@@ -1,0 +1,175 @@
+#login-popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#login-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.3rem;
+}
+
+.login-logo {
+  width: inherit;
+}
+
+.logo-icon {
+  width: 4.37rem;
+  padding: 1rem 1.25rem;
+}
+
+.login-logo i {
+  position: absolute;
+  top: 1rem;
+  left: 23rem;
+  font-size: 1.5rem;
+  color: #999999;
+  cursor: pointer;
+}
+
+.login-content {
+  padding: 1.25rem;
+}
+
+.login-comment {
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.login-comment h1 {
+  line-height: 1.54;
+  font-size: 1.62rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.login-comment h2 {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.login-email {
+  padding-bottom: 0.87rem;
+  text-align: left;
+}
+
+.login-email p {
+  font-size: 0.87rem;
+  font-weight: 400;
+  color: #767676;
+}
+
+.input-email {
+  margin-top:  0.68rem;
+  padding: 0 0.93rem;
+  width : 20.5rem;
+  height: 3.12rem;
+  font-size: 0.93rem;
+  color: #333;
+  border: 1px solid #e1e2e3;
+  border-radius: 0.3rem;
+}
+
+#emailCheck {
+  bottom: 0;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+}
+
+input[type="submit"] {
+  font-family: FontAwesome;
+}
+
+.email-login-button {
+  width: 22.5rem;
+  height: 3.37rem;
+  border: 0;
+  border-radius: 1.68rem;
+  color: #fff;
+  background-color: #3366FF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.email-login-button span {
+  margin-left: 0.62rem;
+}
+
+.panel-buttons p {
+  margin: 0.81rem 0;
+  color: #969696;
+}
+
+.continue-next-account {
+  color: #767676;
+  margin-bottom: 1.06rem;
+  font-size: 0.87rem;
+}
+
+.another-social-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-button {
+  width: 5.62rem;
+}
+
+.kakao-button, .facebook-button, .google-button, .apple-button {
+  width: 3.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin: 0 1.06rem 0.5rem;
+  padding-top: 1rem;
+}
+
+.kakao-button {
+  background-color: #fee500;
+}
+
+.facebook-button {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+.google-button {
+  border: 1px solid #e1e2e3;
+  background-color: #fff;
+}
+
+.apple-button {
+  background-color: #333;
+  color: #fff;
+}
+
+.another-social-buttons div img {
+  height: 1.43rem;
+}
+
+.another-social-buttons p {
+  font-size: 0.81rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.popup-bottom-comment {
+  margin-top: 1.625rem;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  color: #999;
+}
