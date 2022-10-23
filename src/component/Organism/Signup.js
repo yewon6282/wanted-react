@@ -1,19 +1,38 @@
-import "../css/whole.css";
-import "../css/font.css";
-import "../css/signup.css";
+import "../../css/signup.css";
+import { GrClose } from "react-icons/gr";
 
 function Signup({setSignupOpen}) {
   const closeSignup = () => {
     setSignupOpen(false);
   };
 
+  function checkSelectAll() {
+    const checkboxes = document.querySelectorAll('input[name="agreement"]');
+    const checked = document.querySelectorAll('input[name="agreement"]:checked');
+    const selectAll = document.querySelector('input[name="selectall"]');
+  
+    if (checkboxes.length === checked.length) {
+      selectAll.checked = true;
+    } else {
+      selectAll.checked = false;
+    }
+  }
+  
+  // function selectAll() {
+  //   const checkboxes = document.getElementsByName("agreement");
+  
+  //   checkboxes.forEach((checkbox) => {
+  //     checkbox.checked = selectAll.checked;
+  //   });
+  // }
+  
   return (
     <div>
-      <div id="signup-popup-background">
-        <div id="signup-popup">
+      <div className="signup-popup-background">
+        <div className="signup-popup">
           <div className="signup-head">
             <span>회원가입</span>
-            <i onClick={closeSignup} className="fa fa-times" aria-hidden="true"></i>
+            <GrClose onClick={closeSignup} id="closeIcon" size={20}/>
           </div>
           <div className="signup-content">
             <div className="signup-input">
@@ -215,9 +234,9 @@ function Signup({setSignupOpen}) {
               <input className="input-box" type="password" id="checkPassword" placeholder="비밀번호를 다시 한번 입력해 주세요." />
               <small id="passwordDoubleCheck"></small>
             </div>
-            {/* <div className="agree-checkbox">
+            <div className="agree-checkbox">
               <div>
-                <input type="checkbox" name="selectall" value="" onClick={selectAll(this)} />
+                <input type="checkbox" name="selectall" value="" /*onClick={selectAll}*/ />
                 <span>전체 동의</span>
               </div>
               <hr />
@@ -233,7 +252,7 @@ function Signup({setSignupOpen}) {
                 <input type="checkbox" name="agreement" value="3" onClick={checkSelectAll} />
                 <span>개인정보 및 수집 이용 동의 (필수)</span>
               </div>
-            </div> */}
+            </div>
           </div>
           <div className="panel-buttons">
             <input type="submit" className="signup-button" value="회원가입하기" />

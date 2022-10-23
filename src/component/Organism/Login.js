@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "../css/whole.css";
-import "../css/font.css";
-import "../css/login.css";
-import Logo from "../image/logo.png";
+import React from "react";
+import "../../css/login.css";
+import Logo from "../../image/logo.png";
+import { GrClose } from "react-icons/gr";
+import { FaFacebookF, FaApple } from "react-icons/fa";
 
 function Login({ setLoginOpen, showSignup }) {
   const closeLogin = () => {
@@ -11,11 +11,11 @@ function Login({ setLoginOpen, showSignup }) {
 
   return (
     <div>
-      <div id="login-popup-background">
-        <div id="login-popup">
+      <div className="login-popup-background">
+        <div className="login-popup">
           <div className="login-logo">
             <img className="logo-icon" src={Logo} alt="wanted-logo" />
-            <i onClick={closeLogin} className="fa fa-times" aria-hidden="true"></i>
+            <GrClose onClick={closeLogin} id="closeIcon" size={20}/>
           </div>
           <div className="login-content">
             <div className="login-comment">
@@ -34,7 +34,7 @@ function Login({ setLoginOpen, showSignup }) {
               <small id="emailCheck"></small>
             </div>
             <div className="panel-buttons">
-              <input type="submit" onClick={showSignup} className="email-login-button" value="&#!xf0e0; 이메일로 계속하기" />
+              <input type="submit" onClick={showSignup} className="email-login-button" value="이메일로 계속하기" />
               <p>or</p>
               <div className="continue-next-account">다음 계정으로 계속하기</div>
               <div className="another-social-buttons">
@@ -46,7 +46,7 @@ function Login({ setLoginOpen, showSignup }) {
                 </div>
                 <div className="social-button">
                   <div className="facebook-button">
-                    <i className="fa-brands fa-facebook-f fa-lg"></i>
+                    <FaFacebookF size={20}/>
                   </div>
                   <p>Facebook</p>
                 </div>
@@ -58,7 +58,7 @@ function Login({ setLoginOpen, showSignup }) {
                 </div>
                 <div>
                   <div className="apple-button">
-                    <i className="fa-brands fa-apple fa-lg"></i>
+                    <FaApple size={20}/>
                   </div>
                   <p>Apple</p>
                 </div>

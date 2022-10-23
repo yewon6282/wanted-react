@@ -9,9 +9,9 @@ header {
 }
 
 header .header{
+  margin: 0 auto;
   width: 66.25rem;
   height: inherit;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -32,21 +32,21 @@ header .header{
 
 .menu-dropdown {
   display: none;
-  position: absolute;
   z-index: 10;
+  position: absolute;
   background-color: #fff;
 }
 
 .menu-list {
-  padding: 0 6.25rem 0 0.62rem;
   display: block;
-  color: #333;
+  padding: 0 6.25rem 0 0.62rem;
   font-size: 0.81rem;
   font-weight: 600;
+  color: #333;
   line-height: 2.9;
 }
 
-#list-all {
+#listAll {
   margin-top: 1rem;
   font-size: 0.85rem;
 }
@@ -65,11 +65,16 @@ header .header{
 }
 
 ul .menu {
+  height: 3.05rem;
+  float: left;
+}
+
+.menu-link{
+  display: inline-block;
   padding: 1.1rem;
   font-size: 0.85rem;
   font-weight: 600;
   color: #333;
-  float: left;
   cursor: pointer;
 }
 
@@ -103,9 +108,9 @@ ul .menu:hover {
 
 .corp-service {
   padding: 0.5rem 0.62rem;
-  border: 1px solid #e1e2e3;
-  border-radius: 3.1rem;
   font-size: 0.81rem;
   color: #666;
+  border: 1px solid #e1e2e3;
+  border-radius: 3.1rem;
   cursor: pointer;
 }

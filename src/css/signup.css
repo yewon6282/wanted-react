@@ -1,4 +1,4 @@
-#signup-popup-background {
+.signup-popup-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,7 +7,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#signup-popup {
+.signup-popup {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,11 +25,10 @@
   font-weight: 500;
 }
 
-.signup-head i {
+#closeIcon {
   position: absolute;
   top: 1rem;
   left: 23rem;
-  font-size: 1.5rem;
   color: #999999;
   cursor: pointer;
 }
