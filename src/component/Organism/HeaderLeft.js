@@ -12,7 +12,7 @@ function HeaderLeft() {
           <a className="menu-list" id="listAll" href="#!">
             직군 전체
           </a>
-          <Link to="/develop" className="menu-list">
+          <Link to="/Develop" className="menu-list">
             개발
           </Link>
           <a className="menu-list" href="#!">

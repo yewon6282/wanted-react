@@ -1,8 +1,8 @@
 import React from "react";
 import "../../css/header.css";
-import HeaderCenter from "../Molecules/HeaderCenter";
-import HeaderLeft from "../Molecules/HeaderLeft";
-import HeaderRight from "../Molecules/HeaderRight";
+import HeaderCenter from "../Organism/HeaderCenter";
+import HeaderLeft from "../Organism/HeaderLeft";
+import HeaderRight from "../Organism/HeaderRight";
 
 function Header() {
   return (

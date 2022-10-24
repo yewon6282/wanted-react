@@ -55,10 +55,13 @@
   text-align: left;
 }
 
-.section-scroll-grid {
-  padding-bottom: 1.5rem;
+.section-filter {
   margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid #ececec;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .filter-button {
@@ -109,7 +112,7 @@
   width: 1rem;
 }
 
-.section2 {
+.section-bookmark {
   width: 66.25rem;
   padding-top: 2.5rem;
   margin: 0 auto;
@@ -124,15 +127,21 @@
   color: #36f;
 }
 
+.bookmark span {
+  margin-left: 0.4rem;
+}
+
 .slider-item {
   margin-top: 0.87rem;
 }
 
 .slider-item li{
+  margin-right: 0.81rem;
   width: 12.31rem;
   height: 16.93rem;
   border: 1px solid #ececec;
   border-radius: 0.2rem;
+  float: left;
 }
 
 .slider-item-top {
@@ -210,11 +219,12 @@
 .job-card-image {
   width: 15.6rem;
   height: 10.9rem;
+  border: 1px solid #e1e2e3;
   border-radius: 0.2rem;
   object-fit: cover;
 }
 
-.job-card-bookmark {
+#jobCardBookmark {
   position: relative;
   top: -10.5rem;
   left: 14rem;

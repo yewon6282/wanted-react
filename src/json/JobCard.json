@@ -1,0 +1,26 @@
+{
+  "JobCards" : [
+    {
+      "id" : 0,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32138%2Fiuyt954kiyblqg49__1080_790.png&w=1000&q=75",
+      "imgAlt" : "카카오픽코마",
+      "jobCategory" : "프론트엔드 개발자",
+      "jobCompanyName" : "카카오픽코마",
+      "responseRate" : "응답률 매우 높음",
+      "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
+      "companyLocation" : "서울 · 한국",
+      "companyReward" : "채용보상금 1,000,000원"
+    },
+    {
+      "id" : 1,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fbcuz7urkmspwvbfy__400_400.jpg&w=400&q=75",
+      "imgAlt" : "파이리코",
+      "jobCategory" : "Senior Software Engineer - Frontend 시니어 프론트앤드 개발자",
+      "jobCompanyName" : "파이리코",
+      "responseRate" : "응답률 매우 높음",
+      "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
+      "companyLocation" : "서울 · 한국",
+      "companyReward" : "채용보상금 1,000,000원"
+    }
+  ]
+}

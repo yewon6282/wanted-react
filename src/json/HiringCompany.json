@@ -1,0 +1,49 @@
+{
+  "HiringCompanies" : [
+    {
+      "id" : 0,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F216%2Fpdgjch6eg5ajfdfm__400_400.jpg&w=400&q=75",
+      "imgAlt" : "화해(버드뷰)",
+      "companyLogo" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.799382a7.jpg&w=100&q=75",
+      "companyLogoAlt" : "화해(버드뷰)",
+      "companyTitle" : "화해(버드뷰)",
+      "companyPosition" : "3개 포지션"
+    },
+    {
+      "id" : 1,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F27709%2Fnr9xfm9decaxtq0v__400_400.jpg&w=400&q=75",
+      "imgAlt" : "캐시멜로",
+      "companyLogo" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.8486cd98.png&w=100&q=75",
+      "companyLogoAlt" : "캐시멜로",
+      "companyTitle" : "캐시멜로",
+      "companyPosition" : "7개 포지션"
+    },
+    {
+      "id" : 2,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F25912%2Feu3nk4q7gb3xdn2i__400_400.png&w=400&q=75",
+      "imgAlt" : "데이터라이즈",
+      "companyLogo" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.cc4f3409.jpg&w=100&q=75",
+      "companyLogoAlt" : "데이터라이즈",
+      "companyTitle" : "데이터라이즈",
+      "companyPosition" : "3개 포지션"
+    },
+    {
+      "id" : 3,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F666%2Fev8xbqrdgjmpvmol__400_400.jpg&w=400&q=75",
+      "imgAlt" : "인라이플",
+      "companyLogo" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.8486cd98.png&w=100&q=75",
+      "companyLogoAlt" : "인라이플",
+      "companyTitle" : "인라이플",
+      "companyPosition" : "3개 포지션"
+    },
+    {
+      "id" : 4,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F79%2Fno3ey0e5mjbismfq__400_400.jpg&w=400&q=75",
+      "imgAlt" : "원티드랩",
+      "companyLogo" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.cc473dbf.jpg&w=100&q=75",
+      "companyLogoAlt" : "원티드랩",
+      "companyTitle" : "원티드랩",
+      "companyPosition" : "20개 포지션"
+    }
+  ]
+}

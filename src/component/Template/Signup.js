@@ -1,30 +1,22 @@
 import "../../css/signup.css";
 import { GrClose } from "react-icons/gr";
+import { useState } from "react";
 
 function Signup({setSignupOpen}) {
   const closeSignup = () => {
     setSignupOpen(false);
   };
 
-  function checkSelectAll() {
-    const checkboxes = document.querySelectorAll('input[name="agreement"]');
-    const checked = document.querySelectorAll('input[name="agreement"]:checked');
-    const selectAll = document.querySelector('input[name="selectall"]');
-  
-    if (checkboxes.length === checked.length) {
-      selectAll.checked = true;
-    } else {
-      selectAll.checked = false;
-    }
+  const [checkboxAll, setCheckboxAll] = useState(false);
+  const [checkedList, setCheckedList] = useState([]);
+
+  const checkSelectAll = () => {
+
   }
   
-  // function selectAll() {
-  //   const checkboxes = document.getElementsByName("agreement");
-  
-  //   checkboxes.forEach((checkbox) => {
-  //     checkbox.checked = selectAll.checked;
-  //   });
-  // }
+  const selectAll = () => {
+    
+  }
   
   return (
     <div>
@@ -236,7 +228,7 @@ function Signup({setSignupOpen}) {
             </div>
             <div className="agree-checkbox">
               <div>
-                <input type="checkbox" name="selectall" value="" /*onClick={selectAll}*/ />
+                <input type="checkbox" name="selectall" value="" onClick={selectAll(this)} />
                 <span>전체 동의</span>
               </div>
               <hr />

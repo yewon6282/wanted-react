@@ -1,0 +1,32 @@
+{
+  "Articles" : [
+    {
+      "id" : 0,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2478%2Feff0764c.jpg&w=800&q=75",
+      "imgAlt" : "카드뉴스, 어떻게 만들면 되나요?",
+      "cardTitle" : "카드뉴스, 어떻게 만들면 되나요?",
+      "cardCategory" : "#디자인 #콘텐츠 제작 #회사생활"
+    },
+    {
+      "id" : 1,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2480%2F6207a0f5.jpg&w=800&q=75",
+      "imgAlt" : "롯데월드타워 38층 ‘우아한형제들’에 가서 물어봤다",
+      "cardTitle" : "롯데월드타워 38층 ‘우아한형제들’에 가서 물어봤다",
+      "cardCategory" : "#회사생활 #라이프스타일 #식·음료"
+    },
+    {
+      "id" : 2,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2441%2F0b7c94dc.jpg&w=800&q=75",
+      "imgAlt" : "소셜을 석권한 ‘티빙’ 오리지널 콘텐츠 마케팅",
+      "cardTitle" : "소셜을 석권한 ‘티빙’ 오리지널 콘텐츠 마케팅",
+      "cardCategory" : "#마케팅·광고 #브랜딩 #콘텐츠 제작"
+    },
+    {
+      "id" : 3,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2466%2Fce876081.jpg&w=800&q=75",
+      "imgAlt" : "CTO가 말하는 스타트업 개발자 생존 백서",
+      "cardTitle" : "CTO가 말하는 스타트업 개발자 생존 백서",
+      "cardCategory" : "#개발 #커리어고민 #취업/이직"
+    }
+  ]
+}

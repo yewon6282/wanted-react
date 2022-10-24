@@ -71,7 +71,7 @@ ul .menu {
 
 .menu-link{
   display: inline-block;
-  padding: 1.1rem;
+  padding: 1.2rem;
   font-size: 0.85rem;
   font-weight: 600;
   color: #333;
@@ -97,10 +97,12 @@ ul .menu:hover {
   display: flex;
   flex-direction: row;
   border-right: 1px solid #e1e2e3;
+  align-items: center;
 }
 
 .header-right .menu {
   margin-left: 0.62rem;
+  height: fit-content;
   font-size: 0.85rem;
   font-weight: 600;
   color: #333;

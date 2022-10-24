@@ -1,3 +1,7 @@
+:root {
+  --border-radius: 0.25rem:
+}
+
 #mainSection1 {
   position: relative;
   padding: 1.5rem;
@@ -179,7 +183,7 @@
 }
 
 .career-card li {
-  margin: 0 0.4rem;
+  margin: 0 0.4rem 3.125rem;
   width: 15.6rem;
   text-align: left;
 }
@@ -234,12 +238,13 @@
 #otherContent  {
   width: 21rem;
   height: 3.1rem;
+  margin: 0 auto;
   padding: 0.62rem 1.68rem;
+  font-size: 1rem;
+  font-weight: 700;
   border: 1px solid #e1e2e3;
   border-radius: 3.1rem;
   background-color: inherit;
-  font-size: 1rem;
-  font-weight: 700;
 }
 
 .down-button-icon {
@@ -247,11 +252,12 @@
 }
 
 .example {
-  justify-content: center;
+  margin-top: 0.2rem;
   font-size: 0.9rem;
   color : #aaa;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .example p {
@@ -273,6 +279,19 @@
   text-align: left;
 }
 
+.card-comment4 {
+  margin: 0.5rem 0;
+  font-weight: 600;
+  font-size: 0.81rem;
+  line-height: 1.3rem;
+  color: #aaa;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 #lineBanner {
   width: 66.25rem;
   margin: 0 auto;
@@ -291,18 +310,6 @@
 #lineBanner p {
   margin: auto 0.2rem;
 }
-
-/* 
-#VOD .card-title {
-  margin-top: 0.3rem;
-}
-
-#VOD .card-comment {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-} */
 
 .career-card .event-card {
   padding: 0.5rem;

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BsChevronLeft, BsChevronRight, BsChevronDown, BsQuestionCircle } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
 import { AiOutlineEllipsis } from "react-icons/ai";
+import CareerInsight from "../Molecule/CareerInsight";
 
 function MainSection02() {
   const [popupOpen, setPopupOpen] = useState(false);
@@ -63,21 +64,11 @@ function MainSection02() {
           </button>
         </div>
         <ul className="career-card">
-          <li>
-            <a href="#!">
-              <img className="card-image" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210208%2F4%2F11031552.jpg&amp;w=500&amp;q=75" alt="우리회사 제품 라이브커머스로 팔기" />
-              <p className="card-title">우리회사 제품 라이브커머스로 팔기</p>
-              <p className="card-comment">라이브커머스를 더 잘하는 법이 궁금하다면, 지금 시청해 보세요!</p>
-              <div className="profile-information">
-                <img className="profile-photo" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&amp;w=60&amp;q=90" alt="wanted" />
-                <span className="writer">강남언니 김윤혁</span>
-              </div>
-            </a>
-          </li>
+          <CareerInsight />
         </ul>
         <button id="otherContent">
           더 많은 콘텐츠 보기
-          <BsChevronDown className="down-button-icon"/>
+          <BsChevronDown className="down-button-icon" />
         </button>
       </div>
       <hr />

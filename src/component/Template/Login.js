@@ -4,11 +4,7 @@ import Logo from "../../image/logo.png";
 import { GrClose } from "react-icons/gr";
 import { FaFacebookF, FaApple } from "react-icons/fa";
 
-function Login({ setLoginOpen, showSignup }) {
-  const closeLogin = () => {
-    setLoginOpen(false);
-  };
-
+function Login({ closeLogin, onChange, checkEmail, emailSubmit, showSignup }) {
   return (
     <div>
       <div className="login-popup-background">
@@ -30,11 +26,11 @@ function Login({ setLoginOpen, showSignup }) {
             </div>
             <div className="login-email">
               <p>이메일</p>
-              <input className="input-email" type="email" id="email" placeholder="이메일을 입력해 주세요." />
-              <small id="emailCheck"></small>
+              <input className={checkEmail ? "input-email" : "input-email-false"} onChange={onChange} type="email" id="email" placeholder="이메일을 입력해 주세요." />
+              {checkEmail ? "" : <small id="emailCheck">올바른 이메일을 입력해주세요.</small>}
             </div>
             <div className="panel-buttons">
-              <input type="submit" onClick={showSignup} className="email-login-button" value="이메일로 계속하기" />
+              {emailSubmit ? <input type="submit" onClick={showSignup} className="email-login-button" value="이메일로 계속하기"/> : <input type="submit" onClick={showSignup} className="email-login-button-false" value="이메일로 계속하기" disabled='disabled'/>}
               <p>or</p>
               <div className="continue-next-account">다음 계정으로 계속하기</div>
               <div className="another-social-buttons">

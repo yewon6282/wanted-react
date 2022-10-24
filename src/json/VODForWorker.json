@@ -1,0 +1,36 @@
+{
+  "VODForWorkers" : [
+    {
+      "id" : 0,
+      "videoAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210618%2F2%2F34753914.jpg&w=800&q=75",
+      "videoAlt" : "회사를 구하는 인사",
+      "cardAuthor" : "노무법인 예담HR컨설팅 장내석",
+      "cardTitle" : "회사를 구하는 인사",
+      "cardComment" : "회사를 구하는 인사 : Live Talk #27"
+    },
+    {
+      "id" : 1,
+      "videoAddress" : "https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210413%2F2%2F39565343.jpg&w=800&q=75",
+      "videoAlt" : "포트폴리오를 부탁해",
+      "cardAuthor" : "전) 원티드랩 최보명",
+      "cardTitle" : "포트폴리오를 부탁해",
+      "cardComment" : "[무료] 포트폴리오를 부탁해 by 원티드"
+    },
+    {
+      "id" : 2,
+      "videoAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210713%2F1%2F22621559.jpg&w=800&q=75",
+      "videoAlt" : "팀장으로 산다는 건",
+      "cardAuthor" : "인터비즈 팀장클럽 김진영",
+      "cardTitle" : "팀장으로 산다는 건",
+      "cardComment" : "팀장으로 산다는 건 : Live Talk #30"
+    },
+    {
+      "id" : 3,
+      "videoAddress" : "https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210521%2F7%2F68765761.jpg&w=800&q=75",
+      "videoAlt" : "함께 일하고 싶은 리더가 되는 질문법",
+      "cardAuthor" : "리더의대화연구소 서수한",
+      "cardTitle" : "함께 일하고 싶은 리더가 되는 질문법",
+      "cardComment" : "일잘러의 무기는 테크닉일까, 마인드셋일까 : Live Talk #26"
+    }
+  ]
+}

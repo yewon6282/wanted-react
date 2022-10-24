@@ -1,0 +1,16 @@
+{
+  "CareerEvents" : [
+    {
+      "id" : 0,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2422%2Ffeb067d4.jpg&w=1200&q=100",
+      "imgAlt" : "기업의 성공을 리드하는 번개장터 마케터의 데이터",
+      "cardTitle" : "기업의 성공을 리드하는 번개장터 마케터의 데이터"
+    },
+    {
+      "id" : 1,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2406%2F6aae1a5c.jpg&w=1200&q=100",
+      "imgAlt" : "[무료] 인간관계, 회사생활, 커리어고민 1분만에 해결하기",
+      "cardTitle" : "[무료] 인간관계, 회사생활, 커리어고민 1분만에 해결하기"
+    }
+  ]
+}

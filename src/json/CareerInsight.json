@@ -1,0 +1,44 @@
+{
+  "CareerInsights" : [
+    {
+      "id" : 0,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F9lr1%2Fimage%2F0g6ITk7LanHHYWe2KomVp5AoBy4.png&w=500&q=75",
+      "imgAlt" : "시골 구멍가게에는 없는 인덱스(index)",
+      "cardTitle" : "시골 구멍가게에는 없는 인덱스(index)",
+      "cardComment" : "서점에서 헤매지 않는 방법 오늘 구매할 책의 종류는 '오라클 SQL'입니다.  책을 사러 동네서점에 갑니다. 그리고 서점 입구를 들어가면 수 십만 권의 책들이 빼곡히 진열되어 있습니다. 하지만 원하는 책을 사기엔 오랜 시간이 걸리지 않습니다. 종류별로 책이 잘 분류되어 있기 때문입니다. 제일 먼저 찾아야 할 부분은 '분류'입니다. 컴퓨터는 기호 'I'입",
+      "profileImage" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&w=60&q=90",
+      "profileImageAlt" : "brunch",
+      "profileWriter" : "고코더"
+    },
+    {
+      "id" : 1,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20220307%2F9%2F43247939.jpg&w=500&q=75",
+      "imgAlt" : "LINE X Wanted Session 2-5",
+      "cardTitle" : "LINE X Wanted Session 2-5",
+      "cardComment" : "아무리 좋은 방법론을 적용한다고 해도, 지속 가능하지 않다면 그 효과는 떨어질 것입니다. 오늘은 지속가능한 성장을 위해 팀의 건강진단을 해봅니다. 팀의 건강검진은 어떻게 하는지 구체적인 사례를 통해 보여드립니다.",
+      "profileImage" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90",
+      "profileImageAlt" : "wanted",
+      "profileWriter" : "라인플러스 고종범"
+    },
+    {
+      "id" : 2,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F1J9E%2Fimage%2FxVDTlcEXCU60vmwNWFMrYQaSD4I.png&w=500&q=75",
+      "imgAlt" : "토스가 부릅니다, 매일 매일 이자 기다려",
+      "cardTitle" : "토스가 부릅니다, 매일 매일 이자 기다려",
+      "cardComment" : "아래 글은 2022년 03월 23일에 발행된 뉴스레터에 실린 글입니다. 전체 뉴스레터를 보시려면 옆의 링크를 클릭하시면 됩니다. [뉴스레터 보러 가기]  토스가 매일 출석을 체크합니다! 토스뱅크가 예금 이자를 하루 단위로 지급하는 '일 복리' 서비스를 업계 최초로 도입했습니다. 물론 아무나 주는 건 아니고요. 토스 앱에 접속해서 직접 버튼을 눌러야 지급이 ",
+      "profileImage" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&w=60&q=90",
+      "profileImageAlt" : "brunch",
+      "profileWriter" : "기묘한"
+    },
+    {
+      "id" : 3,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2FdEi4%2Fimage%2FJsq2lY4uDcuYv2IojZLGt13fw8w.png&w=500&q=75",
+      "imgAlt" : "텀블벅은 어떻게 돈을 벌까?",
+      "cardTitle" : "텀블벅은 어떻게 돈을 벌까?",
+      "cardComment" : "집단의 힘으로창작 문화를 지원하다     1. 창작하는 모든 이들을 위한 크라우드 펀딩   2년 가까이 기다리다 지쳐 2011년 결국 텀블벅을 만들었습니다.- 2014년 7월 당시 텀블벅 사이트 소갯말 中  텀블벅tumblbug(참고)은 2011년 6월 출시된 국내 최초의 크라우드 펀딩 플랫폼이다. 위와 같은 2014년 과거 염재승 당시 텀블벅 대표의 발언",
+      "profileImage" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&w=60&q=90",
+      "profileImageAlt" : "brunch",
+      "profileWriter" : "July"
+    }
+  ]
+}
