@@ -19,6 +19,7 @@ function HeaderRight() {
   
   const [checkEmail, setCheckEmail] = useState(true);
   const [emailSubmit, setEmailSubmit] = useState(false);
+  const [inputEmail, setInputEamil] = useState("");
   
   const onChange = (e) => {
     const emailCheck = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
@@ -26,6 +27,7 @@ function HeaderRight() {
     if (emailCheck.test(e.target.value) === true) {
       setCheckEmail(true);
       setEmailSubmit(true);
+      setInputEamil(e.target.value);
     } else {
       setCheckEmail(false);
       setEmailSubmit(false);
@@ -49,7 +51,7 @@ function HeaderRight() {
           회원가입/로그인
         </button>
         {loginOpen && <Login closeLogin={closeLogin} onChange={onChange} checkEmail={checkEmail} emailSubmit={emailSubmit} showSignup={showSignup} />}
-        {signupOpen && <Signup setSignupOpen={setSignupOpen} />}
+        {signupOpen && <Signup setSignupOpen={setSignupOpen} inputEmail={inputEmail}/>}
       </div>
       <a href="#!" className="corp-service">
         기업 서비스

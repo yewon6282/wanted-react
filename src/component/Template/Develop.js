@@ -1,34 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../css/develop.css";
 import { CiCircleChevDown } from "react-icons/ci";
 import { BsChevronRight } from "react-icons/bs";
 import { AiFillCaretDown } from "react-icons/ai";
-import { FaBookmark, FaRegBookmark } from "react-icons/fa";
+import { FaBookmark } from "react-icons/fa";
 import HiringCompany from "../Molecule/HiringCompany";
 import JobCard from "../Molecule/JobCard";
 
 function Develop() {
-  const section = document.getElementsByClassName("section-scroll");
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollTop, setScrollTop] = useState(false);
 
-  window.addEventListener("scroll", function () {
-    let topLength = document.documentElement.scrollTop;
-    console.log(topLength);
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+      setScrollPosition(window.scrollY);
+      console.log(scrollPosition);
 
-    if (topLength >= 220) {
-      section.style.position = "fixed";
-      section.style.borderBottom = "1px solid blue";
-      section.style.left = "50%";
-      section.style.transform = "translateX(-50%)";
-      section.style.width = "100%";
-      section.style.zIndex = "5";
-    } else {
-      section.style.position = "unset";
-      section.style.borderBottom = "1px solid #ececec";
-      section.style.left = "none";
-      section.style.transform = "none";
-      section.style.width = "none";
-      section.style.zIndex = "none";
-    }
+      if (scrollPosition > 210) {
+        setScrollTop(true);
+      } else {
+        setScrollTop(false);
+      }
+    });
   });
 
   return (
@@ -45,7 +38,7 @@ function Develop() {
           </button>
         </div>
       </div>
-      <div className="section-scroll">
+      <div className={scrollTop ? "section-scroll-fixed" : "section-scroll"}>
         <div className="section-scroll-content">
           <div className="section-filter">
             <div>

@@ -20,7 +20,7 @@ function JobCard() {
               <span className="job-card-container-massage">{jobCompanyName.responseMessage}</span>
             </div>
             <p className="job-card-location">{jobCompanyName.companyLocation}</p>
-            <p className="job-card-reward">{jobCompanyName.companyReward}</p>
+            <p className="job-card-reward">채용보상금 {jobCompanyName.companyReward.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</p>
           </Link>
         </li>
       ))}

@@ -6,11 +6,13 @@ import Footer from "./component/Template/Footer";
 import Main from "./component/Template/Main";
 import Develop from "./component/Template/Develop";
 import DevelopDetail from "./component/Template/DevelopDetail";
+import ScrollToTop from "./component/Atom/ScrollTop";
 
 function App() {
   return (
     <div className="page">
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Main />}></Route>

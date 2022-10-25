@@ -1,39 +1,39 @@
 import "../../css/signup.css";
 import { GrClose } from "react-icons/gr";
-import { useState } from "react";
+// import { useState } from "react";
 
-function Signup({setSignupOpen}) {
+function Signup({ setSignupOpen, inputEmail }) {
   const closeSignup = () => {
     setSignupOpen(false);
   };
 
-  const [checkboxAll, setCheckboxAll] = useState(false);
-  const [checkedList, setCheckedList] = useState([]);
+  // const [checkboxAll, setCheckboxAll] = useState(false);
+  // const [checkedList, setCheckedList] = useState([]);
 
-  const checkSelectAll = () => {
+  // const checkSelectAll = () => {};
 
-  }
-  
-  const selectAll = () => {
-    
-  }
-  
+  // const selectAll = () => {};
+
   return (
     <div>
       <div className="signup-popup-background">
         <div className="signup-popup">
           <div className="signup-head">
             <span>회원가입</span>
-            <GrClose onClick={closeSignup} id="closeIcon" size={20}/>
+            <GrClose onClick={closeSignup} id="closeIcon" size={20} />
           </div>
           <div className="signup-content">
             <div className="signup-input">
-              <p className="input-name">이름</p>
+              <p id="receivedEmail">이메일</p>
+              <input id="receivedEmailBox" value={inputEmail} disabled />
+            </div>
+            <div className="signup-input">
+              <p id="inputName">이름</p>
               <input className="input-box" type="name" id="name" placeholder="이름을 입력해 주세요." />
               <small id="nameCheck"></small>
             </div>
             <div className="signup-input">
-              <p className="input-number">휴대폰 번호</p>
+              <p id="inputNumber">휴대폰 번호</p>
               <select id="countryNumber">
                 <option value="+82">+82 South Korea</option>
                 <option value="+81">+81 Japan</option>
@@ -216,17 +216,17 @@ function Signup({setSignupOpen}) {
               <small id="numberCheck"></small>
             </div>
             <div className="signup-input">
-              <p className="input-password">비밀번호</p>
+              <p id="inputPassword">비밀번호</p>
               <input className="input-box" type="password" id="password" placeholder="비밀번호를 입력해 주세요." />
               <p id="inputPasswordCondition">영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상 입력해 주세요.</p>
               <small id="passwordCheck"></small>
             </div>
             <div className="signup-input">
-              <p className="input-check-password">비밀번호 확인</p>
+              <p id="inputCheckPassword">비밀번호 확인</p>
               <input className="input-box" type="password" id="checkPassword" placeholder="비밀번호를 다시 한번 입력해 주세요." />
               <small id="passwordDoubleCheck"></small>
             </div>
-            <div className="agree-checkbox">
+            {/* <div className="agree-checkbox">
               <div>
                 <input type="checkbox" name="selectall" value="" onClick={selectAll(this)} />
                 <span>전체 동의</span>
@@ -244,7 +244,7 @@ function Signup({setSignupOpen}) {
                 <input type="checkbox" name="agreement" value="3" onClick={checkSelectAll} />
                 <span>개인정보 및 수집 이용 동의 (필수)</span>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="panel-buttons">
             <input type="submit" className="signup-button" value="회원가입하기" />

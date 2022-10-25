@@ -9,7 +9,7 @@
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
-      "companyReward" : "채용보상금 1,000,000원"
+      "companyReward" : "1000000"
     },
     {
       "id" : 1,
@@ -20,7 +20,40 @@
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
-      "companyReward" : "채용보상금 1,000,000원"
+      "companyReward" : "1000000"
+    },
+    {
+      "id" : 2,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F14431%2F4ahjck4zkmbn0atx__400_400.jpg&w=400&q=75",
+      "imgAlt" : "스텝페이",
+      "jobCategory" : "백엔드 개발자 (3년차 이상)",
+      "jobCompanyName" : "스텝페이",
+      "responseRate" : "응답률 매우 높음",
+      "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
+      "companyLocation" : "서울 · 한국",
+      "companyReward" : "1000000"
+    },
+    {
+      "id" : 3,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1619%2Fus3wgabiym4gj4nb__400_400.jpg&w=400&q=75",
+      "imgAlt" : "메디블록(MediBloc)",
+      "jobCategory" : "[메디패스] Flutter 플러터 개발자",
+      "jobCompanyName" : "메디블록(MediBloc)",
+      "responseRate" : "응답률 매우 높음",
+      "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
+      "companyLocation" : "서울 · 한국",
+      "companyReward" : "1000000"
+    },
+    {
+      "id" : 4,
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F15957%2Foabgtorrvaqchvsj__400_400.jpg&w=400&q=75",
+      "imgAlt" : "하이케어넷",
+      "jobCategory" : "웹 개발자",
+      "jobCompanyName" : "하이케어넷",
+      "responseRate" : "응답률 매우 높음",
+      "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
+      "companyLocation" : "서울 · 한국",
+      "companyReward" : "1000000"
     }
   ]
 }

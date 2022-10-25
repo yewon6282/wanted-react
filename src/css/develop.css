@@ -49,6 +49,18 @@
   border-bottom: 1px solid #ececec;
 }
 
+.section-scroll-fixed {
+  z-index: 5;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  background-color: #fff;
+  border-bottom: 1px solid blue;
+}
+
 .section-scroll-content {
   width: 66.25rem;
   margin: 0 auto;
