@@ -333,12 +333,7 @@
   margin: auto 0;
 }
 
-.angle-up-icon{
-  display: none;
-}
-
 .stealing-warning-bottom {
-  display: none;
   padding: 0.8125rem 1.875rem 1.875rem;
   border-top: 1px solid #ececec;
   font-size: 0.81rem;
