@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />}/>
           <Route path="/Develop" element={<Develop />}/>
-          <Route path="/Develop/117564" element={<DevelopDetail />}/>
+          <Route path="/Develop/:DevelopDetail" element={<DevelopDetail />}/>
         </Routes>
         <Footer />
       </BrowserRouter>

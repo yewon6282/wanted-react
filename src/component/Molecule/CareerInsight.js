@@ -4,15 +4,15 @@ import CareerInsightData from "../../json/CareerInsight.json";
 function CareerInsight() {
   return (
     <>
-      {CareerInsightData.CareerInsights.map((cardTitle) => (
-        <li key={cardTitle.id}>
+      {CareerInsightData.CareerInsights.map((careerInsight) => (
+        <li key={careerInsight.id}>
           <a href="#!">
-            <img className="card-image" src={cardTitle.imgAddress} alt={cardTitle.imgAlt} />
-            <p className="card-title">{cardTitle.cardTitle}</p>
-            <p className="card-comment">{cardTitle.cardComment}</p>
+            <img className="card-image" src={careerInsight.imgAddress} alt={careerInsight.imgAlt} />
+            <p className="card-title">{careerInsight.cardTitle}</p>
+            <p className="card-comment">{careerInsight.cardComment}</p>
             <div className="profile-information">
-              <img className="profile-photo" src={cardTitle.profileImage} alt={cardTitle.profileImageAlt} />
-              <span className="writer">{cardTitle.profileWriter}</span>
+              <img className="profile-photo" src={careerInsight.profileImage} alt={careerInsight.profileImageAlt} />
+              <span className="writer">{careerInsight.profileWriter}</span>
             </div>
           </a>
         </li>

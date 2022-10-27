@@ -6,7 +6,7 @@
 .develop-detail-flex {
   display: flex;
   flex-direction: row;
-  margin: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .develop-detail-image {
@@ -17,9 +17,9 @@
 }
 
 .develop-detail-image img {
-  width: inherit;
-  height: 29rem;
+  width: 43.75rem;
   border-radius: 0.3rem;
+  object-fit: cover;
 }
 
 .job-process-container {
@@ -147,11 +147,11 @@
   margin-left: 0.625rem;
   padding: 0.2rem 0.3rem;
   width: fit-content;
-  border: 1px solid #36f;
+  border: 1px solid #00aead;
   border-radius: 0.1rem;
   font-size: 0.62rem;
   font-weight: 400;
-  color: #36f;
+  color: #00aead;
 }
 
 .develop-job-card-massage {

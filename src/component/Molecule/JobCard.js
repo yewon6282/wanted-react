@@ -6,21 +6,32 @@ import { FaRegBookmark } from "react-icons/fa";
 function JobCard() {
   return (
     <>
-      {JobCardData.JobCards.map((jobCompanyName) => (
-        <li key={jobCompanyName.id}>
-          <Link to="/Develop/117564">
+      {JobCardData.JobCards.map((jobCard) => (
+        <li key={jobCard.id}>
+          <Link
+            to={`/Develop/${jobCard.id}`}
+            state={{
+              imgAddress: jobCard.imgAddress,
+              imgAlt : jobCard.imgAlt,
+              category: jobCard.jobCategory,
+              companyName: jobCard.jobCompanyName,
+              responseRate: jobCard.responseRate,
+              responseMessage: jobCard.responseMessage,
+              companyLocation: jobCard.companyLocation,
+            }}
+          >
             <div>
-              <img className="job-card-image" src={jobCompanyName.imgAddress} alt={jobCompanyName.imgAlt} />
+              <img className="job-card-image" src={jobCard.imgAddress[0].images} alt={jobCard.imgAlt} />
               <FaRegBookmark id="jobCardBookmark" />
             </div>
-            <p className="job-card-category">{jobCompanyName.jobCategory}</p>
-            <p className="job-card-company-name">{jobCompanyName.jobCompanyName}</p>
+            <p className="job-card-category">{jobCard.jobCategory}</p>
+            <p className="job-card-company-name">{jobCard.jobCompanyName}</p>
             <div className="job-card-container-hover">
-              <div className="job-card-container">{jobCompanyName.responseRate}</div>
-              <span className="job-card-container-massage">{jobCompanyName.responseMessage}</span>
+              <div className="job-card-container">{jobCard.responseRate}</div>
+              <span className="job-card-container-massage">{jobCard.responseMessage}</span>
             </div>
-            <p className="job-card-location">{jobCompanyName.companyLocation}</p>
-            <p className="job-card-reward">채용보상금 {jobCompanyName.companyReward.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</p>
+            <p className="job-card-location">{jobCard.companyLocation}</p>
+            <p className="job-card-reward">채용보상금 {jobCard.companyReward.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원</p>
           </Link>
         </li>
       ))}

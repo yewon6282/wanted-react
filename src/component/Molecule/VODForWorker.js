@@ -4,15 +4,15 @@ import VODData from "../../json/VODForWorker.json";
 function VODForWorker() {
   return (
     <>
-      {VODData.VODForWorkers.map((cardTitle) => (
-        <li key={cardTitle.id}>
+      {VODData.VODForWorkers.map((vodData) => (
+        <li key={vodData.id}>
           <a href="#!">
             <div>
-              <img className="card-image" src={cardTitle.videoAddress} alt={cardTitle.videoAlt} />
+              <img className="card-image" src={vodData.videoAddress} alt={vodData.videoAlt} />
             </div>
-            <p className="card-comment3">{cardTitle.cardAuthor}</p>
-            <p className="card-title">{cardTitle.cardTitle}</p>
-            <p className="card-comment4">{cardTitle.cardComment}</p>
+            <p className="card-comment3">{vodData.cardAuthor}</p>
+            <p className="card-title">{vodData.cardTitle}</p>
+            <p className="card-comment4">{vodData.cardComment}</p>
           </a>
         </li>
       ))}
