@@ -18,6 +18,9 @@ function JobCard() {
               responseRate: jobCard.responseRate,
               responseMessage: jobCard.responseMessage,
               companyLocation: jobCard.companyLocation,
+              companyTag : jobCard.companyTag,
+              companyIntroduction : jobCard.companyIntroduction,
+              technologyStack : jobCard.technologyStack
             }}
           >
             <div>

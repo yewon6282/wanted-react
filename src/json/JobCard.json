@@ -3,15 +3,9 @@
     {
       "id" : 117564,
       "imgAddress" : [
-        {
-          "id" : 0,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32138%2Fiuyt954kiyblqg49__1080_790.png&w=1000&q=75"}, 
-        {
-          "id" : 1,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32138%2Fo7arxraei8dh38pt__1080_790.png&w=1000&q=75"}, 
-        {
-          "id" : 2,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32138%2Fy2nskyaiekymbiso__1080_790.png&w=1000&q=75"}
+        {"id" : 0, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32138%2Fiuyt954kiyblqg49__1080_790.png&w=1000&q=75"}, 
+        {"id" : 1, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32138%2Fo7arxraei8dh38pt__1080_790.png&w=1000&q=75"}, 
+        {"id" : 2, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32138%2Fy2nskyaiekymbiso__1080_790.png&w=1000&q=75"}
       ],
       "imgAlt" : "카카오픽코마",
       "jobCategory" : "프론트엔드 개발",
@@ -19,26 +13,47 @@
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
-      "companyReward" : "1000000"
+      "companyReward" : "1000000",
+      "companyTag" : [
+        {"id" : 0, "tags" : "#식비"},
+        {"id" : 1, "tags" : "#사내식당"},
+        {"id" : 2, "tags" : "#어린이집"},
+        {"id" : 3, "tags" : "#건강검진"},
+        {"id" : 4, "tags" : "#의료비"},
+        {"id" : 5, "tags" : "#인공지능"},
+        {"id" : 6, "tags" : "#IT, 컨텐츠"}
+      ],
+      "companyIntroduction" : "회사소개\n 카카오픽코마는 작품과 독자의 연결을 통해 독자에게는 일상의 즐거움을&#44; 콘텐츠 산업에서는 작품의 가치가 더욱 빛날 수 있는 세상을 만들고자 합니다. 세계 최대의 일본 만화 시장과 프랑스에서 디지털 만화&#44; 소설 플랫폼 '픽코마'를 전개하고 있으며&#44; 나아가 작품이 국경을 초월하여 보다 넓은 세상의 독자들과 만날 수 있는 세계를 꿈꾸고 있습니다.\n\n &#91; 조직소개 &#93; \n 카카오픽코마 한국오피스 Global개발그룹은 독자적인 S\/W 개발 역량을 갖추어 여러가지 새로운 가능성들을 현실화할 수 있는 조직이 되고자 하는 목표를 가지고 있습니다. 조금 더 구체적으로는&#44; 성공적인 서비스 런칭과 성장을 목표로 S/W 개발을 주요 업무로 하는 곳입니다. 픽코마 서비스로 신 시장을 개척하여 전 세계 사람들이 만화를 보며 행복해지는 꿈을 꿉니다. 그래서 함께 고민하고 처음부터 다시 만들어나가는 마음가짐으로 도전하고 성장하는 인재를 찾고 있습니다.\n\n 주요업무\n [어떤 역할을 해주셔야 하나요]\n\n 이런 일을 합니다\n • 이미지 컨텐츠를 매끄럽게 고객에게 제공합니다\n • 신규 요구사항을 분석하고 설계하여 개발합니다\n • 기존 서버 API들을 재 사용하는 공수 최적화 설계합니다\n • 재 사용성을 극대화 하는 UI 컴포넌트 및 상태 설계합니다\n • 설계&#44; 개발&#44; 빌드&#44; 배포 파이프라인을 구축합니다\n\n 이런 마음가짐이 필요합니다\n • 장인 또는 리더로 성장 할 다짐\n • 어려운 문제는 함께 고민하고&#44; 쉬운 문제는 능동적으로 해결\n • 빠른 기술 변화에 대한 적극적인 학습 태도\n • 동료의 성장을 도울 수 있다는 믿음\n 자격요건\n 이런 경험이 필요합니다\n • JavaScript 또는 TypeScript 사용 경험이 있으신 분\n • 순수 HTML & CSS에 대한 경험이 있으신 분\n • 모던 웹 프레임워크 \/ 라이브러리 1개 이상 사용 경험이 있으신 분\n • 모던 웹 상태 관리 개념 및 원리를 잘 알고 계신 분\n • 모던 CSS 속성 사용 경험이 있으신 분\n • 비동기 호출을 위한 네트워크 모듈(XHR&#44; Web Fetch) 에 대한 이해 및 경험이 있으신 분\n • 해외 출장에 결격 사유가 없는 분\n\n 우대사항\n 이런 경험이 있다면 더더욱 좋습니다\n • 성능 이슈&#44; 메모리 누수&#44; 네트워크 프로파일링 경험이 있으신 분\n • UI 컴포넌트 테스팅 경험이 있으신 분\n • SSR \/ CSR 방식 등 다양한 렌더링을 사용하여 웹 어플리케이션 개발 경험이 있으신 분\n • Next.js&#44; Tailwind CSS 사용 경험이 있으신 분\n • Atomic Design에 대해 알고계신 분\n • AWS ECS \/ Cloudfront에 대해 경험이 있으신 분\n • 오픈소스 기여 경험이 있으신 분\n\n  혜택 및 복지\n • 파격적인 안식 휴가 제공:  3년 근무 시&#44; 30일 유급휴가 및 200만원의 휴가비를 지원해 드립니다.\n • 업무 도서 지원: 업무에 필요하거나 도움이 될 수 있는 도서 구매를 전액 지원받을 수 있습니다. \n • 매월 식비 지원: 사내식당 점심 지원 및 분기별 30만원 씩 기본 연봉과 별도로 포인트 형태로 지급해 드립니다.\n • 종합 건강 검진 지원: 매년 1회 건강검진을 시행하며&#44; 검진비용을 지원해 드립니다.\n • 카카오 어린이집 운영: 추첨을 통해 원아를 모집하고 있습니다.\n • 경조사 지원: 본인\/배우자\/가족 등의 경조사에 대한 경조사비\/화환\/용품 등을 지원해 드립니다.\n • 가족 상해 보험 지원: 본인&#44; 배우자&#44; 자녀&#44; 본인과 배우자의 부모까지 보장성 보험료와 실손의료비를 지원해 드립니다.\n\n [전형안내]\n 서류 전형 ＞1차 인터뷰 ＞ 2차 인터뷰 ＞ 처우 협의 ＞ 최종 합격\n\n * 직무 및 상황에 따라 전형 절차는 변경될 수 있습니다.\n * 지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.\n",
+      "technologyStack" : [
+        {"id" : 0, "stacks" : "Git"},
+        {"id" : 1, "stacks" : "iOS"},
+        {"id" : 2, "stacks" : "C / C++"},
+        {"id" : 3, "stacks" : "HTML"},
+        {"id" : 4, "stacks" : "Java"},
+        {"id" : 5, "stacks" : "JavaScript"},
+        {"id" : 6, "stacks" : "Kotlin"},
+        {"id" : 7, "stacks" : "ObjectiveC"},
+        {"id" : 8, "stacks" : "Python"},
+        {"id" : 9, "stacks" : "TypeScript"},
+        {"id" : 10, "stacks" : "MVVM"},
+        {"id" : 11, "stacks" : "AWS"},
+        {"id" : 12, "stacks" : "C++"},
+        {"id" : 13, "stacks" : "Jenkins"},
+        {"id" : 14, "stacks" : "NoSQL"},
+        {"id" : 15, "stacks" : "NodeJS"},
+        {"id" : 16, "stacks" : "Spring Framework"},
+        {"id" : 17, "stacks" : "GCP"},
+        {"id" : 18, "stacks" : "KOL 개발"}
+      ]   
     },
     {
       "id" : 132344,
       "imgAddress" : [
-        {
-          "id" : 0,
-          "images" :"https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fbcuz7urkmspwvbfy__1080_790.jpg&w=1000&q=75"}, 
-        {
-          "id" : 1,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fwyycvngqcurxxzmz__1080_790.jpg&w=1000&q=75"}, 
-        {
-          "id" : 2,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fh35h10dfxhfwmhmn__1080_790.jpg&w=1000&q=75"}, 
-        {
-          "id" : 3,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fv6mdxfthw2tzh5so__1080_790.jpg&w=1000&q=75"},
-        {
-          "id" : 4,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fefva02piyagcacdb__1080_790.jpg&w=1000&q=75"}
+        {"id" : 0, "images" :"https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fbcuz7urkmspwvbfy__1080_790.jpg&w=1000&q=75"}, 
+        {"id" : 1, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fwyycvngqcurxxzmz__1080_790.jpg&w=1000&q=75"}, 
+        {"id" : 2, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fh35h10dfxhfwmhmn__1080_790.jpg&w=1000&q=75"}, 
+        {"id" : 3, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fv6mdxfthw2tzh5so__1080_790.jpg&w=1000&q=75"},
+        {"id" : 4, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F32262%2Fefva02piyagcacdb__1080_790.jpg&w=1000&q=75"}
       ],
       "imgAlt" : "파이리코",
       "jobCategory" : "Senior Software Engineer - Frontend 시니어 프론트앤드 개발자",
@@ -46,20 +61,37 @@
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
-      "companyReward" : "1000000"
+      "companyReward" : "1000000",
+      "companyTag" : [
+        {"id" : 0, "tags" : "#퇴사율5%이하"},
+        {"id" : 1, "tags" : "#50명이하"},
+        {"id" : 2, "tags" : "#설립4~9년"},
+        {"id" : 3, "tags" : "#유연근무"},
+        {"id" : 4, "tags" : "#스타트업"},
+        {"id" : 5, "tags" : "#반려동물"},
+        {"id" : 6, "tags" : "#커피"},
+        {"id" : 7, "tags" : "#인공지능"},
+        {"id" : 8, "tags" : "#IT, 컨텐츠"}
+      ],
+      "companyIntroduction" : "회사소개\n 카카오픽코마는 작품과 독자의 연결을 통해 독자에게는 일상의 즐거움을&#44; 콘텐츠 산업에서는 작품의 가치가 더욱 빛날 수 있는 세상을 만들고자 합니다. 세계 최대의 일본 만화 시장과 프랑스에서 디지털 만화&#44; 소설 플랫폼 '픽코마'를 전개하고 있으며&#44; 나아가 작품이 국경을 초월하여 보다 넓은 세상의 독자들과 만날 수 있는 세계를 꿈꾸고 있습니다.\n\n &#91; 조직소개 &#93; \n 카카오픽코마 한국오피스 Global개발그룹은 독자적인 S\/W 개발 역량을 갖추어 여러가지 새로운 가능성들을 현실화할 수 있는 조직이 되고자 하는 목표를 가지고 있습니다. 조금 더 구체적으로는&#44; 성공적인 서비스 런칭과 성장을 목표로 S/W 개발을 주요 업무로 하는 곳입니다. 픽코마 서비스로 신 시장을 개척하여 전 세계 사람들이 만화를 보며 행복해지는 꿈을 꿉니다. 그래서 함께 고민하고 처음부터 다시 만들어나가는 마음가짐으로 도전하고 성장하는 인재를 찾고 있습니다.\n\n 주요업무\n [어떤 역할을 해주셔야 하나요]\n\n 이런 일을 합니다\n • 이미지 컨텐츠를 매끄럽게 고객에게 제공합니다\n • 신규 요구사항을 분석하고 설계하여 개발합니다\n • 기존 서버 API들을 재 사용하는 공수 최적화 설계합니다\n • 재 사용성을 극대화 하는 UI 컴포넌트 및 상태 설계합니다\n • 설계&#44; 개발&#44; 빌드&#44; 배포 파이프라인을 구축합니다\n\n 이런 마음가짐이 필요합니다\n • 장인 또는 리더로 성장 할 다짐\n • 어려운 문제는 함께 고민하고&#44; 쉬운 문제는 능동적으로 해결\n • 빠른 기술 변화에 대한 적극적인 학습 태도\n • 동료의 성장을 도울 수 있다는 믿음\n 자격요건\n 이런 경험이 필요합니다\n • JavaScript 또는 TypeScript 사용 경험이 있으신 분\n • 순수 HTML & CSS에 대한 경험이 있으신 분\n • 모던 웹 프레임워크 \/ 라이브러리 1개 이상 사용 경험이 있으신 분\n • 모던 웹 상태 관리 개념 및 원리를 잘 알고 계신 분\n • 모던 CSS 속성 사용 경험이 있으신 분\n • 비동기 호출을 위한 네트워크 모듈(XHR&#44; Web Fetch) 에 대한 이해 및 경험이 있으신 분\n • 해외 출장에 결격 사유가 없는 분\n\n 우대사항\n 이런 경험이 있다면 더더욱 좋습니다\n • 성능 이슈&#44; 메모리 누수&#44; 네트워크 프로파일링 경험이 있으신 분\n • UI 컴포넌트 테스팅 경험이 있으신 분\n • SSR \/ CSR 방식 등 다양한 렌더링을 사용하여 웹 어플리케이션 개발 경험이 있으신 분\n • Next.js&#44; Tailwind CSS 사용 경험이 있으신 분\n • Atomic Design에 대해 알고계신 분\n • AWS ECS \/ Cloudfront에 대해 경험이 있으신 분\n • 오픈소스 기여 경험이 있으신 분\n\n  혜택 및 복지\n • 파격적인 안식 휴가 제공:  3년 근무 시&#44; 30일 유급휴가 및 200만원의 휴가비를 지원해 드립니다.\n • 업무 도서 지원: 업무에 필요하거나 도움이 될 수 있는 도서 구매를 전액 지원받을 수 있습니다. \n • 매월 식비 지원: 사내식당 점심 지원 및 분기별 30만원 씩 기본 연봉과 별도로 포인트 형태로 지급해 드립니다.\n • 종합 건강 검진 지원: 매년 1회 건강검진을 시행하며&#44; 검진비용을 지원해 드립니다.\n • 카카오 어린이집 운영: 추첨을 통해 원아를 모집하고 있습니다.\n • 경조사 지원: 본인\/배우자\/가족 등의 경조사에 대한 경조사비\/화환\/용품 등을 지원해 드립니다.\n • 가족 상해 보험 지원: 본인&#44; 배우자&#44; 자녀&#44; 본인과 배우자의 부모까지 보장성 보험료와 실손의료비를 지원해 드립니다.\n\n [전형안내]\n 서류 전형 ＞1차 인터뷰 ＞ 2차 인터뷰 ＞ 처우 협의 ＞ 최종 합격\n\n * 직무 및 상황에 따라 전형 절차는 변경될 수 있습니다.\n * 지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.\n",
+      "technologyStack" : [
+        {"id" : 0, "stacks" : "Git"},
+        {"id" : 1, "stacks" : "Android"},
+        {"id" : 2, "stacks" : "iOS"},
+        {"id" : 3, "stacks" : "React"},
+        {"id" : 4, "stacks" : "JavaScript"},
+        {"id" : 5, "stacks" : "TypeScript"},
+        {"id" : 6, "stacks" : "React Native"},
+        {"id" : 7, "stacks" : "Redux"},
+        {"id" : 8, "stacks" : "Next.js"}
+      ]   
     },
     {
       "id" : 97734,
       "imgAddress" : [
-        {
-          "id" : 0,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13954%2F51ybqqilqw279tbs__1080_790.jpg&w=1000&q=75"}, 
-        {
-          "id" : 1,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13954%2Fe9bldrbx3sj2qdvw__1080_790.jpg&w=1000&q=75"}, 
-        {
-          "id" : 2,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13954%2Fkdorvymchfy8th0u__1080_790.jpg&w=1000&q=75"}
+        {"id" : 0, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13954%2F51ybqqilqw279tbs__1080_790.jpg&w=1000&q=75"}, 
+        {"id" : 1, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13954%2Fe9bldrbx3sj2qdvw__1080_790.jpg&w=1000&q=75"}, 
+        {"id" : 2, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13954%2Fkdorvymchfy8th0u__1080_790.jpg&w=1000&q=75"}
       ],
       "imgAlt" : "리브애니웨어",
       "jobCategory" : "모바일앱 개발자(Flutter)",
@@ -67,20 +99,39 @@
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
-      "companyReward" : "1000000"
+      "companyReward" : "1000000",
+      "companyTag" : [
+        {"id" : 0, "tags" : "#인원급성장"},
+        {"id" : 1, "tags" : "#50명이하"},
+        {"id" : 2, "tags" : "#설립3년이하"},
+        {"id" : 3, "tags" : "#식비"},
+        {"id" : 4, "tags" : "#원격근무"},
+        {"id" : 5, "tags" : "#IT, 컨텐츠"}
+      ],
+      "companyIntroduction" : "회사소개\n 카카오픽코마는 작품과 독자의 연결을 통해 독자에게는 일상의 즐거움을&#44; 콘텐츠 산업에서는 작품의 가치가 더욱 빛날 수 있는 세상을 만들고자 합니다. 세계 최대의 일본 만화 시장과 프랑스에서 디지털 만화&#44; 소설 플랫폼 '픽코마'를 전개하고 있으며&#44; 나아가 작품이 국경을 초월하여 보다 넓은 세상의 독자들과 만날 수 있는 세계를 꿈꾸고 있습니다.\n\n &#91; 조직소개 &#93; \n 카카오픽코마 한국오피스 Global개발그룹은 독자적인 S\/W 개발 역량을 갖추어 여러가지 새로운 가능성들을 현실화할 수 있는 조직이 되고자 하는 목표를 가지고 있습니다. 조금 더 구체적으로는&#44; 성공적인 서비스 런칭과 성장을 목표로 S/W 개발을 주요 업무로 하는 곳입니다. 픽코마 서비스로 신 시장을 개척하여 전 세계 사람들이 만화를 보며 행복해지는 꿈을 꿉니다. 그래서 함께 고민하고 처음부터 다시 만들어나가는 마음가짐으로 도전하고 성장하는 인재를 찾고 있습니다.\n\n 주요업무\n [어떤 역할을 해주셔야 하나요]\n\n 이런 일을 합니다\n • 이미지 컨텐츠를 매끄럽게 고객에게 제공합니다\n • 신규 요구사항을 분석하고 설계하여 개발합니다\n • 기존 서버 API들을 재 사용하는 공수 최적화 설계합니다\n • 재 사용성을 극대화 하는 UI 컴포넌트 및 상태 설계합니다\n • 설계&#44; 개발&#44; 빌드&#44; 배포 파이프라인을 구축합니다\n\n 이런 마음가짐이 필요합니다\n • 장인 또는 리더로 성장 할 다짐\n • 어려운 문제는 함께 고민하고&#44; 쉬운 문제는 능동적으로 해결\n • 빠른 기술 변화에 대한 적극적인 학습 태도\n • 동료의 성장을 도울 수 있다는 믿음\n 자격요건\n 이런 경험이 필요합니다\n • JavaScript 또는 TypeScript 사용 경험이 있으신 분\n • 순수 HTML & CSS에 대한 경험이 있으신 분\n • 모던 웹 프레임워크 \/ 라이브러리 1개 이상 사용 경험이 있으신 분\n • 모던 웹 상태 관리 개념 및 원리를 잘 알고 계신 분\n • 모던 CSS 속성 사용 경험이 있으신 분\n • 비동기 호출을 위한 네트워크 모듈(XHR&#44; Web Fetch) 에 대한 이해 및 경험이 있으신 분\n • 해외 출장에 결격 사유가 없는 분\n\n 우대사항\n 이런 경험이 있다면 더더욱 좋습니다\n • 성능 이슈&#44; 메모리 누수&#44; 네트워크 프로파일링 경험이 있으신 분\n • UI 컴포넌트 테스팅 경험이 있으신 분\n • SSR \/ CSR 방식 등 다양한 렌더링을 사용하여 웹 어플리케이션 개발 경험이 있으신 분\n • Next.js&#44; Tailwind CSS 사용 경험이 있으신 분\n • Atomic Design에 대해 알고계신 분\n • AWS ECS \/ Cloudfront에 대해 경험이 있으신 분\n • 오픈소스 기여 경험이 있으신 분\n\n  혜택 및 복지\n • 파격적인 안식 휴가 제공:  3년 근무 시&#44; 30일 유급휴가 및 200만원의 휴가비를 지원해 드립니다.\n • 업무 도서 지원: 업무에 필요하거나 도움이 될 수 있는 도서 구매를 전액 지원받을 수 있습니다. \n • 매월 식비 지원: 사내식당 점심 지원 및 분기별 30만원 씩 기본 연봉과 별도로 포인트 형태로 지급해 드립니다.\n • 종합 건강 검진 지원: 매년 1회 건강검진을 시행하며&#44; 검진비용을 지원해 드립니다.\n • 카카오 어린이집 운영: 추첨을 통해 원아를 모집하고 있습니다.\n • 경조사 지원: 본인\/배우자\/가족 등의 경조사에 대한 경조사비\/화환\/용품 등을 지원해 드립니다.\n • 가족 상해 보험 지원: 본인&#44; 배우자&#44; 자녀&#44; 본인과 배우자의 부모까지 보장성 보험료와 실손의료비를 지원해 드립니다.\n\n [전형안내]\n 서류 전형 ＞1차 인터뷰 ＞ 2차 인터뷰 ＞ 처우 협의 ＞ 최종 합격\n\n * 직무 및 상황에 따라 전형 절차는 변경될 수 있습니다.\n * 지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.\n",
+      "technologyStack" : [
+        {"id" : 0, "stacks" : "Git"},
+        {"id" : 1, "stacks" : "Github"},
+        {"id" : 2, "stacks" : "React"},
+        {"id" : 3, "stacks" : "CSS"},
+        {"id" : 4, "stacks" : "HTML"},
+        {"id" : 5, "stacks" : "Java"},
+        {"id" : 6, "stacks" : "JavaScript"},
+        {"id" : 7, "stacks" : "Kotlin"},
+        {"id" : 8, "stacks" : "TypeScript"},
+        {"id" : 9, "stacks" : "AWS"},
+        {"id" : 10, "stacks" : "Docker"},
+        {"id" : 11, "stacks" : "Spring Framework"},
+        {"id" : 12, "stacks" : "JPA"},
+        {"id" : 13, "stacks" : "Flutter"}
+      ]   
     },
     {
       "id" : 134154,
       "imgAddress" : [
-        {
-          "id" : 0,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1732%2Fw1dxpmpgk2kffdod__1080_790.jpg&w=1000&q=75"}, 
-        {
-          "id" : 1,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1732%2Fq6citipngnp4jpmn__1080_790.jpg&w=1000&q=75"}, 
-        {
-          "id" : 2,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1732%2Fxvn21encqqacpruy__1080_790.jpg&w=1000&q=75"}
+        {"id" : 0, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1732%2Fw1dxpmpgk2kffdod__1080_790.jpg&w=1000&q=75"}, 
+        {"id" : 1, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1732%2Fq6citipngnp4jpmn__1080_790.jpg&w=1000&q=75"}, 
+        {"id" : 2, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1732%2Fxvn21encqqacpruy__1080_790.jpg&w=1000&q=75"}
       ],
       "imgAlt" : "룰루랩(lululab)",
       "jobCategory" : "프론트엔드(클라이언트) 개발자",
@@ -88,20 +139,32 @@
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
-      "companyReward" : "1000000"
+      "companyReward" : "1000000",
+      "companyTag" : [
+        {"id" : 0, "tags" : "#연봉업계평균이상"},
+        {"id" : 1, "tags" : "#인원급성장"},
+        {"id" : 2, "tags" : "#퇴사율5%이하"},
+        {"id" : 3, "tags" : "#50명이하"},
+        {"id" : 4, "tags" : "#설립4~9년"},
+        {"id" : 5, "tags" : "#음료"},
+        {"id" : 6, "tags" : "#간식"},
+        {"id" : 7, "tags" : "#생일선물"},
+        {"id" : 8, "tags" : "#IT, 컨텐츠"}
+      ],
+      "companyIntroduction" : "회사소개\n 카카오픽코마는 작품과 독자의 연결을 통해 독자에게는 일상의 즐거움을&#44; 콘텐츠 산업에서는 작품의 가치가 더욱 빛날 수 있는 세상을 만들고자 합니다. 세계 최대의 일본 만화 시장과 프랑스에서 디지털 만화&#44; 소설 플랫폼 '픽코마'를 전개하고 있으며&#44; 나아가 작품이 국경을 초월하여 보다 넓은 세상의 독자들과 만날 수 있는 세계를 꿈꾸고 있습니다.\n\n &#91; 조직소개 &#93; \n 카카오픽코마 한국오피스 Global개발그룹은 독자적인 S\/W 개발 역량을 갖추어 여러가지 새로운 가능성들을 현실화할 수 있는 조직이 되고자 하는 목표를 가지고 있습니다. 조금 더 구체적으로는&#44; 성공적인 서비스 런칭과 성장을 목표로 S/W 개발을 주요 업무로 하는 곳입니다. 픽코마 서비스로 신 시장을 개척하여 전 세계 사람들이 만화를 보며 행복해지는 꿈을 꿉니다. 그래서 함께 고민하고 처음부터 다시 만들어나가는 마음가짐으로 도전하고 성장하는 인재를 찾고 있습니다.\n\n 주요업무\n [어떤 역할을 해주셔야 하나요]\n\n 이런 일을 합니다\n • 이미지 컨텐츠를 매끄럽게 고객에게 제공합니다\n • 신규 요구사항을 분석하고 설계하여 개발합니다\n • 기존 서버 API들을 재 사용하는 공수 최적화 설계합니다\n • 재 사용성을 극대화 하는 UI 컴포넌트 및 상태 설계합니다\n • 설계&#44; 개발&#44; 빌드&#44; 배포 파이프라인을 구축합니다\n\n 이런 마음가짐이 필요합니다\n • 장인 또는 리더로 성장 할 다짐\n • 어려운 문제는 함께 고민하고&#44; 쉬운 문제는 능동적으로 해결\n • 빠른 기술 변화에 대한 적극적인 학습 태도\n • 동료의 성장을 도울 수 있다는 믿음\n 자격요건\n 이런 경험이 필요합니다\n • JavaScript 또는 TypeScript 사용 경험이 있으신 분\n • 순수 HTML & CSS에 대한 경험이 있으신 분\n • 모던 웹 프레임워크 \/ 라이브러리 1개 이상 사용 경험이 있으신 분\n • 모던 웹 상태 관리 개념 및 원리를 잘 알고 계신 분\n • 모던 CSS 속성 사용 경험이 있으신 분\n • 비동기 호출을 위한 네트워크 모듈(XHR&#44; Web Fetch) 에 대한 이해 및 경험이 있으신 분\n • 해외 출장에 결격 사유가 없는 분\n\n 우대사항\n 이런 경험이 있다면 더더욱 좋습니다\n • 성능 이슈&#44; 메모리 누수&#44; 네트워크 프로파일링 경험이 있으신 분\n • UI 컴포넌트 테스팅 경험이 있으신 분\n • SSR \/ CSR 방식 등 다양한 렌더링을 사용하여 웹 어플리케이션 개발 경험이 있으신 분\n • Next.js&#44; Tailwind CSS 사용 경험이 있으신 분\n • Atomic Design에 대해 알고계신 분\n • AWS ECS \/ Cloudfront에 대해 경험이 있으신 분\n • 오픈소스 기여 경험이 있으신 분\n\n  혜택 및 복지\n • 파격적인 안식 휴가 제공:  3년 근무 시&#44; 30일 유급휴가 및 200만원의 휴가비를 지원해 드립니다.\n • 업무 도서 지원: 업무에 필요하거나 도움이 될 수 있는 도서 구매를 전액 지원받을 수 있습니다. \n • 매월 식비 지원: 사내식당 점심 지원 및 분기별 30만원 씩 기본 연봉과 별도로 포인트 형태로 지급해 드립니다.\n • 종합 건강 검진 지원: 매년 1회 건강검진을 시행하며&#44; 검진비용을 지원해 드립니다.\n • 카카오 어린이집 운영: 추첨을 통해 원아를 모집하고 있습니다.\n • 경조사 지원: 본인\/배우자\/가족 등의 경조사에 대한 경조사비\/화환\/용품 등을 지원해 드립니다.\n • 가족 상해 보험 지원: 본인&#44; 배우자&#44; 자녀&#44; 본인과 배우자의 부모까지 보장성 보험료와 실손의료비를 지원해 드립니다.\n\n [전형안내]\n 서류 전형 ＞1차 인터뷰 ＞ 2차 인터뷰 ＞ 처우 협의 ＞ 최종 합격\n\n * 직무 및 상황에 따라 전형 절차는 변경될 수 있습니다.\n * 지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.\n",
+      "technologyStack" : [
+        {"id" : 0, "stacks" : "C"},
+        {"id" : 1, "stacks" : "하드웨어"},
+        {"id" : 2, "stacks" : "C++"},
+        {"id" : 3, "stacks" : "펌웨어"}
+      ]   
     },
     {
       "id" : 133874,
       "imgAddress" : [
-        {
-          "id" : 0,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22947%2Feivai5cs8oj7juah__1080_790.png&w=1000&q=75"}, 
-        {
-          "id" : 1,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22947%2F81imuzfjrxctwdk7__1080_790.jpg&w=1000&q=75"}, 
-        {
-          "id" : 2,
-          "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22947%2Fmste3ewhyiemwouc__1080_790.jpg&w=1000&q=75"}
+        {"id" : 0, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22947%2Feivai5cs8oj7juah__1080_790.png&w=1000&q=75"}, 
+        {"id" : 1, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22947%2F81imuzfjrxctwdk7__1080_790.jpg&w=1000&q=75"}, 
+        {"id" : 2, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22947%2Fmste3ewhyiemwouc__1080_790.jpg&w=1000&q=75"}
       ],
       "imgAlt" : "파이노버스랩(페이먼스)",
       "jobCategory" : "소프트웨어 엔지니어(프론트엔드 웹)",
@@ -109,7 +172,32 @@
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
-      "companyReward" : "1000000"
+      "companyReward" : "1000000",
+      "companyTag" : [
+        {"id" : 0, "tags" : "#연봉상위1%"},
+        {"id" : 1, "tags" : "#인원급성장"},
+        {"id" : 2, "tags" : "#50명이하"},
+        {"id" : 3, "tags" : "#설립3년이하"},
+        {"id" : 4, "tags" : "#스톡옵션"},
+        {"id" : 5, "tags" : "#스타트업"},
+        {"id" : 6, "tags" : "#과일"},
+        {"id" : 7, "tags" : "#원격근무"},
+        {"id" : 8, "tags" : "#IT, 컨텐츠"}
+      ],
+      "companyIntroduction" : "회사소개\n 카카오픽코마는 작품과 독자의 연결을 통해 독자에게는 일상의 즐거움을&#44; 콘텐츠 산업에서는 작품의 가치가 더욱 빛날 수 있는 세상을 만들고자 합니다. 세계 최대의 일본 만화 시장과 프랑스에서 디지털 만화&#44; 소설 플랫폼 '픽코마'를 전개하고 있으며&#44; 나아가 작품이 국경을 초월하여 보다 넓은 세상의 독자들과 만날 수 있는 세계를 꿈꾸고 있습니다.\n\n &#91; 조직소개 &#93; \n 카카오픽코마 한국오피스 Global개발그룹은 독자적인 S\/W 개발 역량을 갖추어 여러가지 새로운 가능성들을 현실화할 수 있는 조직이 되고자 하는 목표를 가지고 있습니다. 조금 더 구체적으로는&#44; 성공적인 서비스 런칭과 성장을 목표로 S/W 개발을 주요 업무로 하는 곳입니다. 픽코마 서비스로 신 시장을 개척하여 전 세계 사람들이 만화를 보며 행복해지는 꿈을 꿉니다. 그래서 함께 고민하고 처음부터 다시 만들어나가는 마음가짐으로 도전하고 성장하는 인재를 찾고 있습니다.\n\n 주요업무\n [어떤 역할을 해주셔야 하나요]\n\n 이런 일을 합니다\n • 이미지 컨텐츠를 매끄럽게 고객에게 제공합니다\n • 신규 요구사항을 분석하고 설계하여 개발합니다\n • 기존 서버 API들을 재 사용하는 공수 최적화 설계합니다\n • 재 사용성을 극대화 하는 UI 컴포넌트 및 상태 설계합니다\n • 설계&#44; 개발&#44; 빌드&#44; 배포 파이프라인을 구축합니다\n\n 이런 마음가짐이 필요합니다\n • 장인 또는 리더로 성장 할 다짐\n • 어려운 문제는 함께 고민하고&#44; 쉬운 문제는 능동적으로 해결\n • 빠른 기술 변화에 대한 적극적인 학습 태도\n • 동료의 성장을 도울 수 있다는 믿음\n 자격요건\n 이런 경험이 필요합니다\n • JavaScript 또는 TypeScript 사용 경험이 있으신 분\n • 순수 HTML & CSS에 대한 경험이 있으신 분\n • 모던 웹 프레임워크 \/ 라이브러리 1개 이상 사용 경험이 있으신 분\n • 모던 웹 상태 관리 개념 및 원리를 잘 알고 계신 분\n • 모던 CSS 속성 사용 경험이 있으신 분\n • 비동기 호출을 위한 네트워크 모듈(XHR&#44; Web Fetch) 에 대한 이해 및 경험이 있으신 분\n • 해외 출장에 결격 사유가 없는 분\n\n 우대사항\n 이런 경험이 있다면 더더욱 좋습니다\n • 성능 이슈&#44; 메모리 누수&#44; 네트워크 프로파일링 경험이 있으신 분\n • UI 컴포넌트 테스팅 경험이 있으신 분\n • SSR \/ CSR 방식 등 다양한 렌더링을 사용하여 웹 어플리케이션 개발 경험이 있으신 분\n • Next.js&#44; Tailwind CSS 사용 경험이 있으신 분\n • Atomic Design에 대해 알고계신 분\n • AWS ECS \/ Cloudfront에 대해 경험이 있으신 분\n • 오픈소스 기여 경험이 있으신 분\n\n  혜택 및 복지\n • 파격적인 안식 휴가 제공:  3년 근무 시&#44; 30일 유급휴가 및 200만원의 휴가비를 지원해 드립니다.\n • 업무 도서 지원: 업무에 필요하거나 도움이 될 수 있는 도서 구매를 전액 지원받을 수 있습니다. \n • 매월 식비 지원: 사내식당 점심 지원 및 분기별 30만원 씩 기본 연봉과 별도로 포인트 형태로 지급해 드립니다.\n • 종합 건강 검진 지원: 매년 1회 건강검진을 시행하며&#44; 검진비용을 지원해 드립니다.\n • 카카오 어린이집 운영: 추첨을 통해 원아를 모집하고 있습니다.\n • 경조사 지원: 본인\/배우자\/가족 등의 경조사에 대한 경조사비\/화환\/용품 등을 지원해 드립니다.\n • 가족 상해 보험 지원: 본인&#44; 배우자&#44; 자녀&#44; 본인과 배우자의 부모까지 보장성 보험료와 실손의료비를 지원해 드립니다.\n\n [전형안내]\n 서류 전형 ＞1차 인터뷰 ＞ 2차 인터뷰 ＞ 처우 협의 ＞ 최종 합격\n\n * 직무 및 상황에 따라 전형 절차는 변경될 수 있습니다.\n * 지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.\n",
+      "technologyStack" : [
+        {"id" : 0, "stacks" : "Git"},
+        {"id" : 1, "stacks" : "Github"},
+        {"id" : 2, "stacks" : "VueJS"},
+        {"id" : 3, "stacks" : "JavaScript"},
+        {"id" : 4, "stacks" : "Python"},
+        {"id" : 5, "stacks" : "TypeScript"},
+        {"id" : 6, "stacks" : "AWS"},
+        {"id" : 7, "stacks" : "HTML5"},
+        {"id" : 8, "stacks" : "Docker"},
+        {"id" : 9, "stacks" : "CSS3"},
+        {"id" : 10, "stacks" : "MVVPostgreSQLM"}
+      ]   
     }
   ]
 }

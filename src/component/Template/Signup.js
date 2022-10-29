@@ -1,18 +1,45 @@
+import React, { useState } from "react";
 import "../../css/signup.css";
 import { GrClose } from "react-icons/gr";
-// import { useState } from "react";
 
 function Signup({ setSignupOpen, inputEmail }) {
   const closeSignup = () => {
     setSignupOpen(false);
   };
 
-  // const [checkboxAll, setCheckboxAll] = useState(false);
-  // const [checkedList, setCheckedList] = useState([]);
+  const data = [
+    {
+      id: 0,
+      title: "만 14세 이상입니다.(필수)",
+    },
+    {
+      id: 1,
+      title: "oneID 이용약관 동의 (필수)",
+    },
+    {
+      id: 2,
+      title: "개인정보 및 수집 이용 동의 (필수)",
+    },
+  ];
 
-  // const checkSelectAll = () => {};
+  const [checkedList, setCheckedList] = useState([]);
 
-  // const selectAll = () => {};
+  const selectEach = (checked, id) => {
+    if(checked) {
+      setCheckedList(addList => [...addList, id])
+    } else if(!checked && checkedList.includes(id)){
+      setCheckedList(checkedList.filter((el) => el !== id));
+    }
+    console.log(checkedList);
+  };
+
+  const selectAll = (checked) => {
+    if(checked) {
+      setCheckedList([0,1,2]);
+    } else {
+      setCheckedList([]);
+    }
+  };
 
   return (
     <div>
@@ -226,25 +253,19 @@ function Signup({ setSignupOpen, inputEmail }) {
               <input className="input-box" type="password" id="checkPassword" placeholder="비밀번호를 다시 한번 입력해 주세요." />
               <small id="passwordDoubleCheck"></small>
             </div>
-            {/* <div className="agree-checkbox">
+            <div className="agree-checkbox">
               <div>
-                <input type="checkbox" name="selectall" value="" onClick={selectAll(this)} />
+                <input type="checkbox" name="selectall" value="" onChange={(e) => selectAll(e.target.checked)} checked={checkedList.length === data.length ? true : false}/>
                 <span>전체 동의</span>
               </div>
               <hr />
-              <div className="agree-checkbox-one">
-                <input type="checkbox" name="agreement" value="1" onClick={checkSelectAll} />
-                <span>만 14세 이상입니다.(필수)</span>
-              </div>
-              <div className="agree-checkbox-one">
-                <input type="checkbox" name="agreement" value="2" onClick={checkSelectAll} />
-                <span>oneID 이용약관 동의 (필수)</span>
-              </div>
-              <div className="agree-checkbox-one">
-                <input type="checkbox" name="agreement" value="3" onClick={checkSelectAll} />
-                <span>개인정보 및 수집 이용 동의 (필수)</span>
-              </div>
-            </div> */}
+              {data.map((list) => (
+                <div className="agree-checkbox-one" key={list.id}>
+                  <input type="checkbox" name="agreement" value="1" onChange={(e) => selectEach(e.target.checked, list.id)} checked={checkedList.includes(list.id) ? true : false}/>
+                  <span>{list.title}</span>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="panel-buttons">
             <input type="submit" className="signup-button" value="회원가입하기" />

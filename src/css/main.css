@@ -11,6 +11,7 @@
 
 .slides{
   position: absolute;
+  display: flex;
 }
 
 .slides li{

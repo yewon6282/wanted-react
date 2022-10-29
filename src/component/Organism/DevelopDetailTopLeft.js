@@ -1,6 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import JobDetailImage from "../Atom/JobDetailImage";
+import JobDetailTag from "../Atom/JobDetailTag";
+import TechnologyStack from "../Atom/TechnologyStack";
 
 function DevelopDetailTopLeft({ warning, warningOn, warningOff }) {
   const location = useLocation();
@@ -21,15 +23,10 @@ function DevelopDetailTopLeft({ warning, warningOn, warningOff }) {
           <div className="company-location">{location.state.companyLocation}</div>
         </div>
         <div className="company-benefits">
-          <button>#식비</button>
-          <button>#사내식당</button>
-          <button>#어린이집</button>
-          <button>#건강검진</button>
-          <button>#의료비</button>
-          <button>#인공지능</button>
-          <button>#IT, 컨텐츠</button>
+          <JobDetailTag companyTag={location.state.companyTag}/>
         </div>
         <div className="about-company">
+        {/* {location.state.companyIntroduction} */}
           [회사소개]
           <br />
           카카오픽코마는 작품과 독자의 연결을 통해 독자에게는 일상의 즐거움을, 콘텐츠 산업에서는 작품의 가치가 더욱 빛날 수 있는 세상을 만들고자 합니다. 세계 최대의 일본 만화 시장과 프랑스에서 디지털 만화, 소설 플랫폼 '픽코마'를 전개하고 있으며, 나아가 작품이 국경을 초월하여 보다 넓은 세상의 독자들과 만날 수 있는 세계를 꿈꾸고 있습니다.
@@ -121,25 +118,7 @@ function DevelopDetailTopLeft({ warning, warningOn, warningOff }) {
         <div className="technology-stack-tool">
           기술스택 · 툴
           <div className="technology-stack-tool-type">
-            <p>Git</p>
-            <p>iOS</p>
-            <p>C / C++</p>
-            <p>HTML</p>
-            <p>Java</p>
-            <p>JavaScript</p>
-            <p>Kotlin</p>
-            <p>ObjectiveC</p>
-            <p>Python</p>
-            <p>TypeScript</p>
-            <p>MVVM</p>
-            <p>AWS</p>
-            <p>C++</p>
-            <p>Jenkins</p>
-            <p>NoSQL</p>
-            <p>NodeJS</p>
-            <p>Spring Framework</p>
-            <p>GCP</p>
-            <p>KOL 개발</p>
+            <TechnologyStack technologyStack={location.state.technologyStack}/>
           </div>
         </div>
         <div className="jobs-information">

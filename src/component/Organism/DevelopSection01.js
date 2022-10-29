@@ -1,9 +1,10 @@
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { AiFillCaretDown } from "react-icons/ai";
+import TagData from "../../json/FilterTag.json";
 
 function DevelopSection01({ scrollTop }) {
-  return (
+return (
     <>
       <div className="section1">
         <div className="section1-grid">
@@ -47,21 +48,11 @@ function DevelopSection01({ scrollTop }) {
             </div>
           </div>
           <div className="slick-list">
-            <div>
-              <button>
-                <span>연봉이 최고의 복지 💰</span>
-              </button>
-            </div>
-            <div>
-              <button>
-                <span>재택근무 🏠</span>
-              </button>
-            </div>
-            <div>
-              <button>
-                <span>퇴사율 10% 이하 📍</span>
-              </button>
-            </div>
+            {TagData.Tags.map((tag) => (
+              <div key={tag.id} style={{backgroundColor: `${tag.color}`}}>
+                <button>{tag.tag}</button>
+              </div>
+            ))}
           </div>
         </div>
       </div>

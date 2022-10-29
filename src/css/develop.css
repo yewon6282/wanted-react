@@ -111,8 +111,10 @@
 }
 
 .slick-list {
+  width: 66.25rem;
   display: flex;
   flex-direction: row;
+  overflow: scroll;
 }
 
 .slick-list div{
@@ -120,21 +122,15 @@
   margin-right: 0.5rem;
   border: none;
   border-radius: 1.25rem;
-  background-color: #F2FBF5;
   font-size: 0.81rem;
   line-height: 1rem;
   font-weight: 300;
   color: #333;
+  cursor: pointer;
 }
 
 .slick-list div button {
-  display: flex;
-  flex-direction: row;
-}
-
-.slick-list div button img {
-  margin-left: 0.31rem;
-  width: 1rem;
+  white-space: nowrap;
 }
 
 .section-bookmark {

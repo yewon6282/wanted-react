@@ -1,5 +1,5 @@
 import React from "react";
-import DevelopDetailTopLeft from "../Molecule/DevelopDetailTopLeft";
+import DevelopDetailTopLeft from "../Organism/DevelopDetailTopLeft";
 import DevelopDetailTopRight from "../Molecule/DevelopDetailTopRight";
 
 function DevelopDetailTop({ warning, warningOn, warningOff }) {
