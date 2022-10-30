@@ -198,6 +198,14 @@
   line-height: 1.75;
 }
 
+.job-description-title {
+  margin: 1.25rem 0 0;
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
 .technology-stack-tool {
   margin-top: 1.25rem;
   padding-bottom: 3.75rem;
