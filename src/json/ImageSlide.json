@@ -1,0 +1,10 @@
+{
+  "Images" : [
+    {"id" : 0, "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1863%2Fe8f9a9d3.jpg&w=1060&q=100", "alt" : "Startup Recruiting Bootcamp 2기"},
+    {"id" : 1, "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1868%2F99f8f5da.jpg&w=1060&q=100", "alt" : "11월 원티드살롱"},
+    {"id" : 2, "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1870%2Fd977df3f.jpg&w=1060&q=100", "alt" : "뽑히는 개발자 이력서!?"},
+    {"id" : 3, "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1843%2F6e4ca95f.jpg&w=1060&q=100", "alt" : "원티드긱스 <개발자의 달>"},
+    {"id" : 4, "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1860%2F22a89fd7.jpg&w=1060&q=100", "alt" : "1분 완성 비즈니스 메일"},
+    {"id" : 5, "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1859%2F6290aead.jpg&w=1060&q=100", "alt" : "검사/변호사 출신 엔지니어를 만나다"}
+  ]
+}

@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../../css/login.css";
 import Logo from "../../image/logo.png";
 import { GrClose } from "react-icons/gr";
 import { FaFacebookF, FaApple } from "react-icons/fa";
 
 function Login({ closeLogin, onChange, checkEmail, emailSubmit, showSignup }) {
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  })
+  
   return (
     <div>
       <div className="login-popup-background">
@@ -26,7 +32,7 @@ function Login({ closeLogin, onChange, checkEmail, emailSubmit, showSignup }) {
             </div>
             <div className="login-email">
               <p>이메일</p>
-              <input className={checkEmail ? "input-email" : "input-email-false"} onChange={onChange} type="email" id="email" placeholder="이메일을 입력해 주세요." />
+              <input className={checkEmail ? "input-email" : "input-email-false"} ref={inputRef} onChange={onChange} type="email" id="email" placeholder="이메일을 입력해 주세요." />
               {checkEmail ? "" : <small id="emailCheck">올바른 이메일을 입력해주세요.</small>}
             </div>
             <div className="panel-buttons">

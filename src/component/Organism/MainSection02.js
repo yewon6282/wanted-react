@@ -15,6 +15,12 @@ function MainSection02() {
     setPopupOpen(false);
   };
 
+  const [cardIdx, setCardIdx] = useState(7);
+
+  const showCard = () => {
+    setCardIdx(cardIdx+8);
+  }
+  
   return (
     <>
       <div className="section2">
@@ -64,9 +70,9 @@ function MainSection02() {
           </button>
         </div>
         <ul className="career-card">
-          <CareerInsight />
+          <CareerInsight cardIdx={cardIdx}/>
         </ul>
-        <button id="otherContent">
+        <button id="otherContent" onClick={showCard}>
           더 많은 콘텐츠 보기
           <BsChevronDown className="down-button-icon" />
         </button>

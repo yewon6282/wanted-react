@@ -8,8 +8,8 @@ function AboutCompany({ companyIntroduction }) {
           <div className="job-description-title">
             {content.title}
           </div>
-          {content.contents.split('\n').map((line) => (
-            <span>{line}<br/></span>
+          {content.contents.split('\n').map((line, key) => (
+            <p key={key}>{line}<br/></p>
           ))}
         </div>
       ))}

@@ -20,10 +20,9 @@ function HeaderRight() {
   const [checkEmail, setCheckEmail] = useState(true);
   const [emailSubmit, setEmailSubmit] = useState(false);
   const [inputEmail, setInputEamil] = useState("");
+  const emailCheck = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
   
   const onChange = (e) => {
-    const emailCheck = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    
     if (emailCheck.test(e.target.value) === true) {
       setCheckEmail(true);
       setEmailSubmit(true);

@@ -38,6 +38,8 @@ header .header{
 }
 
 .menu-list {
+  border-left: 1px solid #f0f1f2;
+  border-right: 1px solid #f0f1f2;
   display: block;
   padding: 0 6.25rem 0 0.62rem;
   font-size: 0.81rem;

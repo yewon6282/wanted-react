@@ -1,22 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import ImageSlide from "../../json/ImageSlide.json";
 
 function MainSection01() {
+  const imageLength = ImageSlide.Images.length;
+  const newImageList = {...ImageSlide};
+  const width = 67.75;
+  const [idx, setIdx] = useState(0);
+  const [imageSlide, setImageSlide] = useState(1);
+
+  const first = ImageSlide.Images.filter((e) => e.id === 0);
+  // const second = ImageSlide.Images.filter((e) => e.id === imageLength - 1);
+  
+  useEffect(() => {
+    newImageList.Images.push({ id: imageLength, imgAddress: first.map((e) => e.imgAddress).join(), alt: first.map((e) => e.alt).join() });
+    // newImageList.Images.push({ id: imageLength+1, imgAddress: second.map((e) => e.imgAddress).join(), alt: second.map((e) => e.alt).join() });
+    console.log(newImageList);
+  }, []);
+
+  function countIdx() {
+    if (idx === imageLength - 1) {
+      // setTimeout(() => {
+        setImageSlide(49.15);
+        setIdx(0);
+      // }, 2000);
+    } else {
+      setIdx(idx + 1);
+    }
+  }
+
+  setTimeout(countIdx, 3000);
+  useEffect(() => {
+    setImageSlide(49.15 + width * idx);
+
+    return () => {
+      countIdx();
+    };
+  }, [idx]);
+
   return (
     <div id="mainSection1">
-      <ul className="slides">
-        <li>
-          <img className="slide-image" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1862%2F4d8d83ed.jpg&amp;w=1060&amp;q=100" alt="이력서, 포트폴리오, 면접을 부탁해" />
-        </li>
-        <li>
-          <img className="slide-image" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1835%2F487d8bb0.jpg&amp;w=1060&amp;q=100" alt="Startup Lead Group Coaching" />
-        </li>
-        <li>
-          <img className="slide-image" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1861%2F357df4e6.jpg&amp;w=1060&amp;q=100" alt="어디서도 듣지 못한 피스 브랜드 이야기" />
-        </li>
-        <li>
-          <img className="slide-image" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1863%2Fe8f9a9d3.jpg&amp;w=1060&amp;q=100" alt="Startup Recruiting Bootcamp 2기" />
-        </li>
+      <ul className="slides" style={{ left: -`${imageSlide}` + "rem" }}>
+        {newImageList.Images.map((image) => (
+          <li key={image.id}>
+            <img className="slide-image" src={image.imgAddress} alt={image.alt} />
+          </li>
+        ))}
       </ul>
       <p className="controller">
         <span className="slide-prev">

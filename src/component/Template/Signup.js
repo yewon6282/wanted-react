@@ -255,13 +255,13 @@ function Signup({ setSignupOpen, inputEmail }) {
             </div>
             <div className="agree-checkbox">
               <div>
-                <input type="checkbox" name="selectall" value="" onChange={(e) => selectAll(e.target.checked)} checked={checkedList.length === data.length ? true : false}/>
+                <input type="checkbox" name="selectall" onChange={(e) => selectAll(e.target.checked)} checked={checkedList.length === data.length ? true : false}/>
                 <span>전체 동의</span>
               </div>
               <hr />
               {data.map((list) => (
                 <div className="agree-checkbox-one" key={list.id}>
-                  <input type="checkbox" name="agreement" value="1" onChange={(e) => selectEach(e.target.checked, list.id)} checked={checkedList.includes(list.id) ? true : false}/>
+                  <input type="checkbox" name="agreement" onChange={(e) => selectEach(e.target.checked, list.id)} checked={checkedList.includes(list.id) ? true : false}/>
                   <span>{list.title}</span>
                 </div>
               ))}
