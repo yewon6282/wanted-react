@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import JobDetailImage from "../Atom/JobDetailImage";
 import JobDetailTag from "../Atom/JobDetailTag";
@@ -9,9 +9,14 @@ function DevelopDetailTopLeft({ warning, warningOn, warningOff }) {
   const location = useLocation();
   const [stack, setStack] = useState(false);
 
-  if(location.state.technologyStack > 0) {
-    setStack(true);
-  }
+  // console.log(location.state.technologyStack.length);
+  useEffect(() => {
+    if(location.state.technologyStack === undefined) {
+      setStack(false);
+    } else {
+      setStack(true);
+    }
+  },[]);
 
   return (
     <div>
@@ -32,14 +37,18 @@ function DevelopDetailTopLeft({ warning, warningOn, warningOff }) {
           <JobDetailTag companyTag={location.state.companyTag} />
         </div>
         <div className="about-company">
-          <AboutCompany companyIntroduction={location.state.companyIntroduction}/>
+          <AboutCompany companyIntroduction={location.state.companyIntroduction} />
         </div>
-        {stack ? <div className="technology-stack-tool">
-          기술스택 · 툴
-          <div className="technology-stack-tool-type">
-            <TechnologyStack technologyStack={location.state.technologyStack} />
+        {stack ? (
+          <div className="technology-stack-tool">
+            기술스택 · 툴
+            <div className="technology-stack-tool-type">
+              <TechnologyStack technologyStack={location.state.technologyStack} />
+            </div>
           </div>
-        </div> : ""}
+        ) : (
+          ""
+        )}
         <div className="jobs-information">
           <div className="jobs-deadline">
             <span>마감일</span>

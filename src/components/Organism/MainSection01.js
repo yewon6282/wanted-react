@@ -15,22 +15,21 @@ function MainSection01() {
   useEffect(() => {
     newImageList.Images.push({ id: imageLength, imgAddress: first.map((e) => e.imgAddress).join(), alt: first.map((e) => e.alt).join() });
     // newImageList.Images.push({ id: imageLength+1, imgAddress: second.map((e) => e.imgAddress).join(), alt: second.map((e) => e.alt).join() });
-    console.log(newImageList);
   }, []);
 
   function countIdx() {
-    if (idx === imageLength - 1) {
-      // setTimeout(() => {
+    if (idx === imageLength - 2) {
+      setTimeout(() => {
         setImageSlide(49.15);
         setIdx(0);
-      // }, 2000);
+      }, 2000);
     } else {
       setIdx(idx + 1);
     }
   }
 
-  setTimeout(countIdx, 3000);
   useEffect(() => {
+    setTimeout(countIdx, 3000);
     setImageSlide(49.15 + width * idx);
 
     return () => {
