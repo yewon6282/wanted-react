@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useReducer, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import "../../css/login.css";
 import Logo from "../../image/logo.png";
@@ -27,13 +27,15 @@ const ModalOverlay = (props) => {
             지금 원티드에서 시작하세요.
           </h2>
         </div>
-        <div className="login-email">
-          <p>이메일</p>
-          <input className={props.checkEmail ? "input-email" : "input-email-false"} ref={props.inputRef} onChange={props.onChange} type="email" id="email" placeholder="이메일을 입력해 주세요." />
-          {props.checkEmail ? "" : <small id="emailCheck">올바른 이메일을 입력해주세요.</small>}
-        </div>
-        <div className="panel-buttons">
-          {props.emailSubmit ? <input type="submit" onClick={props.showSignup} className="email-login-button" value="이메일로 계속하기" /> : <input type="submit" onClick={props.showSignup} className="email-login-button-false" value="이메일로 계속하기" disabled="disabled" />}
+        <form onSubmit={props.submitHandler}>
+          <div className="login-email">
+            <p>이메일</p>
+            <input className={props.emailIsValid ? "input-email" : "input-email-false"} ref={props.inputRef} onChange={props.emailChangeHandler} type="email" id="email" placeholder="이메일을 입력해 주세요." />
+            {props.emailIsValid ? "" : <small id="emailCheck">올바른 이메일을 입력해주세요.</small>}
+          </div>
+          <input type="submit" className={props.emailBtnDisabled ? "email-login-button" : "email-login-button-false"} value="이메일로 계속하기" disabled={!props.emailBtnDisabled} />
+        </form>
+        <div className="login-else">
           <p>or</p>
           <div className="continue-next-account">다음 계정으로 계속하기</div>
           <div className="another-social-buttons">
@@ -73,6 +75,15 @@ const ModalOverlay = (props) => {
   );
 };
 
+const emailReducer = (state, action) => {
+  const emailCheck = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+  if (action.type === "USER_INPUT") {
+    return { value: action.val, isValid: emailCheck.test(action.val), btnDisabled : emailCheck.test(action.val)};
+  }
+  return { value: "", isValid: false, btnDisabled: false };
+};
+
 function Login(props) {
   const inputRef = useRef();
 
@@ -80,10 +91,30 @@ function Login(props) {
     inputRef.current.focus();
   });
 
+  const [formIsValid, setFormIsValid] = useState(false);
+  const [emailState, dispatchEmail] = useReducer(emailReducer, { value: "", isValid: true, btnDisabled: false });
+  const { isValid: emailIsValid } = emailState;
+  const { btnDisabled: emailBtnDisabled } = emailState;
+
+  const emailCheck = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+  const emailChangeHandler = (event) => {
+    dispatchEmail({ type: "USER_INPUT", val: event.target.value });
+
+    setFormIsValid(emailCheck.test(event.target.value));
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    
+    props.setShowModal(3);
+    props.setInputEmail(emailState.value);
+  };
+
   return (
     <div>
-      {ReactDOM.createPortal(<Backdrop closeModal={props.closeModal} />, document.getElementById("backdrop-root"))}
-      {ReactDOM.createPortal(<ModalOverlay closeModal={props.closeModal} checkEmail={props.checkEmail} inputRef={inputRef} onChange={props.onChange} emailSubmit={props.emailSubmit} showSignup={props.showSignup}/>, document.getElementById("overlay-root"))}
+      {ReactDOM.createPortal(<Backdrop closeModal={props.closeModal}/>, document.getElementById("backdrop-root"))}
+      {ReactDOM.createPortal(<ModalOverlay closeModal={props.closeModal} inputRef={inputRef} submitHandler={submitHandler} emailIsValid={emailIsValid} emailBtnDisabled={emailBtnDisabled} emailChangeHandler={emailChangeHandler} formIsValid={formIsValid} showSignup={props.showSignup} />, document.getElementById("overlay-root"))}
     </div>
   );
 }

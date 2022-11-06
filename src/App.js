@@ -15,9 +15,9 @@ function App() {
         <ScrollToTop />
         <Header />
         <Routes>
-          <Route path="/" element={<Main />}/>
-          <Route path="/Develop" element={<Develop />}/>
-          <Route path="/Develop/:DevelopDetail" element={<DevelopDetail />}/>
+          <Route path="/" element={<Main />} />
+          <Route path="/Develop" element={<Develop />} />
+          <Route path="/Develop/:DevelopDetail" element={<DevelopDetail />} />
         </Routes>
         <Footer />
       </BrowserRouter>
