@@ -232,10 +232,9 @@
 .job-card li {
   padding: 0.625rem;
   width: calc(25% - 1.25rem);
-  /* width: 15.6rem; */
 }
 
-.job-card li a {
+.jobcard-link {
   text-align: left;
 }
 
@@ -247,12 +246,15 @@
   object-fit: cover;
 }
 
-#jobCardBookmark {
+.job-card-bookmark {
   position: relative;
-  top: -10.5rem;
-  left: 14rem;
+  top: 2rem;
+  left: 6.7rem;
+  /* top: -10.5rem;
+  left: 14rem; */
   color: white;
-  z-index: 8;
+  /* z-index: 5; */
+
 }
 
 .job-card-category {

@@ -78,8 +78,8 @@ const ModalOverlay = (props) => {
 const emailReducer = (state, action) => {
   const emailCheck = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
-  if (action.type === "USER_INPUT") {
-    return { value: action.val, isValid: emailCheck.test(action.val), btnDisabled : emailCheck.test(action.val)};
+  if (action.type === "EMAIL_INPUT") {
+    return { value: action.val, isValid: emailCheck.test(action.val), btnDisabled: emailCheck.test(action.val) };
   }
   return { value: "", isValid: false, btnDisabled: false };
 };
@@ -91,30 +91,23 @@ function Login(props) {
     inputRef.current.focus();
   });
 
-  const [formIsValid, setFormIsValid] = useState(false);
   const [emailState, dispatchEmail] = useReducer(emailReducer, { value: "", isValid: true, btnDisabled: false });
-  const { isValid: emailIsValid } = emailState;
-  const { btnDisabled: emailBtnDisabled } = emailState;
-
-  const emailCheck = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
   const emailChangeHandler = (event) => {
-    dispatchEmail({ type: "USER_INPUT", val: event.target.value });
-
-    setFormIsValid(emailCheck.test(event.target.value));
+    dispatchEmail({ type: "EMAIL_INPUT", val: event.target.value });
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    
+
     props.setShowModal(3);
     props.setInputEmail(emailState.value);
   };
 
   return (
     <div>
-      {ReactDOM.createPortal(<Backdrop closeModal={props.closeModal}/>, document.getElementById("backdrop-root"))}
-      {ReactDOM.createPortal(<ModalOverlay closeModal={props.closeModal} inputRef={inputRef} submitHandler={submitHandler} emailIsValid={emailIsValid} emailBtnDisabled={emailBtnDisabled} emailChangeHandler={emailChangeHandler} formIsValid={formIsValid} showSignup={props.showSignup} />, document.getElementById("overlay-root"))}
+      {ReactDOM.createPortal(<Backdrop closeModal={props.closeModal} />, document.getElementById("backdrop-root"))}
+      {ReactDOM.createPortal(<ModalOverlay closeModal={props.closeModal} inputRef={inputRef} submitHandler={submitHandler} emailIsValid={emailState.isValid} emailBtnDisabled={emailState.btnDisabled} emailChangeHandler={emailChangeHandler} showSignup={props.showSignup} />, document.getElementById("overlay-root"))}
     </div>
   );
 }

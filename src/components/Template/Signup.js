@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import ReactDOM from "react-dom";
 import "../../css/signup.css";
 import { GrClose } from "react-icons/gr";
@@ -21,7 +21,7 @@ const ModalOverlay = (props) => {
         </div>
         <div className="signup-input">
           <p id="inputName">이름</p>
-          <input className="input-box" type="name" id="name" placeholder="이름을 입력해 주세요." />
+          <input className="input-box" onChange={props.nameChangeHandler} type="name" id="name" placeholder="이름을 입력해 주세요." />
           <small id="nameCheck"></small>
         </div>
         <div className="signup-input">
@@ -201,15 +201,15 @@ const ModalOverlay = (props) => {
             <option value="+263">+263 Zimbabwe</option>
           </select>
           <div className="certification-number">
-            <input className="input-box" type="number" id="number" placeholder="(예시) 01034567890" />
+            <input className="input-box" onChange={props.phoneNumChangeHandler} type="number" id="number" placeholder="(예시) 01034567890" />
             <button>인증번호 받기</button>
           </div>
-          <input className="input-box" type="number" id="certificationNumber" placeholder="인증번호를 입력해 주세요." />
+          <input className="input-box" type="number" id="certificationNumber" placeholder="인증번호를 입력해 주세요." disabled />
           <small id="numberCheck"></small>
         </div>
         <div className="signup-input">
           <p id="inputPassword">비밀번호</p>
-          <input className="input-box" type="password" id="password" placeholder="비밀번호를 입력해 주세요." />
+          <input className="input-box" onChange={props.passwordChangeHandler} type="password" id="password" placeholder="비밀번호를 입력해 주세요." />
           <p id="inputPasswordCondition">영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상 입력해 주세요.</p>
           <small id="passwordCheck"></small>
         </div>
@@ -220,7 +220,7 @@ const ModalOverlay = (props) => {
         </div>
         <div className="agree-checkbox">
           <div>
-            <input type="checkbox" name="selectall" onChange={(e) => props.selectAll(e.target.checked)} checked={props.checkedList.length === props.data.length ? true : false} />
+            <input type="checkbox" name="selectall" onChange={(e) => props.selectAll(e.target.checked)} checked={props.allChecked ? true : false} />
             <span>전체 동의</span>
           </div>
           <hr />
@@ -233,13 +233,73 @@ const ModalOverlay = (props) => {
         </div>
       </div>
       <div className="panel-buttons">
-        <input type="submit" className="signup-button" value="회원가입하기" />
+        <input type="submit" className="signup-button" value="회원가입하기" disabled={props.formIsValid ? true : false} />
       </div>
     </div>
   );
 };
 
+const nameReducer = (state, action) => {
+  const nameCheck = /^[가-힣]{2,4}$/;
+
+  if (action.type === "NAME_INPUT") {
+    return { value: action.val, isValid: nameCheck.test(action.val) };
+  }
+  return { value: "", isValid: false };
+};
+
+const phoneNumReducer = (state, action) => {
+  const phoneNumCheck = /\d{3}\d{4}\d{4}/;
+
+  if (action.type === "PHONE_NUM_INPUT") {
+    return { value: action.val, isValid: phoneNumCheck.test(action.val) };
+  }
+  return { value: "", isValid: false };
+};
+
+const passwordReducer = (state, action) => {
+  const passwordCheck = /(?=.*\d{1,50})(?=.*[~`!@#$%\^&*()-+=]{1,50})(?=.*[a-zA-Z]{2,50}).{8,16}$/;
+
+  if (action.type === "PASSWORD_INPUT") {
+    return { value: action.val, isValid: passwordCheck.test(action.val) };
+  }
+  return { value: "", isValid: false };
+};
+
 function Signup(props) {
+  const [formIsValid, setFormIsValid] = useState(false);
+  const [nameState, dispatchName] = useReducer(nameReducer, { value: "", isValid: false });
+  const [phoneNumState, dispatchPhoneNum] = useReducer(phoneNumReducer, { value: "", isValid: false });
+  const [passwordState, dispatchPassword] = useReducer(passwordReducer, { value: "", isValid: false });
+  const { isValid: nameIsValid } = nameState;
+  const { isValid: phoneNumIsValid } = phoneNumState;
+  const { isValid: passwordIsValid } = passwordState;
+
+  useEffect(() => {
+    console.log(nameIsValid + ", " + phoneNumIsValid + ", " + passwordIsValid);
+    if (nameIsValid && phoneNumIsValid && passwordIsValid) {
+      setFormIsValid(true);
+    }
+  }, [nameIsValid, phoneNumIsValid, passwordIsValid]);
+
+  const nameChangeHandler = (event) => {
+    dispatchName({ type: "NAME_INPUT", val: event.target.value });
+  };
+
+  const phoneNumChangeHandler = (event) => {
+    dispatchPhoneNum({ type: "PHONE_NUM_INPUT", val: event.target.value });
+  };
+
+  const passwordChangeHandler = (event) => {
+    dispatchPassword({ type: "PASSWORD_INPUT", val: event.target.value });
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    props.setShowModal(0);
+  };
+
   const data = [
     {
       id: 0,
@@ -256,6 +316,7 @@ function Signup(props) {
   ];
 
   const [checkedList, setCheckedList] = useState([]);
+  const [allChecked, setAllChecked] = useState();
 
   const selectEach = (checked, id) => {
     if (checked) {
@@ -273,10 +334,21 @@ function Signup(props) {
     }
   };
 
+  useEffect(() => {
+    if (checkedList.length === 3) {
+      setAllChecked(true);
+    } else {
+      setAllChecked(false);
+    }
+  }, [checkedList]);
+
   return (
     <div>
       {ReactDOM.createPortal(<Backdrop closeModal={props.closeModal} />, document.getElementById("backdrop-root"))}
-      {ReactDOM.createPortal(<ModalOverlay closeModal={props.closeModal} inputEmail={props.inputEmail} selectEach={selectEach} selectAll={selectAll} data={data} checkedList={checkedList} />, document.getElementById("overlay-root"))}
+      {ReactDOM.createPortal(
+        <ModalOverlay closeModal={props.closeModal} inputEmail={props.inputEmail} nameChangeHandler={nameChangeHandler} phoneNumChangeHandler={phoneNumChangeHandler} passwordChangeHandler={passwordChangeHandler} formIsValid={formIsValid} selectEach={selectEach} selectAll={selectAll} data={data} checkedList={checkedList} allChecked={allChecked} />,
+        document.getElementById("overlay-root")
+      )}
     </div>
   );
 }

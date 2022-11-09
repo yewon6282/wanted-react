@@ -71,6 +71,7 @@ function Header(props) {
       }
     }
   }, [randomNumList]);
+  console.log(newList);
 
   const [filterdData, setFilteredData] = useState([]);
   function filtering(tag) {

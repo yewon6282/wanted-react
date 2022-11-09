@@ -1,31 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import JobCardData from "../../json/JobCard.json";
-import { FaRegBookmark } from "react-icons/fa";
+import Bookmark from "../Atom/Bookmark";
 
 function JobCard() {
   return (
     <>
       {JobCardData.JobCards.map((jobCard) => (
         <li key={jobCard.id}>
+          <Bookmark />
           <Link
+            className="jobcard-link"
             to={`/Develop/${jobCard.id}`}
             state={{
               imgAddress: jobCard.imgAddress,
-              imgAlt : jobCard.imgAlt,
+              imgAlt: jobCard.imgAlt,
               category: jobCard.jobCategory,
               companyName: jobCard.jobCompanyName,
               responseRate: jobCard.responseRate,
               responseMessage: jobCard.responseMessage,
               companyLocation: jobCard.companyLocation,
-              companyTag : jobCard.companyTag,
-              companyIntroduction : jobCard.companyIntroduction,
-              technologyStack : jobCard.technologyStack
+              companyTag: jobCard.companyTag,
+              companyIntroduction: jobCard.companyIntroduction,
+              technologyStack: jobCard.technologyStack,
             }}
           >
             <div>
               <img className="job-card-image" src={jobCard.imgAddress[0].images} alt={jobCard.imgAlt} />
-              <FaRegBookmark id="jobCardBookmark" />
             </div>
             <p className="job-card-category">{jobCard.jobCategory}</p>
             <p className="job-card-company-name">{jobCard.jobCompanyName}</p>
