@@ -76,10 +76,26 @@
   border-radius: 0.3rem;
 }
 
-#nameCheck {
+.input-box-false {
+  margin-top: 0.68rem;
+  padding: 0 0.93rem;
+  width : 20.5rem;
+  height: 3.12rem;
+  font-size: 0.93rem;
+  color: #333;
+  border: 1px solid #fe415c;
+  border-radius: 0.3rem;
+}
+
+.input-box:focus, .input-box-false:focus {
+  outline:none;
+}
+
+.input-check {
   bottom: 0;
   margin-top: 0.4rem;
   font-size: 0.75rem;
+  color: #fe415c;
 }
 
 #countryNumber {
@@ -141,8 +157,19 @@
   height: 3.37rem;
   border-color: transparent;
   border-radius: 1.68rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #3366FF;
+  border: none;
+  cursor: pointer;
+}
+
+.signup-button-false {
+  width: 22.5rem;
+  height: 3.37rem;
+  border-color: transparent;
+  border-radius: 1.68rem;
   color: #cacaca;
   font-size: 1rem;
   background-color: #f2f4f7;
-  cursor: not-allowed;
 }

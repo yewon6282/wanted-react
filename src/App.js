@@ -13,15 +13,14 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    const storedUserLoggedInInformation = localStorage.getItem("isLoggedIn");
-
-    if (storedUserLoggedInInformation === "1") {
+    const storedUserId = localStorage.getItem("isLoggedIn");
+    if (storedUserId) {
       setIsLoggedIn(true);
     }
   }, []);
 
   const loginHandler = (email, password) => {
-    localStorage.setItem("isLoggedIn", "1");
+    localStorage.setItem("isLoggedIn", email);
     setIsLoggedIn(true);
   };
 
@@ -34,7 +33,7 @@ function App() {
     <div className="page">
       <BrowserRouter>
         <ScrollToTop />
-        <Header />
+        <Header isLoggedIn={isLoggedIn} onLogin={loginHandler} onLogout={logoutHandler}/>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/Develop" element={<Develop />} />

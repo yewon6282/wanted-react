@@ -4,7 +4,7 @@ import Signup from "../Template/Signup";
 import Search from "../Template/Search";
 import { IoIosSearch } from "react-icons/io";
 
-function HeaderRight() {
+function HeaderRight(props) {
   const [showModal, setShowModal] = useState(0);
   const [inputEmail, setInputEmail] = useState('');
 
@@ -27,11 +27,11 @@ function HeaderRight() {
           <IoIosSearch size={20} />
         </button>
         {showModal === 1 && <Search closeModal={closeModal}/>}
-        <button onClick={showLogin} className="menu">
+        <button onClick={showLogin} className="loginModal">
           회원가입/로그인
         </button>
         {showModal === 2 && <Login closeModal={closeModal} setShowModal={setShowModal} setInputEmail={setInputEmail}/>}
-        {showModal === 3 && <Signup closeModal={closeModal} inputEmail={inputEmail}/>}
+        {showModal === 3 && <Signup closeModal={closeModal} inputEmail={inputEmail} setShowModal={setShowModal} onLogin={props.onLogin}/>}
       </div>
       <a href="#!" className="corp-service">
         기업 서비스

@@ -102,7 +102,12 @@ ul .menu:hover {
   align-items: center;
 }
 
-.header-right .menu {
+.search-button {
+  display: flex;
+  align-items: center;
+}
+
+.header-right .loginModal {
   margin-left: 0.62rem;
   height: fit-content;
   font-size: 0.85rem;
