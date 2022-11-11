@@ -6,11 +6,11 @@ import { IoIosSearch } from "react-icons/io";
 
 function HeaderRight(props) {
   const [showModal, setShowModal] = useState(0);
-  const [inputEmail, setInputEmail] = useState('');
+  const [inputEmail, setInputEmail] = useState("");
 
   const showSearch = () => {
     setShowModal(1);
-  }
+  };
 
   const showLogin = () => {
     setShowModal(2);
@@ -26,12 +26,12 @@ function HeaderRight(props) {
         <button onClick={showSearch}>
           <IoIosSearch size={20} />
         </button>
-        {showModal === 1 && <Search closeModal={closeModal}/>}
+        {showModal === 1 && <Search closeModal={closeModal} setShowModal={setShowModal} />}
         <button onClick={showLogin} className="loginModal">
           회원가입/로그인
         </button>
-        {showModal === 2 && <Login closeModal={closeModal} setShowModal={setShowModal} setInputEmail={setInputEmail}/>}
-        {showModal === 3 && <Signup closeModal={closeModal} inputEmail={inputEmail} setShowModal={setShowModal} onLogin={props.onLogin}/>}
+        {showModal === 2 && <Login closeModal={closeModal} setShowModal={setShowModal} setInputEmail={setInputEmail} />}
+        {showModal === 3 && <Signup closeModal={closeModal} inputEmail={inputEmail} setShowModal={setShowModal} onLogin={props.onLogin} />}
       </div>
       <a href="#!" className="corp-service">
         기업 서비스

@@ -202,7 +202,7 @@ const ModalOverlay = (props) => {
             </select>
             <div className="certification-number">
               <input className={props.phoneNumFalseEffect?"input-box":"input-box-false"} onChange={props.phoneNumChangeHandler} type="tel" id="number" placeholder="(예시) 01034567890" />
-              <button>인증번호 받기</button>
+              <button disabled>인증번호 받기</button>
             </div>
             {props.phoneNumFalseEffect?"":<small className="input-check">올바른 전화번호를 입력해주세요.</small>}
             <input className="input-box" type="number" id="certificationNumber" placeholder="인증번호를 입력해 주세요." disabled />

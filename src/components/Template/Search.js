@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import "../../css/search.css";
 import searchTags from "../../json/searchTag.json";
-import jobCard from "../../json/JobCard.json";
 import { IoIosSearch } from "react-icons/io";
 import { BsChevronRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Backdrop = (props) => {
   return <div className="search" onClick={props.closeModal}></div>;
@@ -27,11 +27,17 @@ const ModalOverlay = (props) => {
             </div>
           </div>
           <ul>
-            {props.newList.map((first, key) => (
+            {props.newList.map((data, key) => (
               <li key={key}>
-                <button onClick={(e) => props.filtering(e.target.value)} className="filter-tag-button" style={{ backgroundColor: `${first[1].color}` }} value={first[0].tag}>
-                  {first[0].tag}
-                </button>
+                <Link 
+                  to={`/SearchResult/${data[0].id}`} 
+                  state={{ 
+                    id: data[0].id, 
+                    tag: data[0].tag 
+                    }} 
+                  onClick={props.selectTag} value={data[0].tag} style={{ backgroundColor: `${data[1].color}` }} className="filter-tag-button">
+                  {data[0].tag}
+                </Link>
               </li>
             ))}
           </ul>
@@ -43,8 +49,8 @@ const ModalOverlay = (props) => {
 
 function Header(props) {
   const [randomNumList, setRandomNumList] = useState([]);
+  const [finalNumList, setFinalNumList] = useState([]);
   const [newList, setNewList] = useState([]);
-  const [finalList, setFinalList] = useState([]);
   const colors = [
     { id: 0, color: "#f0f8f8" },
     { id: 1, color: "#eeedf4" },
@@ -59,30 +65,27 @@ function Header(props) {
   }
 
   useEffect(() => {
-    if (finalList.length < 5) {
+    if (finalNumList.length < 5) {
       makeNumList();
 
       let randomNumber = new Set(randomNumList);
-      setFinalList([...randomNumber]);
+      setFinalNumList([...randomNumber]);
     } else {
       for (let i = 0; i < 5; i++) {
-        let addColorList = searchTags.tags.filter((e) => e.id === finalList[i]).concat(colors[i]);
+        let addColorList = searchTags.tags.filter((e) => e.id === finalNumList[i]).concat(colors[i]);
         setNewList((prevNewList) => [...prevNewList, addColorList]);
       }
     }
   }, [randomNumList]);
-  console.log(newList);
 
-  const [filterdData, setFilteredData] = useState([]);
-  function filtering(tag) {
-    setFilteredData([jobCard.JobCards.filter((el) => el.companyTag.find((e) => e.tags.includes(tag)))]);
+  function selectTag() {
+    props.setShowModal(0);
   }
-  console.log(filterdData);
 
   return (
     <>
       {ReactDOM.createPortal(<Backdrop closeModal={props.closeModal} />, document.getElementById("backdrop-root"))}
-      {ReactDOM.createPortal(<ModalOverlay closeModal={props.closeModal} newList={newList} filtering={filtering} />, document.getElementById("overlay-root"))}
+      {ReactDOM.createPortal(<ModalOverlay closeModal={props.closeModal} newList={newList} selectTag={selectTag} />, document.getElementById("overlay-root"))}
     </>
   );
 }

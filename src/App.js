@@ -8,6 +8,7 @@ import Develop from "./components/Template/Develop";
 import DevelopDetail from "./components/Template/DevelopDetail";
 import ScrollToTop from "./components/Atom/ScrollTop";
 import { useEffect, useState } from "react";
+import SearchResult from "./components/Template/SearchResult";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,11 +34,12 @@ function App() {
     <div className="page">
       <BrowserRouter>
         <ScrollToTop />
-        <Header isLoggedIn={isLoggedIn} onLogin={loginHandler} onLogout={logoutHandler}/>
+        <Header isLoggedIn={isLoggedIn} onLogin={loginHandler} onLogout={logoutHandler} />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/Develop" element={<Develop />} />
           <Route path="/Develop/:DevelopDetail" element={<DevelopDetail />} />
+          <Route path="/SearchResult/:SearchedResult" element={<SearchResult />} />
         </Routes>
         <Footer />
       </BrowserRouter>
