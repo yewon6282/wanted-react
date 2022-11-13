@@ -17,6 +17,7 @@ function JobCard() {
               imgAlt: jobCard.imgAlt,
               category: jobCard.jobCategory,
               companyName: jobCard.jobCompanyName,
+              companyImage: jobCard.jobCompanyImage,
               responseRate: jobCard.responseRate,
               responseMessage: jobCard.responseMessage,
               companyLocation: jobCard.companyLocation,

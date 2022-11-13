@@ -28,6 +28,23 @@
     {"id" : 25, "category" : "보상", "tag" : "#성과급"},
     {"id" : 26, "category" : "보상", "tag" : "#상여금"},
     {"id" : 27, "category" : "보상", "tag" : "#연말보너스"},
-    {"id" : 28, "category" : "보상", "tag" : "#스톡옵션"}
+    {"id" : 28, "category" : "보상", "tag" : "#스톡옵션"},
+    {"id" : 29, "category" : "기업문화", "tag" : "#수평적조직"},
+    {"id" : 30, "category" : "기업문화", "tag" : "#스타트업"},
+    {"id" : 31, "category" : "기업문화", "tag" : "#자율복장"},
+    {"id" : 32, "category" : "기업문화", "tag" : "#워크샵"},
+    {"id" : 33, "category" : "기업문화", "tag" : "#반려동물"},
+    {"id" : 34, "category" : "식사·간식", "tag" : "#조식제공"},
+    {"id" : 35, "category" : "식사·간식", "tag" : "#중식제공"},
+    {"id" : 36, "category" : "식사·간식", "tag" : "#석식제공"},
+    {"id" : 37, "category" : "식사·간식", "tag" : "#시리얼"},
+    {"id" : 38, "category" : "식사·간식", "tag" : "#식비"},
+    {"id" : 39, "category" : "식사·간식", "tag" : "#음료"},
+    {"id" : 40, "category" : "식사·간식", "tag" : "#맥주"},
+    {"id" : 41, "category" : "식사·간식", "tag" : "#커피"},
+    {"id" : 42, "category" : "식사·간식", "tag" : "#와인"},
+    {"id" : 43, "category" : "식사·간식", "tag" : "#샐러드"},
+    {"id" : 44, "category" : "식사·간식", "tag" : "#과일"},
+    {"id" : 45, "category" : "식사·간식", "tag" : "#간식"}
   ]
 }

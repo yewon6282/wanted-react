@@ -10,6 +10,7 @@
       "imgAlt" : "카카오픽코마",
       "jobCategory" : "프론트엔드 개발",
       "jobCompanyName" : "카카오픽코마",
+      "jobCompanyImage" : "https://static.wanted.co.kr/images/wdes/0_5.df97857f.png",
       "responseRate" : "응답률 평균 이상",
       "responseMessage" : "지원 후 응답받을 확률이 75% 이상입니다.",
       "companyLocation" : "서울 · 한국",
@@ -64,6 +65,7 @@
       "imgAlt" : "파이리코",
       "jobCategory" : "Senior Software Engineer - Frontend 시니어 프론트앤드 개발자",
       "jobCompanyName" : "파이리코",
+      "jobCompanyImage" : "https://static.wanted.co.kr/images/wdes/0_5.1ed2a748.jpg",
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
@@ -108,6 +110,7 @@
       "imgAlt" : "리브애니웨어",
       "jobCategory" : "모바일앱 개발자(Flutter)",
       "jobCompanyName" : "리브애니웨어",
+      "jobCompanyImage" : "https://static.wanted.co.kr/images/wdes/0_5.d7c168f9.jpg",
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
@@ -154,6 +157,7 @@
       "imgAlt" : "룰루랩(lululab)",
       "jobCategory" : "프론트엔드(클라이언트) 개발자",
       "jobCompanyName" : "룰루랩(lululab)",
+      "jobCompanyImage" : "https://static.wanted.co.kr/images/wdes/0_5.a8b313b1.png",
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
@@ -193,6 +197,7 @@
       "imgAlt" : "파이노버스랩(페이먼스)",
       "jobCategory" : "소프트웨어 엔지니어(프론트엔드 웹)",
       "jobCompanyName" : "파이노버스랩(페이먼스)",
+      "jobCompanyImage" : "https://static.wanted.co.kr/images/wdes/0_5.338ba513.jpg",
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
@@ -243,6 +248,7 @@
       "imgAlt" : "유섭",
       "jobCategory" : "프론트엔드 개발자 Software Engineer (3년 이상)",
       "jobCompanyName" : "유섭",
+      "jobCompanyImage" : "https://static.wanted.co.kr/images/wdes/0_5.713dfb6e.jpg",
       "responseRate" : "응답률 매우 높음",
       "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
       "companyLocation" : "서울 · 한국",
@@ -264,6 +270,50 @@
         {"id" : 3, "title" : "우대사항", "contents" : "Redux 등 상태 관리 라이브러리를 사용한 경험이 있으신 분\n디자이너와 함께 협업을 통해 서비스 개발 경험이 있으신 분\n팀 리드 경험이 있으신 분\n기본 영어 의사소통이 가능하신 분\n"},
         {"id" : 4, "title" : "혜택 및 복지", "contents" : "자유로운 휴가 사용 + 무제한 (무급) 휴가 \n주 40시간 유연 근무제 (자율 출근 시간 9am~11am)\n점심, 간식 지원\n운동 등 자기개발비 지원\n노트북, 키보드, 마우스, 모니터 지급 (1년에 100만원씩 장비 교체비 부여)\n매년 건강 검진 지원\n함께 성장하는 반려식물 지원 (식물 선택 가능)\n6개월 연봉협상"}
       ]
+    },
+    {
+      "id" : 107744,
+      "imgAddress" : [
+        {"id" : 0, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2263%2Fr38cgc41pnvdvxyr__1080_790.jpg&w=1000&q=75"}, 
+        {"id" : 1, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2263%2Fy6ngr2q6ombrnbip__1080_790.jpg&w=1000&q=75"}, 
+        {"id" : 2, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2263%2Fnwlmypzazcm7n0ha__1080_790.jpg&w=1000&q=75"},
+        {"id" : 3, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2263%2Fbkquxci1vs88cnxd__1080_790.jpg&w=1000&q=75"},
+        {"id" : 4, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2263%2Ff4mwmw3lxwwgpiqi__1080_790.jpg&w=1000&q=75"},
+        {"id" : 5, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2263%2Fboe9rwsw13sucdk1__1080_790.jpg&w=1000&q=75"},
+        {"id" : 6, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2263%2Fh8ciwcsdajw9jqvj__1080_790.jpg&w=1000&q=75"},
+        {"id" : 7, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2263%2Forogyyoqzqqj3hri__1080_790.jpg&w=1000&q=75"},
+        {"id" : 8, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2263%2F2nyubpxcnzkzbvjt__1080_790.jpg&w=1000&q=75"},
+        {"id" : 9, "images" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2263%2Fbyhlxgbxcmnwgwgu__1080_790.jpg&w=1000&q=75"}
+      ],
+      "imgAlt" : "닥터다이어리",
+      "jobCategory" : "웹 퍼블리셔",
+      "jobCompanyName" : "닥터다이어리",
+      "jobCompanyImage" : "https://static.wanted.co.kr/images/wdes/0_5.c856ee60.png",
+      "responseRate" : "응답률 매우 높음",
+      "responseMessage" : "지원 후 응답받을 확률이 95% 이상입니다.",
+      "companyLocation" : "서울 · 한국",
+      "companyReward" : "1000000",
+      "companyTag" : [
+        {"id" : 0, "tags" : "#리프레시휴가"},
+        {"id" : 2, "tags" : "#식비"},
+        {"id" : 3, "tags" : "#음료"},
+        {"id" : 4, "tags" : "#커피"},
+        {"id" : 5, "tags" : "#간식"},
+        {"id" : 6, "tags" : "#택시비"},
+        {"id" : 7, "tags" : "#IT, 컨텐츠"}
+      ],
+      "companyIntroduction" : [
+        {"id" : 0, "title" : " ", "contents" : "[ 커뮤니티 기반, 질환관리 서비스. 닥터다이어리 ]\n\n‘질환'은 언제나 외롭고 ‘혼자'라는 생각이 들게 합니다. 닥터다이어리는 질환자들이 이러한 감정 침체에서 벗어나 일상으로의 회복이 가능하도록 돕고 그 가치를 지속적으로 제공할 수 있도록 노력합니다.\n\n닥터다이어리는 질병관리 헬스케어 서비스를 기반으로 환자들의 생명연장 가치를 실현합니다.\n\n당뇨환자들의 평생관리 파트너로서 모바일 앱을 통한 혈당관리, 질환정보, 커뮤니티 서비스를 제공하고 당뇨관리에 필수적인 의료기기, 건강식품, 식단 등을 온라인 커머스와 무화당 오프라인 매장을 통해 판매, 개척해 나갑니다.\n\n향후 닥터다이어리는 질환관리 서비스를 넘어 만성질환을 가지고 있는 사람들의 삶에 필수적인공존질환 관리 단일플랫폼으로 발전하고자 합니다.\n\n[Vision]\n1. 우리는 고객의 경험과 기술을 통하여 만성질환의 지속가능한 습관을 개선합니다.\n2. 우리는 고객의 개인화 된 경험을 통해 최단 기간과 방법으로 만성질환 관리를 할 수 있도록 도와줍니다.\n3. D2C 모델 경험을 통하여 B2B2C 모델인 보험사, 제약사, 디지털치료제 등을 위한 종합 디지털 플랫폼 구축을 목표로 합니다.\n4. 우리는 커뮤니티를 통한 고객의 경험을 극대화하여 지속적인 동기부여를 제공합니다.\n5. 당뇨관리 영역의 성장을 통해 글로벌 헬스케어 플랫폼으로 도약을 준비합니다.\n\n\n이러한 닥터다이어리의 미션과 비전에 공감하는 Crew를 공개모집합니다.\n\n--------------------------------------------------------------------------\n\n[채용절차]\n• 서류 심사 - 1차 인터뷰 - 2차 인터뷰 - 근무조건 협의\n• 저녁 시간에도 인터뷰는 가능합니다 :-)\n• 포지션의 특성에 따라 채용절차 중 과제가 진행될 수 있습니다.\n• 고용형태 : 정규직(수습기간 3개월)\n\n--------------------------------------------------------------------------\n"},
+        {"id" : 1, "title" : "주요업무", "contents" : "• 닥다몰/무화당(고도몰) 사용성(UX/UI) 개선\n• 신규 기능 추가에 따른 퍼블리싱\n"},
+        {"id" : 2, "title" : "자격요건", "contents" : "• 2년 이상의 디자인/UI 퍼블리싱 실무 경험이 있으신 분\n• HTML, CSS, jQuery 활용한 퍼블리싱에 능숙하신 분\n• PC 및 모바일 접근성/반응형 Web 설계가 가능하신 분\n• 고도몰/카페24 솔루션 디자인/퍼블리싱 경험이 있으신 분\n"},
+        {"id" : 3, "title" : "우대사항", "contents" : "• Figma 활용 경험이 있으신 분\n• E-커머스 근무 경력이 있으신 분\n• 웹 기획 경험이 있으신 분\n• 웹디자인 경험 있으신 분(포토샵 가능자)\n"},
+        {"id" : 4, "title" : "혜택 및 복지", "contents" : "[For Work]\n• 자율출근제 8~10시반 사이 자유롭게 출근\n• 선릉역 1분 초역세권\n• Mac, Gram, 24인치 듀얼 모니터 등 최신 장비 지원\n• 야근 시 석식비 및 택시비 지급\n\n[For Life]\n• 입사 3년(15일), 5년(30일) 리프레시 휴가 지원\n• 주택관련 사내대출제도\n• 자사몰 임직원 할인\n• 단체종합검진 제공\n• 개인 능력 향상을 위한 도서구입비 지원\n\n[For Enjoy]\n• 패밀리 데이엔 전 직원 오후 반차(월 1회+명절 전날)\n• 사유 작성 없는 자유로운 연차 사용\n• 매년 1회 국내외 정기 워크숍\n• 커피, 음료 등 다양한 간식 지원\n• 명절 선물 제공\n• 생일연차 제공으로 생일에는 즐겁게 휴가"}
+      ],
+      "technologyStack" : [
+        {"id" : 0, "stacks" : "CSS"},
+        {"id" : 1, "stacks" : "HTML"},
+        {"id" : 2, "stacks" : "jQuery"}
+      ] 
     }
   ]
 }

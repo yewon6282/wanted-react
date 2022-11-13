@@ -12,7 +12,7 @@ function SearchResultBottom(props) {
                 <li key={data.id} className="company-item">
                   <div className="company-item-card">
                     <div className="company-card-header">
-                      <img src="https://static.wanted.co.kr/images/wdes/851_5_logo_globe.jpg" alt="text" />
+                      <img src={data.jobCompanyImage} alt={data.jobCompanyName} />
                       <p>{data.jobCompanyName}</p>
                       <button>팔로우</button>
                     </div>

@@ -9,14 +9,13 @@ function DevelopDetailTopLeft({ warning, warningOn, warningOff }) {
   const location = useLocation();
   const [stack, setStack] = useState(false);
 
-  // console.log(location.state.technologyStack.length);
   useEffect(() => {
-    if(location.state.technologyStack === undefined) {
+    if (location.state.technologyStack === undefined) {
       setStack(false);
     } else {
       setStack(true);
     }
-  },[]);
+  }, [location.state.technologyStack]);
 
   return (
     <div>
@@ -38,17 +37,17 @@ function DevelopDetailTopLeft({ warning, warningOn, warningOff }) {
         </div>
         <div className="about-company">
           <AboutCompany companyIntroduction={location.state.companyIntroduction} />
-        </div>
-        {stack ? (
-          <div className="technology-stack-tool">
-            기술스택 · 툴
-            <div className="technology-stack-tool-type">
-              <TechnologyStack technologyStack={location.state.technologyStack} />
+          {stack ? (
+            <div className="technology-stack-tool">
+              기술스택 · 툴
+              <div className="technology-stack-tool-type">
+                <TechnologyStack technologyStack={location.state.technologyStack} />
+              </div>
             </div>
-          </div>
-        ) : (
-          ""
-        )}
+          ) : (
+            ""
+          )}
+        </div>
         <div className="jobs-information">
           <div className="jobs-deadline">
             <span>마감일</span>
@@ -61,9 +60,9 @@ function DevelopDetailTopLeft({ warning, warningOn, warningOff }) {
         </div>
         <div className="company-information">
           <div className="company-information-block">
-            <img src="https://static.wanted.co.kr/images/wdes/0_5.df97857f.png" alt="카카오픽코마" />
+            <img src={location.state.companyImage} alt={location.state.companyName} />
             <div>
-              <h5>카카오픽코마</h5>
+              <h5>{location.state.companyName}</h5>
               <h6>IT, 컨텐츠</h6>
             </div>
           </div>

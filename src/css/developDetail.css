@@ -18,6 +18,7 @@
 
 .develop-detail-image img {
   width: 43.75rem;
+  height: 28.9rem;
   border-radius: 0.3rem;
   object-fit: cover;
 }
@@ -208,7 +209,6 @@
 
 .technology-stack-tool {
   margin-top: 1.25rem;
-  padding-bottom: 3.75rem;
   font-weight: 500;
 }
 
@@ -267,7 +267,6 @@
 .company-information-block img {
   margin-right: 0.9375rem;
   width: 3.125rem;
-  border: 1px solid #e9e9e9;
 }
 
 .company-information-block div {

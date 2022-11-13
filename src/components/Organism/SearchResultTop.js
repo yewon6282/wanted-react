@@ -68,6 +68,8 @@ function SearchResultTop(props) {
   const businessYear = searchTags.tags.filter((e) => e.category === "업력");
   const workVacation = searchTags.tags.filter((e) => e.category === "근무·휴가");
   const compensation = searchTags.tags.filter((e) => e.category === "보상");
+  const companyCulture = searchTags.tags.filter((e) => e.category === "기업문화");
+  const mealSnack = searchTags.tags.filter((e) => e.category === "식사·간식");
 
   function showAllTags() {
     if (showTags) {
@@ -137,6 +139,8 @@ function SearchResultTop(props) {
           <EveryTag everyTagCategory={businessYear} />
           <EveryTag everyTagCategory={workVacation} />
           <EveryTag everyTagCategory={compensation} />
+          <EveryTag everyTagCategory={companyCulture} />
+          <EveryTag everyTagCategory={mealSnack} />
         </div>
       ) : (
         ""
