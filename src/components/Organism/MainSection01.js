@@ -10,11 +10,9 @@ function MainSection01() {
   const [imageSlide, setImageSlide] = useState(1);
 
   const first = ImageSlide.Images.filter((e) => e.id === 0);
-  // const second = ImageSlide.Images.filter((e) => e.id === imageLength - 1);
   
   useEffect(() => {
     newImageList.Images.push({ id: imageLength, imgAddress: first.map((e) => e.imgAddress).join(), alt: first.map((e) => e.alt).join() });
-    // newImageList.Images.push({ id: imageLength+1, imgAddress: second.map((e) => e.imgAddress).join(), alt: second.map((e) => e.alt).join() });
   }, []);
 
   function countIdx() {

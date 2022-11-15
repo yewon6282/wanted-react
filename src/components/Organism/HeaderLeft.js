@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-// import "../../css/header.css";
 import Logo from "../../image/logo.png";
 
 function HeaderLeft() {

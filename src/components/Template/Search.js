@@ -60,7 +60,7 @@ function Header(props) {
   ];
 
   function makeNumList() {
-    let randomNum = Math.floor(Math.random() * 28) + 1;
+    let randomNum = Math.floor(Math.random() * searchTags.tags.length) + 1;
     setRandomNumList((prevRandomNumList) => [...prevRandomNumList, randomNum]);
   }
 

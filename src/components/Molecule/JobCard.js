@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import JobCardData from "../../json/JobCard.json";
-import Bookmark from "../Atom/Bookmark";
+import { doBookmark, cancelBookmark } from "../../modules/bookmarking";
+// import Bookmark from "../Atom/Bookmark";
+import { FaRegBookmark, FaBookmark } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 
 function JobCard() {
+  const bookmarkList = useSelector(state => state.bookmarking);
+  const dispatch = useDispatch();
+
+  function bookmarking(id) {
+    console.log(bookmarkList);
+    dispatch(doBookmark(id));
+  }
+  
+  function cancelBookmarking(id) {
+    console.log(bookmarkList);
+    dispatch(cancelBookmark(id));
+  }
+
   return (
     <>
       {JobCardData.JobCards.map((jobCard) => (
         <li key={jobCard.id}>
-          <Bookmark />
+          {bookmarkList.includes(jobCard.id) ? <FaBookmark onClick={() => cancelBookmarking(jobCard.id)} className="job-card-bookmark" /> : <FaRegBookmark onClick={() => bookmarking(jobCard.id)} className="job-card-bookmark" />}
           <Link
             className="jobcard-link"
             to={`/Develop/${jobCard.id}`}
