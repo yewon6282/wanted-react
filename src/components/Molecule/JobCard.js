@@ -2,29 +2,33 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import JobCardData from "../../json/JobCard.json";
 import { doBookmark, cancelBookmark } from "../../modules/bookmarking";
-// import Bookmark from "../Atom/Bookmark";
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
+import { showLogin } from "../../modules/showModal";
 
 function JobCard() {
   const bookmarkList = useSelector(state => state.bookmarking);
+  console.log(bookmarkList);
+  const isLoggedIn = useSelector(state => state.logging);
   const dispatch = useDispatch();
 
   function bookmarking(id) {
-    console.log(bookmarkList);
     dispatch(doBookmark(id));
   }
   
   function cancelBookmarking(id) {
-    console.log(bookmarkList);
     dispatch(cancelBookmark(id));
   }
+
+  const showLoginModal = () => {
+    dispatch(showLogin());
+  };
 
   return (
     <>
       {JobCardData.JobCards.map((jobCard) => (
         <li key={jobCard.id}>
-          {bookmarkList.includes(jobCard.id) ? <FaBookmark onClick={() => cancelBookmarking(jobCard.id)} className="job-card-bookmark" /> : <FaRegBookmark onClick={() => bookmarking(jobCard.id)} className="job-card-bookmark" />}
+          {bookmarkList.includes(jobCard.id) ? <FaBookmark onClick={isLoggedIn[0] ? () => cancelBookmarking(jobCard.id) : showLoginModal} className="job-card-bookmark" /> : <FaRegBookmark onClick={isLoggedIn[0] ? () => bookmarking(jobCard.id) : showLoginModal} className="job-card-bookmark" />}
           <Link
             className="jobcard-link"
             to={`/Develop/${jobCard.id}`}

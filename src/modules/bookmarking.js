@@ -1,8 +1,10 @@
 const DOBOOKMARK = "DOBOOKMARK";
 const CANCELBOOKMARK = "CANCELBOOKMARK";
+const CANCELALLBOOKMARK = "CANCELALLBOOKMARK";
 
 export const doBookmark = (id) => ({ type: DOBOOKMARK, id });
 export const cancelBookmark = (id) => ({ type: CANCELBOOKMARK, id });
+export const cancelAllBookmark = (id) => ({ type: CANCELALLBOOKMARK, id });
 
 const initialState = [];
 
@@ -11,8 +13,9 @@ function bookmarking(state = initialState, action) {
     case DOBOOKMARK:
       return state = [...state, action.id];
     case CANCELBOOKMARK:
-      console.log(state.filter((e) => e !== action.id));
       return state.filter((e) => e !== action.id);
+    case CANCELALLBOOKMARK:
+      return state = [];
     default:
       return state;
   }

@@ -7,7 +7,7 @@ import { BsChevronRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const Backdrop = (props) => {
-  return <div className="search" onClick={props.closeModal}></div>;
+  return <div className="search" onClick={props.closeEveryModal}></div>;
 };
 
 const ModalOverlay = (props) => {
@@ -29,13 +29,25 @@ const ModalOverlay = (props) => {
           <ul>
             {props.newList.map((data, key) => (
               <li key={key}>
-                <Link 
-                  to={`/SearchResult/${data[0].id}`} 
-                  state={{ 
-                    id: data[0].id, 
-                    tag: data[0].tag 
-                    }} 
-                  onClick={props.selectTag} value={data[0].tag} style={{ backgroundColor: `${data[1].color}` }} className="filter-tag-button">
+                <Link
+                  to={`/SearchResult/${data[0].id}`}
+                  state={{
+                    id: data[0].id,
+                    tag: data[0].tag
+                    }}
+
+                  // to={{
+                  //   pathname: `/SearchResult/${data[0].id}`,
+                  //   state: {
+                  //     id: data[0].id,
+                  //     tag: data[0].tag,
+                  //   },
+                  // }}
+                  onClick={props.selectTag}
+                  value={data[0].tag}
+                  style={{ backgroundColor: `${data[1].color}` }}
+                  className="filter-tag-button"
+                >
                   {data[0].tag}
                 </Link>
               </li>
@@ -84,8 +96,8 @@ function Header(props) {
 
   return (
     <>
-      {ReactDOM.createPortal(<Backdrop closeModal={props.closeModal} />, document.getElementById("backdrop-root"))}
-      {ReactDOM.createPortal(<ModalOverlay closeModal={props.closeModal} newList={newList} selectTag={selectTag} />, document.getElementById("overlay-root"))}
+      {ReactDOM.createPortal(<Backdrop closeEveryModal={props.closeEveryModal} />, document.getElementById("backdrop-root"))}
+      {ReactDOM.createPortal(<ModalOverlay closeEveryModal={props.closeEveryModal} newList={newList} selectTag={selectTag} />, document.getElementById("overlay-root"))}
     </>
   );
 }

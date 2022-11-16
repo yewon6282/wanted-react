@@ -6,25 +6,25 @@ import jobCard from "../../json/JobCard.json";
 import { useLocation } from "react-router-dom";
 
 function SearchResult() {
-  const [searchNothing, setSearchNothing] = useState();
   const location = useLocation();
+  const [searchNothing, setSearchNothing] = useState();
   const [filteredData, setFilteredData] = useState([]);
   const [hasData, setHasData] = useState();
 
+  console.log(location);
   useEffect(() => {
-    if(jobCard.JobCards.filter((el) => el.companyTag.find((e) => e.tags.includes(location.state.tag))).length > 0) {
+    if (jobCard.JobCards.filter((el) => el.companyTag.find((e) => e.tags.includes(location.state.tag))).length > 0) {
       setFilteredData([jobCard.JobCards.filter((el) => el.companyTag.find((e) => e.tags.includes(location.state.tag)))]);
       setHasData(true);
     } else {
       setHasData(false);
-
     }
   }, [location.state.tag]);
 
   return (
     <main>
-      <SearchResultTop id={location.state.id} tag={location.state.tag} searchNothing={searchNothing} setSearchNothing={setSearchNothing}/>
-      <SearchResultBottom filteredData={filteredData} hasData={hasData} searchNothing={searchNothing}/>
+      <SearchResultTop id={location.state.id} tag={location.state.tag} searchNothing={searchNothing} setSearchNothing={setSearchNothing} />
+      <SearchResultBottom filteredData={filteredData} hasData={hasData} searchNothing={searchNothing} />
     </main>
   );
 }

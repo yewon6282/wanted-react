@@ -1,39 +1,67 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
+import { cancelAllBookmark } from "../../modules/bookmarking";
+import { doLogin, doLogout } from "../../modules/logging";
+import { showSearch, showLogin, closeModal } from "../../modules/showModal";
 import Login from "../Template/Login";
 import Signup from "../Template/Signup";
 import Search from "../Template/Search";
 import { IoIosSearch } from "react-icons/io";
+import { FiBell } from "react-icons/fi";
 
 function HeaderRight(props) {
-  const [showModal, setShowModal] = useState(0);
-  const [inputEmail, setInputEmail] = useState("");
+  const showModalState = useSelector((state) => state.showModal);
+  const dispatch = useDispatch();
+  const [inputEmail, setInputEmail] = useState();
 
-  const showSearch = () => {
-    setShowModal(1);
+  const showSearchModal = () => {
+    dispatch(showSearch());
   };
 
-  const showLogin = () => {
-    setShowModal(2);
+  const showLoginModal = () => {
+    dispatch(showLogin());
   };
 
-  const closeModal = () => {
-    setShowModal(0);
+  const closeEveryModal = () => {
+    dispatch(closeModal());
   };
+
+  const isLoggedIn = useSelector((state) => state.logging);
+
+  function onLogin(id, password) {
+    dispatch(doLogin(id, password));
+  }
+
+  function onLogout() {
+    dispatch(cancelAllBookmark());
+    dispatch(doLogout());
+  }
 
   return (
     <HeaderRightDiv>
       <div className="search-login-service">
         <div className="search-login">
-          <button onClick={showSearch}>
+          <button onClick={showSearchModal}>
             <IoIosSearch size={20} />
           </button>
-          {showModal === 1 && <Search closeModal={closeModal} setShowModal={setShowModal} />}
-          <button onClick={showLogin} className="login-modal">
-            회원가입/로그인
-          </button>
-          {showModal === 2 && <Login closeModal={closeModal} setShowModal={setShowModal} setInputEmail={setInputEmail} />}
-          {showModal === 3 && <Signup closeModal={closeModal} inputEmail={inputEmail} setShowModal={setShowModal} onLogin={props.onLogin} />}
+          {showModalState === 1 && <Search closeEveryModal={closeEveryModal} />}
+          {!isLoggedIn[0] ? (
+            <button onClick={showLoginModal} className="login-modal">
+              회원가입/로그인
+            </button>
+          ) : (
+            <>
+              <FiBell className="bell-icon" size={18} />
+              <button className="user-icon-button" onClick={onLogout}>
+                <div className="user-icon">
+                  <img id="userImage" src="https://static.wanted.co.kr/oneid-user/profile_default.png" alt="user" />
+                </div>
+              </button>
+            </>
+          )}
+          {showModalState === 2 && <Login closeEveryModal={closeEveryModal} setInputEmail={setInputEmail} />}
+          {showModalState === 3 && <Signup closeEveryModal={closeEveryModal} onLogin={onLogin} inputEmail={inputEmail} />}
         </div>
         <a href="#!" className="corp-service">
           기업 서비스
@@ -48,12 +76,12 @@ const HeaderRightDiv = styled.div`
   margin: auto 0;
   display: flex;
   flex-direction: row;
-  
+
   .search-login-service {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
     .search-login {
       padding: 0.2rem 1.25rem 0 0;
       margin-right: 1.25rem;
@@ -62,7 +90,7 @@ const HeaderRightDiv = styled.div`
       flex-direction: row;
       align-items: center;
       border-right: 1px solid #e1e2e3;
-      
+
       .login-modal {
         margin-left: 0.62rem;
         height: fit-content;
@@ -70,7 +98,35 @@ const HeaderRightDiv = styled.div`
         font-weight: 600;
         color: #333;
       }
+
+      .bell-icon {
+        margin-top: -0.1rem;
+        padding: 0 1.25rem;
+      }
+
+      .user-icon-button {
+        margin-top: -0.2rem;
+        width: 1.85rem;
+        height: 1.85rem;
+
+        .user-icon {
+          width: inherit;
+          height: inherit;
+          border: 1px solid #e1e2e3;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          #userImage {
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 50%;
+          }
+        }
+      }
     }
+
     .corp-service {
       padding: 0.5rem 0.6rem 0.4rem;
       font-size: 0.81rem;

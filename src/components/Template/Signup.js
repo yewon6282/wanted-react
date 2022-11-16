@@ -2,9 +2,11 @@ import React, { useEffect, useReducer, useState } from "react";
 import ReactDOM from "react-dom";
 import "../../css/signup.css";
 import { GrClose } from "react-icons/gr";
+import { useDispatch } from "react-redux";
+import { closeModal } from "../../modules/showModal";
 
 const Backdrop = (props) => {
-  return <div className="signup-popup-background" onClick={props.closeModal}></div>;
+  return <div className="signup-popup-background" onClick={props.closeEveryModal}></div>;
 };
 
 const ModalOverlay = (props) => {
@@ -12,7 +14,7 @@ const ModalOverlay = (props) => {
     <div className="signup-popup">
       <div className="signup-head">
         <span>회원가입</span>
-        <GrClose onClick={props.closeModal} id="closeIcon" size={20} />
+        <GrClose onClick={props.closeEveryModal} id="closeIcon" size={20} />
       </div>
       <form onSubmit={props.submitHandler}>
         <div className="signup-content">
@@ -201,23 +203,23 @@ const ModalOverlay = (props) => {
               <option value="+263">+263 Zimbabwe</option>
             </select>
             <div className="certification-number">
-              <input className={props.phoneNumFalseEffect?"input-box":"input-box-false"} onChange={props.phoneNumChangeHandler} type="tel" id="number" placeholder="(예시) 01034567890" />
+              <input className={props.phoneNumFalseEffect ? "input-box" : "input-box-false"} onChange={props.phoneNumChangeHandler} type="tel" id="number" placeholder="(예시) 01034567890" />
               <button disabled>인증번호 받기</button>
             </div>
-            {props.phoneNumFalseEffect?"":<small className="input-check">올바른 전화번호를 입력해주세요.</small>}
+            {props.phoneNumFalseEffect ? "" : <small className="input-check">올바른 전화번호를 입력해주세요.</small>}
             <input className="input-box" type="number" id="certificationNumber" placeholder="인증번호를 입력해 주세요." disabled />
             <small id="numberCheck"></small>
           </div>
           <div className="signup-input">
             <p id="inputPassword">비밀번호</p>
-            <input className={props.passwordFalseEffect?"input-box":"input-box-false"} onChange={props.passwordChangeHandler} type="password" id="password" placeholder="비밀번호를 입력해 주세요." />
-            {props.passwordFalseEffect?"":<small className="input-check">올바르지 않은 비밀번호입니다.</small>}
+            <input className={props.passwordFalseEffect ? "input-box" : "input-box-false"} onChange={props.passwordChangeHandler} type="password" id="password" placeholder="비밀번호를 입력해 주세요." />
+            {props.passwordFalseEffect ? "" : <small className="input-check">올바르지 않은 비밀번호입니다.</small>}
             <p id="inputPasswordCondition">영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여 8자 이상 입력해 주세요.</p>
           </div>
           <div className="signup-input">
             <p id="inputCheckPassword">비밀번호 확인</p>
-            <input className={props.compareFalseEffect?"input-box":"input-box-false"} onChange={props.checkPasswordChangeHandler} type="password" id="checkPassword" placeholder="비밀번호를 다시 한번 입력해 주세요." />
-            {props.compareFalseEffect?"":<small className="input-check">비밀번호가 서로 일치하지 않습니다.</small>}
+            <input className={props.compareFalseEffect ? "input-box" : "input-box-false"} onChange={props.checkPasswordChangeHandler} type="password" id="checkPassword" placeholder="비밀번호를 다시 한번 입력해 주세요." />
+            {props.compareFalseEffect ? "" : <small className="input-check">비밀번호가 서로 일치하지 않습니다.</small>}
           </div>
           <div className="agree-checkbox">
             <div>
@@ -281,6 +283,7 @@ function Signup(props) {
   const { falseEffect: phoneNumFalseEffect } = phoneNumState;
   const { isValid: passwordIsValid } = passwordState;
   const { falseEffect: passwordFalseEffect } = passwordState;
+  const dispatch = useDispatch();
 
   const nameChangeHandler = (event) => {
     dispatchName({ type: "NAME_INPUT", val: event.target.value });
@@ -352,15 +355,15 @@ function Signup(props) {
     event.preventDefault();
 
     props.onLogin(props.inputEmail, passwordState.value);
-    props.setShowModal(0);
+    dispatch(closeModal());
   };
 
   return (
     <div>
-      {ReactDOM.createPortal(<Backdrop closeModal={props.closeModal} />, document.getElementById("backdrop-root"))}
+      {ReactDOM.createPortal(<Backdrop closeEveryModal={props.closeEveryModal} />, document.getElementById("backdrop-root"))}
       {ReactDOM.createPortal(
         <ModalOverlay
-          closeModal={props.closeModal}
+          closeEveryModal={props.closeEveryModal}
           submitHandler={submitHandler}
           inputEmail={props.inputEmail}
           nameChangeHandler={nameChangeHandler}

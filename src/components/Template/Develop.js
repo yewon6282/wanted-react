@@ -31,7 +31,7 @@ function Develop() {
 
   return (
     <main>
-      <DevelopSection01 scrollTop={scrollTop}/>
+      <DevelopSection01 scrollTop={scrollTop} />
       <DevelopSection02 />
       <DevelopSection03 />
     </main>

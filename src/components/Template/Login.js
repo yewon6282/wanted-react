@@ -1,12 +1,14 @@
-import React, { useEffect, useReducer, useRef, useState } from "react";
+import React, { useEffect, useReducer, useRef } from "react";
 import ReactDOM from "react-dom";
 import "../../css/login.css";
 import Logo from "../../image/logo.png";
 import { GrClose } from "react-icons/gr";
 import { FaFacebookF, FaApple } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { showSignup } from "../../modules/showModal";
 
 const Backdrop = (props) => {
-  return <div className="login-popup-background" onClick={props.closeModal}></div>;
+  return <div className="login-popup-background" onClick={props.closeEveryModal}></div>;
 };
 
 const ModalOverlay = (props) => {
@@ -14,7 +16,7 @@ const ModalOverlay = (props) => {
     <div className="login-popup">
       <div className="login-logo">
         <img className="logo-icon" src={Logo} alt="wanted-logo" />
-        <GrClose onClick={props.closeModal} id="closeIcon" size={20} />
+        <GrClose onClick={props.closeEveryModal} id="closeIcon" size={20} />
       </div>
       <div className="login-content">
         <div className="login-comment">
@@ -85,6 +87,7 @@ const emailReducer = (state, action) => {
 };
 
 function Login(props) {
+  const dispatch = useDispatch();
   const inputRef = useRef();
 
   useEffect(() => {
@@ -100,14 +103,14 @@ function Login(props) {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    props.setShowModal(3);
+    dispatch(showSignup());
     props.setInputEmail(emailState.value);
   };
 
   return (
     <div>
-      {ReactDOM.createPortal(<Backdrop closeModal={props.closeModal} />, document.getElementById("backdrop-root"))}
-      {ReactDOM.createPortal(<ModalOverlay closeModal={props.closeModal} inputRef={inputRef} submitHandler={submitHandler} emailIsValid={emailState.isValid} emailBtnDisabled={emailState.btnDisabled} emailChangeHandler={emailChangeHandler} showSignup={props.showSignup} />, document.getElementById("overlay-root"))}
+      {ReactDOM.createPortal(<Backdrop closeEveryModal={props.closeEveryModal} />, document.getElementById("backdrop-root"))}
+      {ReactDOM.createPortal(<ModalOverlay closeEveryModal={props.closeEveryModal} inputRef={inputRef} submitHandler={submitHandler} emailIsValid={emailState.isValid} emailBtnDisabled={emailState.btnDisabled} emailChangeHandler={emailChangeHandler} />, document.getElementById("overlay-root"))}
     </div>
   );
 }

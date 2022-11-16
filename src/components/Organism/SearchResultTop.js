@@ -57,7 +57,6 @@ function SearchResultTop(props) {
       }
     }
   }, [randomNumList, props.id]);
-  console.log(newList);
 
   const [showTags, setShowTags] = useState();
   const salaryLevel = searchTags.tags.filter((e) => e.category === "업계연봉수준");
