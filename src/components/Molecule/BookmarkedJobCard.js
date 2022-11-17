@@ -1,71 +1,72 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import JobCardData from "../../json/JobCard.json";
-import { doBookmark, cancelBookmark } from "../../modules/bookmarking";
-import { FaRegBookmark, FaBookmark } from "react-icons/fa";
-import { showLogin } from "../../modules/showModal";
+import { cancelBookmark } from "../../modules/bookmarking";
+import { FaBookmark } from "react-icons/fa";
 
-function JobCard() {
+function BookmarkedJobCard() {
   const bookmarkList = useSelector((state) => state.bookmarking);
-  const isLoggedIn = useSelector((state) => state.logging);
   const dispatch = useDispatch();
-
-  function bookmarking(id) {
-    dispatch(doBookmark(id));
-  }
 
   function cancelBookmarking(id) {
     dispatch(cancelBookmark(id));
   }
 
-  const showLoginModal = () => {
-    dispatch(showLogin());
-  };
+  const [showBookmarkedList, setShowBookmarkedList] = useState([]);
+
+  useEffect(() => {
+    setShowBookmarkedList([]);
+    const bookmarkCnt = bookmarkList.length;
+    for (let i = 0; i < bookmarkCnt; i++) {
+      setShowBookmarkedList((prevBookmarkedList) => [...prevBookmarkedList, JobCardData.JobCards.filter((el) => el.id === bookmarkList[i])]);
+    }
+  }, [bookmarkList]);
 
   return (
     <>
-      {JobCardData.JobCards.map((jobCard) => (
-        <JobCardLi key={jobCard.id}>
-          {bookmarkList.includes(jobCard.id) ? <FaBookmark onClick={isLoggedIn[0] ? () => cancelBookmarking(jobCard.id) : showLoginModal} className="job-card-bookmark" /> : <FaRegBookmark onClick={isLoggedIn[0] ? () => bookmarking(jobCard.id) : showLoginModal} className="job-card-bookmark" />}
+      {showBookmarkedList.map((jobCard) => (
+        <BookmarkedJobCardLi key={jobCard[0].id}>
+          <FaBookmark onClick={() => cancelBookmarking(jobCard[0].id)} className="job-card-bookmark" />
           <Link
             className="job-card-link"
-            to={`/Develop/${jobCard.id}`}
+            to={`/Develop/${jobCard[0].id}`}
             state={{
-              imgAddress: jobCard.imgAddress,
-              imgAlt: jobCard.imgAlt,
-              category: jobCard.jobCategory,
-              companyName: jobCard.jobCompanyName,
-              companyImage: jobCard.jobCompanyImage,
-              responseRate: jobCard.responseRate,
-              responseMessage: jobCard.responseMessage,
-              companyLocation: jobCard.companyLocation,
-              companyTag: jobCard.companyTag,
-              companyIntroduction: jobCard.companyIntroduction,
-              technologyStack: jobCard.technologyStack,
+              imgAddress: jobCard[0].imgAddress,
+              imgAlt: jobCard[0].imgAlt,
+              category: jobCard[0].jobCategory,
+              companyName: jobCard[0].jobCompanyName,
+              companyImage: jobCard[0].jobCompanyImage,
+              responseRate: jobCard[0].responseRate,
+              responseMessage: jobCard[0].responseMessage,
+              companyLocation: jobCard[0].companyLocation,
+              companyTag: jobCard[0].companyTag,
+              companyIntroduction: jobCard[0].companyIntroduction,
+              technologyStack: jobCard[0].technologyStack,
             }}
           >
             <div>
-              <img className="job-card-image" src={jobCard.imgAddress[0].images} alt={jobCard.imgAlt} />
+              <img className="job-card-image" src={jobCard[0].imgAddress[0].images} alt={jobCard[0].imgAlt} />
             </div>
-            <p className="job-card-category">{jobCard.jobCategory}</p>
-            <p className="job-card-company-name">{jobCard.jobCompanyName}</p>
+            <p className="job-card-category">{jobCard[0].jobCategory}</p>
+            <p className="job-card-company-name">{jobCard[0].jobCompanyName}</p>
             <div className="job-card-container-hover">
-              <div className="job-card-container">{jobCard.responseRate}</div>
-              <span className="job-card-container-massage">{jobCard.responseMessage}</span>
+              <div className="job-card-container">{jobCard[0].responseRate}</div>
+              <span className="job-card-container-massage">{jobCard[0].responseMessage}</span>
             </div>
-            <p className="job-card-location">{jobCard.companyLocation}</p>
-            <p className="job-card-reward">채용보상금 {jobCard.companyReward.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원</p>
+            <p className="job-card-location">{jobCard[0].companyLocation}</p>
+            <p className="job-card-reward">채용보상금 {jobCard[0].companyReward.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원</p>
           </Link>
-        </JobCardLi>
+        </BookmarkedJobCardLi>
       ))}
     </>
   );
 }
 
-const JobCardLi = styled.li`
+const BookmarkedJobCardLi = styled.li`
   position: relative;
+  float: left;
   padding: 0.625rem;
   width: calc(25% - 1.25rem);
 
@@ -163,4 +164,4 @@ const JobCardLi = styled.li`
   }
 `;
 
-export default JobCard;
+export default BookmarkedJobCard;

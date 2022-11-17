@@ -1,0 +1,130 @@
+.login-next-popup-background {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-next-popup {
+  z-index: 11;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.3rem;
+}
+
+.login-next-head {
+  position: relative;
+  padding: 1rem 1.25rem;
+  color: #333;
+  font-size: 1.12rem;
+  font-weight: 500;
+}
+
+.prev-icon {
+  position: absolute;
+  top: 0.85rem;
+  left: 1rem;
+}
+
+.login-next-content {
+  padding: 1.25rem;
+}
+
+.login-password {
+  padding-bottom: 0.87rem;
+  text-align: left;
+}
+
+.login-password {
+  margin: 1.0625rem 0rem .4375rem;
+  font-size: .875rem;
+  color: #888;
+}
+
+.input-password {
+  margin: 0.68rem 0 1.875rem 0;
+  padding: 0 0.93rem;
+  width : 20.5rem;
+  height: 3.12rem;
+  font-size: 0.93rem;
+  color: #333;
+  border: 1px solid #e1e2e3;
+  border-radius: 0.3rem;
+}
+
+.input-password-false {
+  margin: 0.68rem 0 .5rem 0;
+  padding: 0 0.93rem;
+  width : 20.5rem;
+  height: 3.12rem;
+  font-size: 0.93rem;
+  color: #333;
+  border: 1px solid #fe415c;
+  border-radius: 0.3rem;
+}
+
+.input-password:focus, .input-password-false:focus {
+  outline:none;
+}
+
+#passwordCheck {
+  bottom: 0;
+  margin: 0.4rem 0 .5rem;
+  font-size: 0.75rem;
+  color: #fe415c;
+}
+
+.password-login-button {
+  width: 22.5rem;
+  height: 3.37rem;
+  border: 0;
+  border-radius: 1.68rem;
+  color: #fff;
+  background-color: #3366FF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.password-login-button-false {
+  width: 22.5rem;
+  height: 3.37rem;
+  border: 0;
+  border-radius: 1.68rem;
+  color: #ccc;
+  background-color: #f2f4f7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.initialization-password {
+  display: flex;
+  width: 100%;
+  height: 3.125rem;
+  border-radius: 1.5625rem;
+  font-size: 1rem;
+  margin: .625rem 0;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.initialization-password p {
+  font-size: .875rem;
+  color: #36F;
+}

@@ -16,7 +16,6 @@ function SearchResult() {
   const [hasData, setHasData] = useState();
 
   useEffect(() => {
-    console.log(params);
     filteringData();
   }, [params]);
 

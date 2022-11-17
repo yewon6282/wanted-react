@@ -1,11 +1,12 @@
 import React, { useEffect, useReducer, useRef } from "react";
 import ReactDOM from "react-dom";
+import { useDispatch } from "react-redux";
+import { showLoginNext, showSignup } from "../../modules/showModal";
 import "../../css/login.css";
 import Logo from "../../image/logo.png";
+import SavedId from "../../json/SavedId.json";
 import { GrClose } from "react-icons/gr";
 import { FaFacebookF, FaApple } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { showSignup } from "../../modules/showModal";
 
 const Backdrop = (props) => {
   return <div className="login-popup-background" onClick={props.closeEveryModal}></div>;
@@ -103,7 +104,11 @@ function Login(props) {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    dispatch(showSignup());
+    if (SavedId.SavedIds.filter((el) => el.id === emailState.value).length === 0) {
+      dispatch(showSignup());
+    } else {
+      dispatch(showLoginNext());
+    }
     props.setInputEmail(emailState.value);
   };
 

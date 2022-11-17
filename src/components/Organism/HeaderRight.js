@@ -9,6 +9,7 @@ import Signup from "../Template/Signup";
 import Search from "../Template/Search";
 import { IoIosSearch } from "react-icons/io";
 import { FiBell } from "react-icons/fi";
+import LoginNext from "../Template/LoginNext";
 
 function HeaderRight(props) {
   const showModalState = useSelector((state) => state.showModal);
@@ -61,7 +62,8 @@ function HeaderRight(props) {
             </>
           )}
           {showModalState === 2 && <Login closeEveryModal={closeEveryModal} setInputEmail={setInputEmail} />}
-          {showModalState === 3 && <Signup closeEveryModal={closeEveryModal} onLogin={onLogin} inputEmail={inputEmail} />}
+          {showModalState === 3 && <LoginNext closeEveryModal={closeEveryModal} onLogin={onLogin} inputEmail={inputEmail} />}
+          {showModalState === 4 && <Signup closeEveryModal={closeEveryModal} onLogin={onLogin} inputEmail={inputEmail} />}
         </div>
         <a href="#!" className="corp-service">
           기업 서비스
