@@ -5,6 +5,8 @@ import searchTags from "../../json/searchTag.json";
 import { IoIosSearch } from "react-icons/io";
 import { BsChevronRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { closeModal } from "../../modules/showModal";
 
 const Backdrop = (props) => {
   return <div className="search" onClick={props.closeEveryModal}></div>;
@@ -31,18 +33,6 @@ const ModalOverlay = (props) => {
               <li key={key}>
                 <Link
                   to={`/SearchResult/${data[0].id}`}
-                  state={{
-                    id: data[0].id,
-                    tag: data[0].tag
-                    }}
-
-                  // to={{
-                  //   pathname: `/SearchResult/${data[0].id}`,
-                  //   state: {
-                  //     id: data[0].id,
-                  //     tag: data[0].tag,
-                  //   },
-                  // }}
                   onClick={props.selectTag}
                   value={data[0].tag}
                   style={{ backgroundColor: `${data[1].color}` }}
@@ -60,6 +50,8 @@ const ModalOverlay = (props) => {
 };
 
 function Header(props) {
+  const dispatch = useDispatch();
+  
   const [randomNumList, setRandomNumList] = useState([]);
   const [finalNumList, setFinalNumList] = useState([]);
   const [newList, setNewList] = useState([]);
@@ -72,7 +64,7 @@ function Header(props) {
   ];
 
   function makeNumList() {
-    let randomNum = Math.floor(Math.random() * searchTags.tags.length) + 1;
+    let randomNum = Math.floor(Math.random() * searchTags.tags.length);
     setRandomNumList((prevRandomNumList) => [...prevRandomNumList, randomNum]);
   }
 
@@ -88,10 +80,10 @@ function Header(props) {
         setNewList((prevNewList) => [...prevNewList, addColorList]);
       }
     }
-  }, [randomNumList]);
+  }, [finalNumList, randomNumList]);
 
   function selectTag() {
-    props.setShowModal(0);
+    dispatch(closeModal);
   }
 
   return (

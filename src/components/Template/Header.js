@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import "../../css/header.css";
 import HeaderCenter from "../Organism/HeaderCenter";
 import HeaderLeft from "../Organism/HeaderLeft";
@@ -18,7 +18,7 @@ function Header() {
   );
 }
 
-// export const MainHeader = styled.header`
+// export const Header = styled.header`
 //   z-index: 10;
 //   position: fixed;
 //   top: 0;

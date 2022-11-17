@@ -1,29 +1,37 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "../../css/searchResult.css";
 import SearchResultTop from "../Organism/SearchResultTop";
 import SearchResultBottom from "../Organism/SearchResultBottom";
 import jobCard from "../../json/JobCard.json";
-import { useLocation } from "react-router-dom";
+import searchTags from "../../json/searchTag.json";
 
 function SearchResult() {
-  const location = useLocation();
+  const params = useParams();
+  const tagsId = Number(params.SearchedResult);
+  const filterTags = searchTags.tags.filter((el) => el.id === tagsId);
+  const tagsTag = filterTags.map((el) => el.tag).join();
   const [searchNothing, setSearchNothing] = useState();
   const [filteredData, setFilteredData] = useState([]);
   const [hasData, setHasData] = useState();
 
-  console.log(location);
   useEffect(() => {
-    if (jobCard.JobCards.filter((el) => el.companyTag.find((e) => e.tags.includes(location.state.tag))).length > 0) {
-      setFilteredData([jobCard.JobCards.filter((el) => el.companyTag.find((e) => e.tags.includes(location.state.tag)))]);
+    console.log(params);
+    filteringData();
+  }, [params]);
+
+  function filteringData() {
+    if (jobCard.JobCards.filter((el) => el.companyTag.find((e) => e.tags.includes(tagsTag))).length > 0) {
+      setFilteredData([jobCard.JobCards.filter((el) => el.companyTag.find((e) => e.tags.includes(tagsTag)))]);
       setHasData(true);
     } else {
       setHasData(false);
     }
-  }, [location.state.tag]);
+  }
 
   return (
     <main>
-      <SearchResultTop id={location.state.id} tag={location.state.tag} searchNothing={searchNothing} setSearchNothing={setSearchNothing} />
+      <SearchResultTop id={tagsId} tag={tagsTag} searchNothing={searchNothing} setSearchNothing={setSearchNothing} setHasData={setHasData}/>
       <SearchResultBottom filteredData={filteredData} hasData={hasData} searchNothing={searchNothing} />
     </main>
   );

@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import styled from "styled-components";
 import "../../css/develop.css";
 import DevelopSection01 from "../Organism/DevelopSection01";
 import DevelopSection02 from "../Organism/DevelopSection02";
@@ -30,12 +31,17 @@ function Develop() {
   }, [scroll]);
 
   return (
-    <main>
+    <DevelopMain>
       <DevelopSection01 scrollTop={scrollTop} />
       <DevelopSection02 />
       <DevelopSection03 />
-    </main>
+    </DevelopMain>
   );
 }
+
+const DevelopMain = styled.main`
+  width: 100%;
+  margin: 0 auto;
+`;
 
 export default Develop;

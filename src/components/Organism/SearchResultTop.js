@@ -15,22 +15,25 @@ function SearchResultTop(props) {
   const [newList, setNewList] = useState([]);
 
   function makeNumList() {
-    let randomNum = Math.floor(Math.random() * searchTags.tags.length) + 1;
+    let randomNum = Math.floor(Math.random() * searchTags.tags.length);
     setRandomNumList((prevRandomNumList) => [...prevRandomNumList, randomNum]);
   }
+
+  useEffect(() => setRandomNumList([]),[props]);
 
   useEffect(() => {
     setNewList([]);
     props.setSearchNothing(false);
     if (props.id === -1) {
+      props.setHasData(false);
       if (finalNumList.length < 5) {
         makeNumList();
-
+        
         let randomNumber = new Set(randomNumList);
         setFinalNumList([...randomNumber]);
       } else if (finalNumList.includes(props.id)) {
         setFinalNumList(finalNumList.filter((e) => e !== props.id));
-
+        
         makeNumList();
       } else {
         for (let i = 0; i < 5; i++) {
@@ -41,12 +44,12 @@ function SearchResultTop(props) {
     } else {
       if (finalNumList.length < 4) {
         makeNumList();
-
+        
         let randomNumber = new Set(randomNumList);
         setFinalNumList([...randomNumber]);
       } else if (finalNumList.includes(props.id)) {
         setFinalNumList(finalNumList.filter((e) => e !== props.id));
-
+        
         makeNumList();
       } else {
         setNewList((prevNewList) => [...prevNewList, searchTags.tags.filter((e) => e.id === props.id)]);
@@ -56,7 +59,7 @@ function SearchResultTop(props) {
         }
       }
     }
-  }, [randomNumList, props.id]);
+  }, [props, randomNumList]);
 
   const [showTags, setShowTags] = useState();
   const salaryLevel = searchTags.tags.filter((e) => e.category === "업계연봉수준");
@@ -104,12 +107,8 @@ function SearchResultTop(props) {
           {newList.map((list) => (
             <li key={list[0].id}>
               <Link
-                className={list[0].id === props.id && !props.searchNothing ? "choosed-tag" : "each-tag"}
+                className={list[0].id === props.id ? "choosed-tag" : "each-tag"}
                 to={`/SearchResult/${list[0].id}`}
-                state={{
-                  id: list[0].id,
-                  tag: list[0].tag,
-                }}
               >
                 {list[0].tag}
               </Link>
