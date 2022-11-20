@@ -24,7 +24,7 @@ function DevelopSection01({ scrollTop }) {
             </button>
           </div>
         </div>
-        <div className={scrollTop ? "section-scroll-fixed" : "section-scroll"}>
+        <DevelopSection01Scroll scrollTop={scrollTop}>
           <div className="section-scroll-content">
             <div className="section-filter">
               <div>
@@ -57,7 +57,7 @@ function DevelopSection01({ scrollTop }) {
               ))}
             </div>
           </div>
-        </div>
+        </DevelopSection01Scroll>
       </div>
     </DevelopSection01Div>
   );
@@ -65,31 +65,29 @@ function DevelopSection01({ scrollTop }) {
 
 const DevelopSection01Div = styled.div`
   width: inherit;
-  margin: 0 auto;
+  border-bottom: 1px solid #ececec;
 
   .section1 {
-    width: 100%;
-    border-bottom: 1px solid #ececec;
+    width: 66.25rem;
+    margin: 0 auto;
 
     .develop-category {
       padding-top: 1.8rem;
-      width: 66.25rem;
-      margin: 0 auto;
+      width: inherit;
 
       .develop-category-grid {
         display: flex;
         flex-direction: row;
-        
-        
+
         .job-group {
           padding-right: 1.5rem;
           border-right: 1px solid #e1e2e3;
         }
-        
+
         .job-category {
           padding-left: 1.5rem;
         }
-        
+
         .job-group,
         .job-category {
           display: flex;
@@ -118,102 +116,100 @@ const DevelopSection01Div = styled.div`
         }
       }
     }
+  }
 
-    .section-scroll {
-      padding-top: 1rem;
+  @media (min-width: 48rem) and (max-width: 61.9375rem) {
+    width: inherit;
+
+    .section1 {
+      width: 90%;
+      text-align: left;
+
+      .develop-category {
+        padding-top: 1.8rem;
+        width: inherit;
+      }
+    }
+  }
+`;
+
+const DevelopSection01Scroll = styled.div`
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  background-color: #fff;
+  z-index: ${(props) => (props.scrollTop ? 5 : " ")};
+  position: ${(props) => (props.scrollTop ? "fixed" : " ")};
+  top: ${(props) => (props.scrollTop ? "3.0994rem" : " ")};
+  left: ${(props) => (props.scrollTop ? "50%" : " ")};
+  transform: ${(props) => (props.scrollTop ? "translateX(-50%)" : " ")};
+  width: ${(props) => (props.scrollTop ? "100%" : " ")};
+  border-bottom: ${(props) => (props.scrollTop ? "1px solid blue" : " ")};
+
+  .section-scroll-content {
+    width: ${(props) => (props.scrollTop ? "66.25rem" : "inherit")};
+    margin: 0 auto;
+    text-align: left;
+
+    .section-filter {
+      margin-bottom: 1.5rem;
       padding-bottom: 1.5rem;
-      background-color: #fff;
+      border-bottom: 1px solid #ececec;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .filter-button {
+        background-color: inherit;
+        padding: 0.62rem 0.9rem;
+        margin-right: 0.62rem;
+        height: 2.5rem;
+        border: 1px solid #ececec;
+        border-radius: 0.31rem;
+        align-items: center;
+        font-size: 0.85rem;
+      }
+
+      .filter-title {
+        margin-right: 0.9rem;
+      }
+
+      .button-display {
+        color: #3366ff;
+        font-weight: 600;
+        margin-right: 0.3rem;
+      }
     }
 
-    .section-scroll-fixed {
-      z-index: 5;
-      position: fixed;
-      top: 3.0994rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      padding-top: 1rem;
-      padding-bottom: 1.5rem;
-      background-color: #fff;
-      border-bottom: 1px solid blue;
-    }
+    .slick-list {
+      width: inherit;
+      display: flex;
+      flex-direction: row;
+      overflow: scroll;
 
-    .section-scroll,
-    .section-scroll-fixed {
-      .section-scroll-content {
-        width: 66.25rem;
-        margin: 0 auto;
-        text-align: left;
+      & div {
+        padding: 0.5rem 0.8rem;
+        margin-right: 0.5rem;
+        border: none;
+        border-radius: 1.25rem;
+        font-size: 0.81rem;
+        line-height: 1rem;
+        font-weight: 300;
+        color: #333;
+        cursor: pointer;
+      }
 
-        .section-filter {
-          margin-bottom: 1.5rem;
-          padding-bottom: 1.5rem;
-          border-bottom: 1px solid #ececec;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-
-          .filter-button {
-            background-color: inherit;
-            padding: 0.62rem 0.9rem;
-            margin-right: 0.62rem;
-            height: 2.5rem;
-            border: 1px solid #ececec;
-            border-radius: 0.31rem;
-            align-items: center;
-            font-size: 0.85rem;
-          }
-
-          .filter-title {
-            margin-right: 0.9rem;
-          }
-
-          .button-display {
-            color: #3366ff;
-            font-weight: 600;
-            margin-right: 0.3rem;
-          }
-        }
-
-        .slick-list {
-          width: inherit;
-          display: flex;
-          flex-direction: row;
-          overflow: scroll;
-
-          & div {
-            padding: 0.5rem 0.8rem;
-            margin-right: 0.5rem;
-            border: none;
-            border-radius: 1.25rem;
-            font-size: 0.81rem;
-            line-height: 1rem;
-            font-weight: 300;
-            color: #333;
-            cursor: pointer;
-          }
-
-          & div button {
-            white-space: nowrap;
-          }
-        }
+      & div button {
+        white-space: nowrap;
       }
     }
   }
 
   @media (min-width: 48rem) and (max-width: 61.9375rem) {
-    width: 90%;
-    margin: 0 auto;
+    .section-scroll-content {
+      width: ${(props) => (props.scrollTop ? "90%" : "inherit")};
 
-    .section-scroll-fixed {
-      width: 100%;
-
-      .section-scroll-content {
-        width: 90%;
-
-        .slick-list {
-          width: 100%;
-        }
+      .slick-list {
+        width: 100%;
       }
     }
   }

@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
-import "../../css/develop.css";
 import DevelopSection01 from "../Organism/DevelopSection01";
 import DevelopSection02 from "../Organism/DevelopSection02";
 import DevelopSection03 from "../Organism/DevelopSection03";

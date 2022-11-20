@@ -10,6 +10,7 @@
   display: flex;
   transition: 0.5s ease-out;
   /* left: -49.15rem; */
+  left: 50%;
 }
 
 .slides li{

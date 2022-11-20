@@ -1,4 +1,6 @@
 import React from "react";
+import { BsShare } from 'react-icons/bs'
+import { FaRegBookmark } from "react-icons/fa";
 
 function DevelopDetailTopRight() {
   return (
@@ -6,7 +8,7 @@ function DevelopDetailTopRight() {
       <div className="job-process-container-top">
         <span>채용보상금</span>
         <div className="share-button">
-          <i className="fa fa-share-alt fa-lg" aria-hidden="true"></i>
+          <BsShare className="share-button-icon"/>
         </div>
         <div className="person-price">
           <div>
@@ -21,7 +23,8 @@ function DevelopDetailTopRight() {
       </div>
       <div className="job-process-container-bottom">
         <button className="bookmark-button">
-          <i className="fa fa-bookmark-o job-card-bookmark" aria-hidden="true"></i> 북마크하기
+          <FaRegBookmark />
+          <span>북마크하기</span>
         </button>
         <button className="apply-button">지원하기</button>
       </div>

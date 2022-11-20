@@ -46,7 +46,7 @@ function JobCard() {
               technologyStack: jobCard.technologyStack,
             }}
           >
-            <div>
+            <div className="job-card-image-box">
               <img className="job-card-image" src={jobCard.imgAddress[0].images} alt={jobCard.imgAlt} />
             </div>
             <p className="job-card-category">{jobCard.jobCategory}</p>
@@ -79,12 +79,14 @@ const JobCardLi = styled.li`
   .job-card-link {
     text-align: left;
 
-    .job-card-image {
-      width: 15.6rem;
-      height: 10.9rem;
-      border: 1px solid #e1e2e3;
-      border-radius: 0.2rem;
-      object-fit: cover;
+    .job-card-image-box {
+      .job-card-image {
+        width: 15.6rem;
+        height: 10.9rem;
+        border: 1px solid #e1e2e3;
+        border-radius: 0.2rem;
+        object-fit: cover;
+      }
     }
 
     .job-card-category {
@@ -149,15 +151,30 @@ const JobCardLi = styled.li`
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
-    width: calc(46.2% - 1.25rem);
+    padding: 0.625rem;
+    width: calc(50% - 1.25rem);
+
+    .job-card-bookmark {
+      position: absolute;
+      top: 8%;
+      left: 92%;
+      color: white;
+    }
 
     .job-card-link {
-      .job-card-image {
-        width: 30rem;
-        height: 20rem;
-        border: 1px solid #e1e2e3;
-        border-radius: 0.2rem;
-        object-fit: cover;
+      .job-card-image-box {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 80%;
+
+        .job-card-image {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
       }
     }
   }

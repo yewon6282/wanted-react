@@ -14,7 +14,7 @@ const ModalOverlay = (props) => {
   return (
     <div className="login-next-popup">
       <div className="login-next-head">
-        <BsChevronLeft className="prev-icon" onClick={props.backToLogin}/>
+        <BsChevronLeft className="prev-icon" onClick={props.backToLogin} />
         <p>이메일로 로그인</p>
       </div>
       <div className="login-next-content">
@@ -47,13 +47,11 @@ function LoginNext(props) {
   const [submitButtonIsValid, setSubmitButtonIsValid] = useState(false);
 
   function passwordChangeHandler(event) {
+    setFormIsValid(true);
+    setSubmitButtonIsValid(true);
+
     if (savedData === event.target.value) {
       setPasswordValue(event.target.value);
-      setFormIsValid(true);
-      setSubmitButtonIsValid(true);
-    } else {
-      setFormIsValid(false);
-      setSubmitButtonIsValid(false);
     }
   }
 
@@ -66,8 +64,13 @@ function LoginNext(props) {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    props.onLogin(props.inputEmail, passwordValue);
-    dispatch(closeModal());
+    if (passwordValue !== undefined) {
+      props.onLogin(props.inputEmail, passwordValue);
+      dispatch(closeModal());
+    } else {
+      setFormIsValid(false);
+      setSubmitButtonIsValid(false);
+    }
   };
 
   return (

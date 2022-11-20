@@ -28,8 +28,8 @@
   top: 4.6rem;
   margin: 0 0 3.75rem 1rem;
   padding: 1.5rem 1.25rem;
-  width: 18.625rem;
-  height: 17.125rem;
+  width: 100%;
+  height: 17rem;
   border: 1px solid #e1e2e3;
   border-radius: 0.3rem;
   text-align: left;
@@ -47,13 +47,14 @@
   position: absolute;
   top: -0.5rem;
   left: 16rem;
-  padding: 0.6rem 0.7rem;
+  padding: 0.5rem 0.7rem;
   border-radius: 50%;
   border: 1px solid #e1e2e3;
+  color: #36f;
 }
 
-.share-button i {
-  color: #36f;
+.share-button-icon {
+  margin-top: 0.2rem;
 }
 
 .person-price {
@@ -93,9 +94,8 @@
   color: #36f;
 }
 
-.bookmark-button i{
-  position: inherit;
-  color : #36f;
+.bookmark-button span {
+  margin-left: 0.2rem;
 }
 
 .job-process-container-bottom .apply-button {
@@ -275,18 +275,18 @@
 }
 
 .company-information-block h5 {
+  padding: 0.3rem 0.625rem 0 0;
   color: #333;
-  font-size: 0.9375rem;
+  font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 0.3125rem;
-  padding-right: 0.625rem;
 }
 
 .company-information-block h6 {
-  color: #999;
-  font-size: 0.9375rem;
-  font-weight: 600;
   padding-right: 0.625rem;
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .company-information button {
@@ -348,6 +348,10 @@
   color: #666;
 }
 
+.stealing-warning-bottom span {
+  font-weight: bold;
+}
+
 .develop-detail-bottom {
   margin: 0 auto;
   width: 66.25rem;
@@ -361,7 +365,7 @@
   text-align: left;
 }
 
-/* .job-card {
+.job-card {
   margin-top: 1.8rem;
   display: flex;
   flex-wrap: wrap;
@@ -369,7 +373,7 @@
 
 .job-card li {
   padding-bottom: 3.1rem;
-  width: 15.6rem;
+  width: calc(25% - 1.25rem);
 }
 
 .job-card li a {
@@ -442,4 +446,4 @@
   color: #333;
   font-size: 0.87rem;
   font-weight: 500;
-} */
+}
