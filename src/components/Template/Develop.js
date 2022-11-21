@@ -39,8 +39,17 @@ const Develop = () => {
 };
 
 const DevelopMain = styled.main`
-  width: 100%;
-  margin: 0 auto;
+  position: relative;
+  top: 3.1rem;
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 48rem) and (max-width: 61.9375rem) {
+    top: 6.875rem;
+  }
 `;
 
 export default Develop;

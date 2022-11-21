@@ -137,7 +137,7 @@ const DevelopSection01Scroll = styled.div`
   padding-top: 1rem;
   padding-bottom: 1.5rem;
   background-color: #fff;
-  z-index: ${(props) => (props.scrollTop ? 5 : " ")};
+  z-index: ${(props) => (props.scrollTop ? 10 : " ")};
   position: ${(props) => (props.scrollTop ? "fixed" : " ")};
   top: ${(props) => (props.scrollTop ? "3.0994rem" : " ")};
   left: ${(props) => (props.scrollTop ? "50%" : " ")};
@@ -205,6 +205,8 @@ const DevelopSection01Scroll = styled.div`
   }
 
   @media (min-width: 48rem) and (max-width: 61.9375rem) {
+    top: 6.875rem;
+
     .section-scroll-content {
       width: ${(props) => (props.scrollTop ? "90%" : "inherit")};
 

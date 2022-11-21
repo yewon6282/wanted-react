@@ -34,8 +34,14 @@ const Bookmarks = () => {
 };
 
 const BookmarksMain = styled.main`
+  position: relative;
+  top: 3.1rem;
   width: 100vw;
   min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   background-color: #f8f8fa;
 
   .bookmark-header {
@@ -67,6 +73,10 @@ const BookmarksMain = styled.main`
       display: flex;
       flex-wrap: wrap;
     }
+  }
+
+  @media (min-width: 48rem) and (max-width: 61.9375rem) {
+    top: 6.875rem;
   }
 `;
 
