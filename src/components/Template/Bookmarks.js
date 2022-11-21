@@ -6,7 +6,6 @@ import BookmarkedJobCard from "../Molecule/BookmarkedJobCard";
 
 const Bookmarks = () => {
   const bookmarkList = useSelector((state) => state.bookmarking);
-
   const navigate = useNavigate();
   const isLoggedIn = useSelector((state) => state.logging);
 
@@ -22,7 +21,7 @@ const Bookmarks = () => {
         <h1>북마크</h1>
       </div>
       <div className="bookmark-body">
-        {bookmarkList.length === 0 ? (
+        {bookmarkList.bookmarkId.length === 0 ? (
           <h1>아직 북마크한 포지션이 없습니다.</h1>
         ) : (
           <ul>

@@ -7,9 +7,10 @@ import { showSearch, showLogin, closeModal } from "../../modules/showModal";
 import Login from "../Template/Login";
 import Signup from "../Template/Signup";
 import Search from "../Template/Search";
+import LoginNext from "../Template/LoginNext";
 import { IoIosSearch } from "react-icons/io";
 import { FiBell } from "react-icons/fi";
-import LoginNext from "../Template/LoginNext";
+import { BiDotsHorizontalRounded } from "react-icons/bi";
 
 const HeaderRight = () => {
   const showModalState = useSelector((state) => state.showModal);
@@ -42,29 +43,28 @@ const HeaderRight = () => {
   return (
     <HeaderRightDiv>
       <div className="search-login-service">
-        <div className="search-login">
-          <button onClick={showSearchModal}>
-            <IoIosSearch size={20} />
+        <button className="show-modal-button" onClick={showSearchModal}>
+          <IoIosSearch size={20} />
+        </button>
+        {showModalState === 1 && <Search closeEveryModal={closeEveryModal} />}
+        {!isLoggedIn[0] ? (
+          <button onClick={showLoginModal} size={14} className="login-modal">
+            회원가입/로그인
           </button>
-          {showModalState === 1 && <Search closeEveryModal={closeEveryModal} />}
-          {!isLoggedIn[0] ? (
-            <button onClick={showLoginModal} className="login-modal">
-              회원가입/로그인
-            </button>
-          ) : (
-            <>
-              <FiBell className="bell-icon" size={18} />
-              <button className="user-icon-button" onClick={onLogout}>
-                <div className="user-icon">
-                  <img id="userImage" src="https://static.wanted.co.kr/oneid-user/profile_default.png" alt="user" />
-                </div>
+        ) : (
+          <>
+            <FiBell className="bell-icon" size={18} />
+            <div className="user-icon-button" onClick={onLogout}>
+              <button className="user-icon">
+                <img id="userImage" src="https://static.wanted.co.kr/oneid-user/profile_default.png" alt="user" />
               </button>
-            </>
-          )}
-          {showModalState === 2 && <Login closeEveryModal={closeEveryModal} setInputEmail={setInputEmail} />}
-          {showModalState === 3 && <LoginNext closeEveryModal={closeEveryModal} onLogin={onLogin} inputEmail={inputEmail} />}
-          {showModalState === 4 && <Signup closeEveryModal={closeEveryModal} onLogin={onLogin} inputEmail={inputEmail} />}
-        </div>
+            </div>
+          </>
+        )}
+        {showModalState === 2 && <Login closeEveryModal={closeEveryModal} setInputEmail={setInputEmail} />}
+        {showModalState === 3 && <LoginNext closeEveryModal={closeEveryModal} onLogin={onLogin} inputEmail={inputEmail} />}
+        {showModalState === 4 && <Signup closeEveryModal={closeEveryModal} onLogin={onLogin} inputEmail={inputEmail} />}
+
         <a href="#!" className="corp-service">
           기업 서비스
         </a>
@@ -84,47 +84,48 @@ const HeaderRightDiv = styled.div`
     flex-direction: row;
     align-items: center;
 
-    .search-login {
-      padding: 0.2rem 1.25rem 0 0;
-      margin-right: 1.25rem;
+    .show-modal-button {
+      margin-top: 0.19rem;
+    }
+
+    .more-button {
+      display: none;
+    }
+
+    .login-modal {
+      padding-right: 1.3rem;
+      margin: 0.2rem 1.3rem 0 1rem;
       height: 1.18rem;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #333;
+      border-right: 1px solid #e1e2e3;
+    }
+
+    .bell-icon {
+      padding: 0 1.25rem;
+    }
+
+    .user-icon-button {
+      padding-right: 1.5rem;
+      margin-right: 1.5rem;
+      width: 2rem;
+      height: 2rem;
       border-right: 1px solid #e1e2e3;
 
-      .login-modal {
-        margin-left: 0.62rem;
-        height: fit-content;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #333;
-      }
+      .user-icon {
+        width: inherit;
+        height: inherit;
+        border: 1px solid #e1e2e3;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      .bell-icon {
-        margin-top: -0.1rem;
-        padding: 0 1.25rem;
-      }
-
-      .user-icon-button {
-        margin-top: -0.2rem;
-        width: 1.85rem;
-        height: 1.85rem;
-
-        .user-icon {
-          width: inherit;
-          height: inherit;
-          border: 1px solid #e1e2e3;
+        #userImage {
+          width: 1.75rem;
+          height: 1.75rem;
           border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          #userImage {
-            width: 1.75rem;
-            height: 1.75rem;
-            border-radius: 50%;
-          }
         }
       }
     }
@@ -139,18 +140,8 @@ const HeaderRightDiv = styled.div`
     }
   }
 
-  @media screen and (max-width: 75rem) {
-    .search-login {
-      padding-right: 0.625rem;
-      margin-right: 0.625rem;
-
-      .login-modal {
-        margin-left: 0.4rem;
-      }
-    }
-  }
-
-  @media screen and (max-width: 61.875rem) {
+  @media (min-width: 48rem) and (max-width: 61.9375rem) {
+    display: none;
   }
 `;
 

@@ -25,7 +25,7 @@ const HiringCompany = () => {
 
 const HiringCompanyLi = styled.li`
   /* width: 12.31rem; */
-  margin: 0 0.4rem;
+  margin: 0 0.625rem;
   width: 100%;
   height: 16.93rem;
   border: 1px solid #ececec;

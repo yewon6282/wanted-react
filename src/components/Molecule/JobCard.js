@@ -12,7 +12,7 @@ const JobCard = () => {
   const isLoggedIn = useSelector((state) => state.logging);
   const dispatch = useDispatch();
 
-  const bookmarking = (id) => {
+  const doBookmarking = (id) => {
     dispatch(doBookmark(id));
   };
 
@@ -28,7 +28,9 @@ const JobCard = () => {
     <>
       {JobCardData.JobCards.map((jobCard) => (
         <JobCardLi key={jobCard.id}>
-          {bookmarkList.includes(jobCard.id) ? <FaBookmark onClick={isLoggedIn[0] ? () => cancelBookmarking(jobCard.id) : showLoginModal} className="job-card-bookmark" /> : <FaRegBookmark onClick={isLoggedIn[0] ? () => bookmarking(jobCard.id) : showLoginModal} className="job-card-bookmark" />}
+          {bookmarkList.bookmarkId.includes(jobCard.id) ? 
+            <FaBookmark onClick={isLoggedIn[0] ? () => cancelBookmarking(jobCard.id) : showLoginModal} className="job-card-bookmark" /> :
+            <FaRegBookmark onClick={isLoggedIn[0] ? () => doBookmarking(jobCard.id) : showLoginModal} className="job-card-bookmark" />}
           <Link
             className="job-card-link"
             to={`/Develop/${jobCard.id}`}

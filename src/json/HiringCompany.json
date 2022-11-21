@@ -29,12 +29,12 @@
     },
     {
       "id" : 3,
-      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F666%2Fev8xbqrdgjmpvmol__400_400.jpg&w=400&q=75",
-      "imgAlt" : "인라이플",
-      "companyLogo" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.8486cd98.png&w=100&q=75",
-      "companyLogoAlt" : "인라이플",
-      "companyTitle" : "인라이플",
-      "companyPosition" : "3개 포지션"
+      "imgAddress" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2237%2Fzya13wpnohi0uffa__400_400.jpg&w=400&q=75",
+      "imgAlt" : "스페이스워크",
+      "companyLogo" : "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.ad446faf.jpg&w=100&q=75",
+      "companyLogoAlt" : "스페이스워크",
+      "companyTitle" : "스페이스워크",
+      "companyPosition" : "5개 포지션"
     },
     {
       "id" : 4,

@@ -18,9 +18,9 @@ const BookmarkedJobCard = () => {
 
   useEffect(() => {
     setShowBookmarkedList([]);
-    const bookmarkCnt = bookmarkList.length;
+    const bookmarkCnt = bookmarkList.bookmarkId.length;
     for (let i = 0; i < bookmarkCnt; i++) {
-      setShowBookmarkedList((prevBookmarkedList) => [...prevBookmarkedList, JobCardData.JobCards.filter((el) => el.id === bookmarkList[i])]);
+      setShowBookmarkedList((prevBookmarkedList) => [...prevBookmarkedList, JobCardData.JobCards.filter((el) => el.id === bookmarkList.bookmarkId[i])]);
     }
   }, [bookmarkList]);
 
