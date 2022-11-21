@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchResultTag(props) {
+const SearchResultTag = (props) => {
   return (
     <>
       {props.companyTag.map((tag) => (
@@ -8,6 +8,6 @@ function SearchResultTag(props) {
       ))}
     </>
   );
-}
+};
 
 export default SearchResultTag;

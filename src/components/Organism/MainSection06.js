@@ -1,7 +1,7 @@
 import React from "react";
 import { BsCheck2 } from "react-icons/bs";
 
-function MainSection06() {
+const MainSection06 = () => {
   return (
     <div id="reasonSection">
       <div id="reasonSectionContents">
@@ -17,7 +17,7 @@ function MainSection06() {
           </div>
           <p id="reasonSectionContentsComment">구독자의 서류 합격률이 비구독자보다 1.5배 높아요!</p>
           <a href="#!" id="applySubscribe">
-            <BsCheck2 size={16}/>
+            <BsCheck2 size={16} />
             <p className="apply-subscribe-comment">첫 구독 0원 신청하기</p>
           </a>
         </div>
@@ -25,6 +25,6 @@ function MainSection06() {
       </div>
     </div>
   );
-}
+};
 
 export default MainSection06;

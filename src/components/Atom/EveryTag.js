@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function EveryTag(props) {
+const EveryTag = (props) => {
   return (
     <>
       <div className="tags-category">
@@ -9,7 +9,8 @@ function EveryTag(props) {
         <ul>
           {props.everyTagCategory.map((list) => (
             <li key={list.id}>
-              <Link className="category-tag" 
+              <Link
+                className="category-tag"
                 to={`/SearchResult/${list.id}`}
                 state={{
                   id: list.id,
@@ -24,6 +25,6 @@ function EveryTag(props) {
       </div>
     </>
   );
-}
+};
 
 export default EveryTag;

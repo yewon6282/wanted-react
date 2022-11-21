@@ -1,7 +1,7 @@
 import React from "react";
 import VODData from "../../json/VODForWorker.json";
 
-function VODForWorker() {
+const VODForWorker = () => {
   return (
     <>
       {VODData.VODForWorkers.map((vodData) => (
@@ -18,6 +18,6 @@ function VODForWorker() {
       ))}
     </>
   );
-}
+};
 
 export default VODForWorker;

@@ -2,7 +2,7 @@ import React from "react";
 import { BsChevronRight } from "react-icons/bs";
 import VODForWorker from "../Molecule/VODForWorker";
 
-function MainSection04() {
+const MainSection04 = () => {
   return (
     <>
       <div className="section2" id="VOD">
@@ -21,6 +21,6 @@ function MainSection04() {
       </div>
     </>
   );
-}
+};
 
 export default MainSection04;

@@ -4,7 +4,7 @@ import { FiChevronDown } from "react-icons/fi";
 import { AiFillCaretDown } from "react-icons/ai";
 import TagData from "../../json/FilterTag.json";
 
-function DevelopSection01({ scrollTop }) {
+const DevelopSection01 = (props) => {
   return (
     <DevelopSection01Div>
       <div className="section1">
@@ -24,7 +24,7 @@ function DevelopSection01({ scrollTop }) {
             </button>
           </div>
         </div>
-        <DevelopSection01Scroll scrollTop={scrollTop}>
+        <DevelopSection01Scroll scrollTop={props.scrollTop}>
           <div className="section-scroll-content">
             <div className="section-filter">
               <div>
@@ -61,7 +61,7 @@ function DevelopSection01({ scrollTop }) {
       </div>
     </DevelopSection01Div>
   );
-}
+};
 
 const DevelopSection01Div = styled.div`
   width: inherit;

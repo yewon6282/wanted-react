@@ -1,15 +1,15 @@
 import React from "react";
 
-function JobDetailImage({ imgAddress, imgAlt }) {
+const JobDetailImage = (props) => {
   return (
     <>
-      {imgAddress.map((image) => (
+      {props.imgAddress.map((image) => (
         <div key={image.id}>
-          <img src={image.images} alt={imgAlt} />
+          <img src={image.images} alt={props.imgAlt} />
         </div>
       ))}
     </>
   );
-}
+};
 
 export default JobDetailImage;

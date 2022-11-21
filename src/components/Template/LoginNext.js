@@ -34,7 +34,7 @@ const ModalOverlay = (props) => {
   );
 };
 
-function LoginNext(props) {
+const LoginNext = (props) => {
   const inputRef = useRef();
 
   useEffect(() => {
@@ -46,20 +46,20 @@ function LoginNext(props) {
   const [formIsValid, setFormIsValid] = useState(true);
   const [submitButtonIsValid, setSubmitButtonIsValid] = useState(false);
 
-  function passwordChangeHandler(event) {
+  const passwordChangeHandler = (event) => {
     setFormIsValid(true);
     setSubmitButtonIsValid(true);
 
     if (savedData === event.target.value) {
       setPasswordValue(event.target.value);
     }
-  }
+  };
 
   const dispatch = useDispatch();
 
-  function backToLogin() {
+  const backToLogin = () => {
     dispatch(showLogin());
-  }
+  };
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -79,6 +79,6 @@ function LoginNext(props) {
       {ReactDOM.createPortal(<ModalOverlay closeEveryModal={props.closeEveryModal} inputRef={inputRef} backToLogin={backToLogin} passwordChangeHandler={passwordChangeHandler} formIsValid={formIsValid} submitButtonIsValid={submitButtonIsValid} submitHandler={submitHandler} />, document.getElementById("overlay-root"))}
     </div>
   );
-}
+};
 
 export default LoginNext;

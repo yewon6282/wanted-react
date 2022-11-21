@@ -2,13 +2,13 @@ import React from "react";
 import DevelopDetailTopLeft from "../Organism/DevelopDetailTopLeft";
 import DevelopDetailTopRight from "../Molecule/DevelopDetailTopRight";
 
-function DevelopDetailTop({ warning, warningOn, warningOff }) {
+const DevelopDetailTop = (props) => {
   return (
     <div className="develop-detail-flex">
-      <DevelopDetailTopLeft warning={warning} warningOn={warningOn} warningOff={warningOff} />
+      <DevelopDetailTopLeft warning={props.warning} warningOn={props.warningOn} warningOff={props.warningOff} />
       <DevelopDetailTopRight />
     </div>
   );
-}
+};
 
 export default DevelopDetailTop;

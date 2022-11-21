@@ -87,7 +87,7 @@ const emailReducer = (state, action) => {
   return { value: "", isValid: false, btnDisabled: false };
 };
 
-function Login(props) {
+const Login = (props) => {
   const dispatch = useDispatch();
   const inputRef = useRef();
 
@@ -118,6 +118,6 @@ function Login(props) {
       {ReactDOM.createPortal(<ModalOverlay closeEveryModal={props.closeEveryModal} inputRef={inputRef} submitHandler={submitHandler} emailIsValid={emailState.isValid} emailBtnDisabled={emailState.btnDisabled} emailChangeHandler={emailChangeHandler} />, document.getElementById("overlay-root"))}
     </div>
   );
-}
+};
 
 export default Login;

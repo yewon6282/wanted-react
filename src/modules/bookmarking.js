@@ -8,17 +8,17 @@ export const cancelAllBookmark = (id) => ({ type: CANCELALLBOOKMARK, id });
 
 const initialState = [];
 
-function bookmarking(state = initialState, action) {
+const bookmarking = (state = initialState, action) => {
   switch (action.type) {
     case DOBOOKMARK:
-      return state = [...state, action.id];
+      return (state = [...state, action.id]);
     case CANCELBOOKMARK:
       return state.filter((e) => e !== action.id);
     case CANCELALLBOOKMARK:
-      return state = [];
+      return (state = []);
     default:
       return state;
   }
-}
+};
 
 export default bookmarking;

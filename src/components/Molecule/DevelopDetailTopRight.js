@@ -1,14 +1,14 @@
 import React from "react";
-import { BsShare } from 'react-icons/bs'
+import { BsShare } from "react-icons/bs";
 import { FaRegBookmark } from "react-icons/fa";
 
-function DevelopDetailTopRight() {
+const DevelopDetailTopRight = () => {
   return (
     <div className="job-process-container">
       <div className="job-process-container-top">
         <span>채용보상금</span>
         <div className="share-button">
-          <BsShare className="share-button-icon"/>
+          <BsShare className="share-button-icon" />
         </div>
         <div className="person-price">
           <div>
@@ -33,6 +33,6 @@ function DevelopDetailTopRight() {
       </button>
     </div>
   );
-}
+};
 
 export default DevelopDetailTopRight;

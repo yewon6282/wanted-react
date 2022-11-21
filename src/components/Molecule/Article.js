@@ -1,7 +1,7 @@
 import React from "react";
 import ArticleData from "../../json/Article.json";
 
-function Article() {
+const Article = () => {
   return (
     <>
       {ArticleData.Articles.map((article) => (
@@ -17,6 +17,6 @@ function Article() {
       ))}
     </>
   );
-}
+};
 
 export default Article;

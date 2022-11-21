@@ -31,13 +31,7 @@ const ModalOverlay = (props) => {
           <ul>
             {props.newList.map((data, key) => (
               <li key={key}>
-                <Link
-                  to={`/SearchResult/${data[0].id}`}
-                  onClick={props.selectTag}
-                  value={data[0].tag}
-                  style={{ backgroundColor: `${data[1].color}` }}
-                  className="filter-tag-button"
-                >
+                <Link to={`/SearchResult/${data[0].id}`} onClick={props.selectTag} value={data[0].tag} style={{ backgroundColor: `${data[1].color}` }} className="filter-tag-button">
                   {data[0].tag}
                 </Link>
               </li>
@@ -49,9 +43,9 @@ const ModalOverlay = (props) => {
   );
 };
 
-function Header(props) {
+const Search = (props) => {
   const dispatch = useDispatch();
-  
+
   const [randomNumList, setRandomNumList] = useState([]);
   const [finalNumList, setFinalNumList] = useState([]);
   const [newList, setNewList] = useState([]);
@@ -92,6 +86,6 @@ function Header(props) {
       {ReactDOM.createPortal(<ModalOverlay closeEveryModal={props.closeEveryModal} newList={newList} selectTag={selectTag} />, document.getElementById("overlay-root"))}
     </>
   );
-}
+};
 
-export default Header;
+export default Search;

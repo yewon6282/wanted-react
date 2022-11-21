@@ -4,7 +4,7 @@ import { GrClose } from "react-icons/gr";
 import { AiOutlineEllipsis } from "react-icons/ai";
 import CareerInsight from "../Molecule/CareerInsight";
 
-function MainSection02() {
+const MainSection02 = () => {
   const [popupOpen, setPopupOpen] = useState(false);
 
   const onDisplay = () => {
@@ -18,9 +18,9 @@ function MainSection02() {
   const [cardIdx, setCardIdx] = useState(7);
 
   const showCard = () => {
-    setCardIdx(cardIdx+8);
-  }
-  
+    setCardIdx(cardIdx + 8);
+  };
+
   return (
     <>
       <div className="section2">
@@ -70,7 +70,7 @@ function MainSection02() {
           </button>
         </div>
         <ul className="career-card">
-          <CareerInsight cardIdx={cardIdx}/>
+          <CareerInsight cardIdx={cardIdx} />
         </ul>
         <button id="otherContent" onClick={showCard}>
           더 많은 콘텐츠 보기
@@ -80,6 +80,6 @@ function MainSection02() {
       <hr />
     </>
   );
-}
+};
 
 export default MainSection02;

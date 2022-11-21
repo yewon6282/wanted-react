@@ -1,6 +1,6 @@
 import React from "react";
 
-function HeaderCenter() {
+const HeaderCenter = () => {
   return (
     <ul>
       <li className="menu">
@@ -40,6 +40,6 @@ function HeaderCenter() {
       </li>
     </ul>
   );
-}
+};
 
 export default HeaderCenter;

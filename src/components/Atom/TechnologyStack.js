@@ -1,15 +1,15 @@
 import React from "react";
 
-function TechnologyStack({ technologyStack }) {
+const TechnologyStack = (props) => {
   return (
     <>
-      {technologyStack.map((stack) => (
+      {props.technologyStack.map((stack) => (
         <span key={stack.id}>
           <p>{stack.stacks}</p>
         </span>
       ))}
     </>
   );
-}
+};
 
 export default TechnologyStack;

@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Logo from "../../image/logo.png";
 
-function HeaderLeft() {
+const HeaderLeft = () => {
   return (
     <div className="header-left">
       <div className="dropdown">
@@ -75,6 +75,6 @@ function HeaderLeft() {
       </Link>
     </div>
   );
-}
+};
 
 export default HeaderLeft;

@@ -5,8 +5,7 @@ import HeaderCenter from "../Organism/HeaderCenter";
 import HeaderLeft from "../Organism/HeaderLeft";
 import HeaderRight from "../Organism/HeaderRight";
 
-
-function Header() {
+const Header = () => {
   return (
     <header>
       <div className="header">
@@ -16,7 +15,7 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 // export const Header = styled.header`
 //   z-index: 10;

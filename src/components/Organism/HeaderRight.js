@@ -11,7 +11,7 @@ import { IoIosSearch } from "react-icons/io";
 import { FiBell } from "react-icons/fi";
 import LoginNext from "../Template/LoginNext";
 
-function HeaderRight(props) {
+const HeaderRight = () => {
   const showModalState = useSelector((state) => state.showModal);
   const dispatch = useDispatch();
   const [inputEmail, setInputEmail] = useState();
@@ -30,14 +30,14 @@ function HeaderRight(props) {
 
   const isLoggedIn = useSelector((state) => state.logging);
 
-  function onLogin(id, password) {
+  const onLogin = (id, password) => {
     dispatch(doLogin(id, password));
-  }
+  };
 
-  function onLogout() {
+  const onLogout = () => {
     dispatch(cancelAllBookmark());
     dispatch(doLogout());
-  }
+  };
 
   return (
     <HeaderRightDiv>
@@ -71,7 +71,7 @@ function HeaderRight(props) {
       </div>
     </HeaderRightDiv>
   );
-}
+};
 
 const HeaderRightDiv = styled.div`
   padding: 0 0.31rem;

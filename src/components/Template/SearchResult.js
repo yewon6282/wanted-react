@@ -6,7 +6,7 @@ import SearchResultBottom from "../Organism/SearchResultBottom";
 import jobCard from "../../json/JobCard.json";
 import searchTags from "../../json/searchTag.json";
 
-function SearchResult() {
+const SearchResult = () => {
   const params = useParams();
   const tagsId = Number(params.SearchedResult);
   const filterTags = searchTags.tags.filter((el) => el.id === tagsId);
@@ -19,21 +19,21 @@ function SearchResult() {
     filteringData();
   }, [params]);
 
-  function filteringData() {
+  const filteringData = () => {
     if (jobCard.JobCards.filter((el) => el.companyTag.find((e) => e.tags.includes(tagsTag))).length > 0) {
       setFilteredData([jobCard.JobCards.filter((el) => el.companyTag.find((e) => e.tags.includes(tagsTag)))]);
       setHasData(true);
     } else {
       setHasData(false);
     }
-  }
+  };
 
   return (
     <main>
-      <SearchResultTop id={tagsId} tag={tagsTag} searchNothing={searchNothing} setSearchNothing={setSearchNothing} setHasData={setHasData}/>
+      <SearchResultTop id={tagsId} tag={tagsTag} searchNothing={searchNothing} setSearchNothing={setSearchNothing} setHasData={setHasData} />
       <SearchResultBottom filteredData={filteredData} hasData={hasData} searchNothing={searchNothing} />
     </main>
   );
-}
+};
 
 export default SearchResult;

@@ -1,12 +1,12 @@
 import React from "react";
 import CareerInsightData from "../../json/CareerInsight.json";
 
-function CareerInsight({ cardIdx }) {
-  let cardLength = CareerInsightData.CareerInsights.filter((e) => (e.id <= cardIdx));
+const CareerInsight = (props) => {
+  let cardLength = CareerInsightData.CareerInsights.filter((e) => e.id <= props.cardIdx);
   return (
     <>
       {cardLength.map((careerInsight) => (
-        <li key={careerInsight.id }>
+        <li key={careerInsight.id}>
           <a href="#!">
             <img className="card-image" src={careerInsight.imgAddress} alt={careerInsight.imgAlt} />
             <p className="card-title">{careerInsight.cardTitle}</p>
@@ -20,6 +20,6 @@ function CareerInsight({ cardIdx }) {
       ))}
     </>
   );
-}
+};
 
 export default CareerInsight;

@@ -12,7 +12,7 @@ export const closeModal = () => ({ type: CLOSEMODAL });
 
 const initialState = 0;
 
-function showModal(state = initialState, action) {
+const showModal = (state = initialState, action) => {
   switch (action.type) {
     case SHOWSEARCH:
       return (state = 1);
@@ -27,6 +27,6 @@ function showModal(state = initialState, action) {
     default:
       return state;
   }
-}
+};
 
 export default showModal;

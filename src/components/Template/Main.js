@@ -8,7 +8,7 @@ import MainSection05 from "../Organism/MainSection05";
 import MainSection06 from "../Organism/MainSection06";
 import MainSection07 from "../Organism/MainSection07";
 
-function Main() {
+const Main = () => {
   return (
     <main>
       <MainSection01 />
@@ -20,6 +20,6 @@ function Main() {
       <MainSection07 />
     </main>
   );
-}
+};
 
 export default Main;

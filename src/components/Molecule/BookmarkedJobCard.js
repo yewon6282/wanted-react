@@ -6,13 +6,13 @@ import JobCardData from "../../json/JobCard.json";
 import { cancelBookmark } from "../../modules/bookmarking";
 import { FaBookmark } from "react-icons/fa";
 
-function BookmarkedJobCard() {
+const BookmarkedJobCard = () => {
   const bookmarkList = useSelector((state) => state.bookmarking);
   const dispatch = useDispatch();
 
-  function cancelBookmarking(id) {
+  const cancelBookmarking = (id) => {
     dispatch(cancelBookmark(id));
-  }
+  };
 
   const [showBookmarkedList, setShowBookmarkedList] = useState([]);
 
@@ -62,7 +62,7 @@ function BookmarkedJobCard() {
       ))}
     </>
   );
-}
+};
 
 const BookmarkedJobCardLi = styled.li`
   position: relative;

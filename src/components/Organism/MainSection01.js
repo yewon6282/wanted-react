@@ -19,7 +19,7 @@ import ImageSlide from "../../json/ImageSlide.json";
 //   }, [delay]);
 // }
 
-function MainSection01() {
+const MainSection01 = () => {
   // const imageList = ImageSlide.Images;
   // const imageLength = ImageSlide.Images.length;
   // const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,7 +62,7 @@ function MainSection01() {
     newImageList.Images.push({ id: imageLength, imgAddress: first.map((e) => e.imgAddress).join(), alt: first.map((e) => e.alt).join() });
   }, []);
 
-  function countCurrentIndex() {
+  const countCurrentIndex = () => {
     if (currentIndex === imageLength - 2) {
       setTimeout(() => {
         setImageSlide(49.15);
@@ -71,7 +71,7 @@ function MainSection01() {
     } else {
       setCurrentIndex(currentIndex + 1);
     }
-  }
+  };
 
   useEffect(() => {
     setTimeout(countCurrentIndex, 3000);
@@ -104,6 +104,6 @@ function MainSection01() {
       </p>
     </div>
   );
-}
+};
 
 export default MainSection01;

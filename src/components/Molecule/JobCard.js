@@ -7,18 +7,18 @@ import { doBookmark, cancelBookmark } from "../../modules/bookmarking";
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 import { showLogin } from "../../modules/showModal";
 
-function JobCard() {
+const JobCard = () => {
   const bookmarkList = useSelector((state) => state.bookmarking);
   const isLoggedIn = useSelector((state) => state.logging);
   const dispatch = useDispatch();
 
-  function bookmarking(id) {
+  const bookmarking = (id) => {
     dispatch(doBookmark(id));
-  }
+  };
 
-  function cancelBookmarking(id) {
+  const cancelBookmarking = (id) => {
     dispatch(cancelBookmark(id));
-  }
+  };
 
   const showLoginModal = () => {
     dispatch(showLogin());
@@ -62,7 +62,7 @@ function JobCard() {
       ))}
     </>
   );
-}
+};
 
 const JobCardLi = styled.li`
   position: relative;

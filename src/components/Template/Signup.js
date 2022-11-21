@@ -273,7 +273,7 @@ const passwordReducer = (state, action) => {
   return { value: "", isValid: false, falseEffect: true, compareValue: "", compareIsValid: false, compareFalseEffect: true };
 };
 
-function Signup(props) {
+const Signup = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
   const [nameState, dispatchName] = useReducer(nameReducer, { value: "", isValid: false });
   const [phoneNumState, dispatchPhoneNum] = useReducer(phoneNumReducer, { value: "", isValid: false, falseEffect: true });
@@ -387,6 +387,6 @@ function Signup(props) {
       )}
     </div>
   );
-}
+};
 
 export default Signup;

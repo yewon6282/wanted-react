@@ -1,15 +1,15 @@
 import React from "react";
 
-function JobDetailTag({ companyTag }) {
+const JobDetailTag = (props) => {
   return (
     <>
-      {companyTag.map((tag) => (
+      {props.companyTag.map((tag) => (
         <button key={tag.id}>
           <p>{tag.tags}</p>
         </button>
       ))}
     </>
   );
-}
+};
 
 export default JobDetailTag;

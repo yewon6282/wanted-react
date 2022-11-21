@@ -1,7 +1,7 @@
 import React from "react";
 import SearchResultTag from "../Atom/SearchResultTag";
 
-function SearchResultBottom(props) {
+const SearchResultBottom = (props) => {
   return (
     <>
       <div className="searched-result">
@@ -30,6 +30,6 @@ function SearchResultBottom(props) {
       </div>
     </>
   );
-}
+};
 
 export default SearchResultBottom;

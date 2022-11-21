@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import styled from "styled-components";
 import BookmarkedJobCard from "../Molecule/BookmarkedJobCard";
 
-function Bookmarks() {
+const Bookmarks = () => {
   const bookmarkList = useSelector((state) => state.bookmarking);
 
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ function Bookmarks() {
       </div>
     </BookmarksMain>
   );
-}
+};
 
 const BookmarksMain = styled.main`
   width: 100vw;

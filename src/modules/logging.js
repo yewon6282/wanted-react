@@ -6,15 +6,15 @@ export const doLogout = () => ({ type: DOLOGOUT });
 
 const initialState = [];
 
-function logging(state = initialState, action) {
+const logging = (state = initialState, action) => {
   switch (action.type) {
     case DOLOGIN:
-      return (state = [action.id,action.password]);
+      return (state = [action.id, action.password]);
     case DOLOGOUT:
       return (state = []);
     default:
       return state;
   }
-}
+};
 
 export default logging;

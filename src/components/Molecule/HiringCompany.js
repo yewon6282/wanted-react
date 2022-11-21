@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HiringCompanyData from "../../json/HiringCompany.json";
 
-function HiringCompany() {
+const HiringCompany = () => {
   return (
     <>
       {HiringCompanyData.HiringCompanies.map((hiringCompany) => (
@@ -21,7 +21,7 @@ function HiringCompany() {
       ))}
     </>
   );
-}
+};
 
 const HiringCompanyLi = styled.li`
   /* width: 12.31rem; */

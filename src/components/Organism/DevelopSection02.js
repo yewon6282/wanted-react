@@ -7,7 +7,7 @@ import HiringCompany from "../Molecule/HiringCompany";
 import { Link } from "react-router-dom";
 import { showLogin } from "../../modules/showModal";
 
-function DevelopSection02() {
+const DevelopSection02 = () => {
   const isLoggedIn = useSelector((state) => state.logging);
   const dispatch = useDispatch();
 
@@ -30,7 +30,7 @@ function DevelopSection02() {
       </ul>
     </DevelopSection02Div>
   );
-}
+};
 
 const DevelopSection02Div = styled.div`
   width: 66.25rem;
@@ -59,16 +59,10 @@ const DevelopSection02Div = styled.div`
   .slider-item {
     margin: 0.87rem -0.625rem;
     display: flex;
-    /* width: inherit; */
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
     width: 90%;
-    /* margin: 0 auto; */
-
-    /* .slider-item {
-      width: inherit;
-    } */
   }
 `;
 

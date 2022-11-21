@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import JobCard from "../Molecule/JobCard";
 
-function DevelopSection03() {
+const DevelopSection03 = () => {
   return (
     <DevelopSection03Div>
       <ul className="job-cards">
@@ -10,7 +10,7 @@ function DevelopSection03() {
       </ul>
     </DevelopSection03Div>
   );
-}
+};
 
 const DevelopSection03Div = styled.div`
   margin: 0 auto;

@@ -3,16 +3,16 @@ import "../../css/developDetail.css";
 import DevelopDetailBottom from "../Organism/DevelopDetailBottom";
 import DevelopDetailTop from "../Organism/DevelopDetailTop";
 
-function DevelopDetail() {
+const DevelopDetail = () => {
   const [warning, setWarning] = useState(false);
 
-  function warningOn() {
+  const warningOn = () => {
     setWarning(true);
-  }
+  };
 
-  function warningOff() {
+  const warningOff = () => {
     setWarning(false);
-  }
+  };
 
   return (
     <main className="develop-detail">
@@ -20,6 +20,6 @@ function DevelopDetail() {
       <DevelopDetailBottom />
     </main>
   );
-}
+};
 
 export default DevelopDetail;

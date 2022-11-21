@@ -1,7 +1,7 @@
 import React from "react";
 import JobCard from "../Molecule/JobCard";
 
-function DevelopDetailBottom() {
+const DevelopDetailBottom = () => {
   return (
     <div className="develop-detail-bottom">
       <p className="develop-detail-bottom-title">이 포지션을 찾고 계셨나요?</p>
@@ -10,6 +10,6 @@ function DevelopDetailBottom() {
       </ul>
     </div>
   );
-}
+};
 
 export default DevelopDetailBottom;

@@ -4,15 +4,15 @@ import DevelopSection01 from "../Organism/DevelopSection01";
 import DevelopSection02 from "../Organism/DevelopSection02";
 import DevelopSection03 from "../Organism/DevelopSection03";
 
-function Develop() {
+const Develop = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [scrollTop, setScrollTop] = useState(false);
 
-  function scrollListener(scrollPosition) {
+  const scrollListener = (scrollPosition) => {
     setScrollPosition(window.scrollY);
 
     return scrollPosition;
-  }
+  };
 
   const scroll = useMemo(() => scrollListener(scrollPosition), [scrollPosition]);
 
@@ -36,7 +36,7 @@ function Develop() {
       <DevelopSection03 />
     </DevelopMain>
   );
-}
+};
 
 const DevelopMain = styled.main`
   width: 100%;
