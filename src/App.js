@@ -9,8 +9,11 @@ import DevelopDetail from "./components/Template/DevelopDetail";
 import ScrollToTop from "./components/Atom/ScrollTop";
 import SearchResult from "./components/Template/SearchResult";
 import Bookmarks from "./components/Template/Bookmarks";
+import Resume from "./components/Template/Resume";
+import firebaseApp from "./modules/firebase";
 
 function App() {
+  console.log(firebaseApp);
   return (
     <div className="page">
       <BrowserRouter>
@@ -22,6 +25,7 @@ function App() {
           <Route path="/Develop/:DevelopDetail" element={<DevelopDetail />} />
           <Route path="/Bookmarks" element={<Bookmarks />} />
           <Route path="/SearchResult/:SearchedResult" element={<SearchResult />} />
+          <Route path="/Resume" element={<Resume />} />
         </Routes>
         <Footer />
       </BrowserRouter>

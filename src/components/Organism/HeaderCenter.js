@@ -1,7 +1,17 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { showLogin } from "../../modules/showModal";
 
 const HeaderCenter = () => {
+  const isLoggedIn = useSelector((state) => state.logging);
+  const dispatch = useDispatch();
+
+  const showLoginModal = () => {
+    dispatch(showLogin());
+  };
+
   return (
     <HeaderCenterUl>
       <li className="menu">
@@ -20,9 +30,9 @@ const HeaderCenter = () => {
         </a>
       </li>
       <li className="menu">
-        <a href="#!" className="menu-link">
+        <Link to={isLoggedIn[0] && "/Resume"} onClick={!isLoggedIn[0] && showLoginModal} className="menu-link">
           이력서
-        </a>
+        </Link>
       </li>
       <li className="menu">
         <a href="#!" className="menu-link">
@@ -69,7 +79,7 @@ const HeaderCenterUl = styled.ul`
     .menu {
       .menu-link {
         /* padding: 0.6875rem 0.625rem 1rem; */
-        font-size: .8125rem;
+        font-size: 0.8125rem;
       }
     }
   }
