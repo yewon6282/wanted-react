@@ -1,9 +1,9 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import { FiBell } from "react-icons/fi";
 import { IoIosSearch } from "react-icons/io";
-import { useDispatch, useSelector } from "react-redux";
-import styled from "styled-components";
 import { closeModal, showLogin, showSearch } from "../../modules/showModal";
 import HeaderCenter from "../Organism/HeaderCenter";
 import HeaderLeft from "../Organism/HeaderLeft";

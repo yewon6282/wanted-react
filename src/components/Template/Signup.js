@@ -1,8 +1,8 @@
 import React, { useEffect, useReducer, useState } from "react";
 import ReactDOM from "react-dom";
+import { useDispatch } from "react-redux";
 import "../../css/signup.css";
 import { GrClose } from "react-icons/gr";
-import { useDispatch } from "react-redux";
 import { closeModal } from "../../modules/showModal";
 
 const Backdrop = (props) => {

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 import "../../css/search.css";
 import searchTags from "../../json/searchTag.json";
 import { IoIosSearch } from "react-icons/io";
 import { BsChevronRight } from "react-icons/bs";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { closeModal } from "../../modules/showModal";
 
 const Backdrop = (props) => {

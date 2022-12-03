@@ -78,7 +78,6 @@ const HeaderCenterUl = styled.ul`
 
     .menu {
       .menu-link {
-        /* padding: 0.6875rem 0.625rem 1rem; */
         font-size: 0.8125rem;
       }
     }

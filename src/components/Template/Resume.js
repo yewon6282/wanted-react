@@ -38,6 +38,10 @@ const ResumeDiv = styled.div`
     margin: 0 auto;
     width: 66.25rem;
   }
+
+  @media (min-width: 48rem) and (max-width: 61.9375rem) {
+    top: 6.875rem;
+  }
 `;
 
 export default Resume;

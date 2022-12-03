@@ -6,21 +6,6 @@ export const doBookmark = (id) => ({ type: DOBOOKMARK, id });
 export const cancelBookmark = (id) => ({ type: CANCELBOOKMARK, id });
 export const cancelAllBookmark = () => ({ type: CANCELALLBOOKMARK });
 
-// const initialState = [];
-
-// function bookmarking(state = initialState, action) {
-//   switch (action.type) {
-//     case DOBOOKMARK:
-//       return (state = [...state, action.id]);
-//     case CANCELBOOKMARK:
-//       return state.filter((e) => e !== action.id);
-//     case CANCELALLBOOKMARK:
-//       return (state = []);
-//     default:
-//       return state;
-//   }
-// }
-
 const initialState = { bookmarkId: [] };
 
 function bookmarking(state = initialState, action) {

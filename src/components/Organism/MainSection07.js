@@ -1,8 +1,7 @@
 import React from "react";
 import { IoIosSearch } from "react-icons/io";
-import { BsPerson } from "react-icons/bs";
+import { BsPerson, BsChevronRight } from "react-icons/bs";
 import { BiBuildings, BiSliderAlt } from "react-icons/bi";
-import { BsChevronRight } from "react-icons/bs";
 
 const MainSection07 = () => {
   return (

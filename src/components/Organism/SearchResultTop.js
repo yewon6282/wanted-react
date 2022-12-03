@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import searchTags from "../../json/searchTag.json";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
-import { Link } from "react-router-dom";
 import EveryTag from "../Atom/EveryTag";
 
 const SearchResultTop = (props) => {

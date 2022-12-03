@@ -31,8 +31,6 @@ const MainSection01 = () => {
   //   return [lastImage, ...imageList, firstImage];
   // }
 
-  // console.log(newImageList);
-
   // function handleSlide(index) {
   //   if (index < 0) {
   //     index = imageLength - 1;
@@ -43,13 +41,13 @@ const MainSection01 = () => {
   // }
 
   // function handleSwipe(direction) {
-  //   console.log(direction);
   //   handleSlide(currentIndex + direction);
   // }
 
   // useInterval(() => {
   //   setCurrentIndex((currentIndex) => currentIndex + 1);
   // }, 3000);
+
   const imageLength = ImageSlide.Images.length;
   const newImageList = { ...ImageSlide };
   const width = 67.75;

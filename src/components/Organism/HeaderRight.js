@@ -10,7 +10,6 @@ import Search from "../Template/Search";
 import LoginNext from "../Template/LoginNext";
 import { IoIosSearch } from "react-icons/io";
 import { FiBell } from "react-icons/fi";
-import { BiDotsHorizontalRounded } from "react-icons/bi";
 
 const HeaderRight = () => {
   const showModalState = useSelector((state) => state.showModal);

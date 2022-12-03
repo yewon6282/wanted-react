@@ -13,7 +13,6 @@ import Resume from "./components/Template/Resume";
 import firebaseApp from "./modules/firebase";
 
 function App() {
-  console.log(firebaseApp);
   return (
     <div className="page">
       <BrowserRouter>
