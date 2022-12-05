@@ -76,7 +76,7 @@ const LoginNext = (props) => {
   return (
     <div>
       {ReactDOM.createPortal(<Backdrop closeEveryModal={props.closeEveryModal} />, document.getElementById("backdrop-root"))}
-      {ReactDOM.createPortal(<ModalOverlay closeEveryModal={props.closeEveryModal} inputRef={inputRef} backToLogin={backToLogin} passwordChangeHandler={passwordChangeHandler} formIsValid={formIsValid} submitButtonIsValid={submitButtonIsValid} submitHandler={submitHandler} />, document.getElementById("overlay-root"))}
+      {ReactDOM.createPortal(<ModalOverlay inputRef={inputRef} backToLogin={backToLogin} passwordChangeHandler={passwordChangeHandler} formIsValid={formIsValid} submitButtonIsValid={submitButtonIsValid} submitHandler={submitHandler} />, document.getElementById("overlay-root"))}
     </div>
   );
 };

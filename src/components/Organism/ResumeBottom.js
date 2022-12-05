@@ -1,43 +1,47 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { storage } from "../../modules/firebase";
+import ResumeBox from "../Molecule/ResumeBox";
+import { getStorage, ref, listAll } from "firebase/storage";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 import { RiFileCopyLine, RiUpload2Fill } from "react-icons/ri";
-import ResumeBox from "../Molecule/ResumeBox";
-import axios from "axios";
-// import { getStorage, ref } from "firebase/storage";
-
-const RESUMEURL = "https://firebasestorage.googleapis.com/v0/b/wanted-react-699df.appspot.com/o/";
+import { storage } from "../../modules/firebase";
+import PercentBar from "../Atom/PercentBar";
 
 const ResumeBottom = () => {
-  // const storage = getStorage();
-  // const pathReference = ref(storage, ['gs://wanted-react-699df.appspot.com/image/files/kakaoLogin.png','']);
-  // console.log(pathReference);
+  const [showPercentBar, setShowPercentBar] = useState(false);
+  const [percentBar, setPercentBar] = useState(0);
+  const [resumeImageList, setResumeImageList] = useState([]);
+  const gs = getStorage();
 
-  const [resumeImageList, setResumeImageList] = useState();
-  const getResumeImageList = async () => {
-    try {
-      const response = await axios.get(RESUMEURL);
-      setResumeImageList(response.data.items);
-    } catch (error) {
-      console.log(error);
-    }
+  const listRef = ref(gs, "image/files");
+
+  const showFileList = () => {
+    setResumeImageList([]);
+
+    listAll(listRef)
+      .then((res) => {
+        res.items.forEach((itemRef) => {
+          setResumeImageList((prevResumeImageList) => [...prevResumeImageList, itemRef]);
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   useEffect(() => {
-    getResumeImageList();
+    showFileList();
   }, []);
-
-  const [fileUrl, setFileUrl] = useState("");
 
   const onSubmit = (event) => {
     event.preventDefault();
+    setShowPercentBar(true);
 
     const file = event.target.files[0];
 
     const storageRef = storage.ref("image/files/");
-    const filesRef = storageRef.child(file.name); //저장할 경로
-    const upLoadTask = filesRef.put(file); // 업로드 작업
+    const filesRef = storageRef.child(file.name);
+    const upLoadTask = filesRef.put(file);
 
     upLoadTask.on(
       "state_changed",
@@ -45,6 +49,7 @@ const ResumeBottom = () => {
         console.log("snapshot", snapshot);
         const percent = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         console.log(percent + "% done");
+        setPercentBar(percent);
       },
       (error) => {
         console.log("err", error);
@@ -52,13 +57,22 @@ const ResumeBottom = () => {
       () => {
         upLoadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
           console.log("File available at", downloadURL);
-          setFileUrl(downloadURL);
+          showFileList();
         });
-        getResumeImageList();
       }
     );
   };
-  console.log(resumeImageList);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (percentBar === 100) {
+        setShowPercentBar(false);
+      }
+    }, 2000);
+    return () => {
+      clearTimeout();
+    };
+  }, [percentBar]);
 
   return (
     <ResumeBottomDiv>
@@ -90,9 +104,10 @@ const ResumeBottom = () => {
         {resumeImageList !== undefined &&
           resumeImageList.map((list, key) => (
             <div key={key} className="resume-item">
-              <ResumeBox name={list.name} />
+              <ResumeBox list={list} showFileList={showFileList} />
             </div>
           ))}
+        {showPercentBar && <PercentBar percentBar={percentBar} />}
       </div>
     </ResumeBottomDiv>
   );
@@ -100,7 +115,7 @@ const ResumeBottom = () => {
 
 const ResumeBottomDiv = styled.div`
   width: inherit;
-  margin: 25px 0 5px;
+  margin: 1.5625rem 0 0.3125rem;
 
   .resume-list-header {
     display: flex;
@@ -108,33 +123,33 @@ const ResumeBottomDiv = styled.div`
     justify-content: space-between;
 
     h4 {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 600;
       line-height: 1.4;
       margin: 0;
-      padding: 15px 0;
+      padding: 0.9375rem 0;
       color: #333;
     }
 
     a {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 600;
       margin: 0;
-      padding: 15px 0;
+      padding: 0.9375rem 0;
       color: #36f;
       display: flex;
       align-items: center;
 
       .exclimation-icon {
-        margin-left: 8px;
+        margin-left: 0.5rem;
         position: relative;
-        bottom: 1px;
+        bottom: 0.0625rem;
       }
     }
   }
 
   .resume-list-body {
-    width: calc(100% + 20px);
+    width: calc(100% + 1.25rem);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -142,10 +157,10 @@ const ResumeBottomDiv = styled.div`
 
     .resume-item {
       width: calc(25% - 1.38rem);
-      height: 190px;
-      margin: 0 20px 20px 0;
+      height: 11.875rem;
+      margin: 0 1.25rem 1.25rem 0;
       position: relative;
-      border: 0.0625rem solid #dbdbdb;
+      border: 1px solid #dbdbdb;
       background-color: #fff;
 
       .resume-add-item,
@@ -160,9 +175,9 @@ const ResumeBottomDiv = styled.div`
         .add-file-icon,
         .upload-file-icon {
           margin: 0 auto;
-          width: 74px;
-          height: 74px;
-          font-size: 26px;
+          width: 4.625rem;
+          height: 4.625rem;
+          font-size: 1.625rem;
           color: #fff;
           background-color: #36f;
           border-radius: 50%;
@@ -188,10 +203,10 @@ const ResumeBottomDiv = styled.div`
 
       input[type="file"] {
         position: absolute;
-        width: 1px;
-        height: 1px;
+        width: 0.0625rem;
+        height: 0.0625rem;
         padding: 0;
-        margin: -1px;
+        margin: -0.0625rem;
         overflow: hidden;
         clip: rect(0, 0, 0, 0);
         border: 0;

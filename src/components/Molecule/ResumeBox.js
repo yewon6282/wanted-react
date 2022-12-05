@@ -1,19 +1,92 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import { getStorage, ref, getDownloadURL, deleteObject } from "firebase/storage";
 import { BsFileEarmarkText, BsThreeDotsVertical } from "react-icons/bs";
+import DeleteResume from "./DeleteResume";
 
 const ResumeBox = (props) => {
+  const btnRef = useRef();
+  const modalRef = useRef();
+  const [dropdownState, setDropdownState] = useState(false);
+
+  const changeDropdown = (event) => {
+    if (!dropdownState && btnRef.current && btnRef.current.contains(event.target)) {
+      setDropdownState(true);
+    } else setDropdownState(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("click", changeDropdown);
+    return () => {
+      window.removeEventListener("click", changeDropdown);
+    };
+  }, []);
+
+  const storage = getStorage();
+  const imagesRef = ref(storage, props.list._location.path_);
+
+  const downloadFile = () => {
+    getDownloadURL(imagesRef)
+      .then((url) => {
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = "blob";
+        xhr.onload = function () {
+          const blob = xhr.response;
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = props.list.name;
+          link.click();
+          URL.revokeObjectURL(link.href);
+        };
+        xhr.open("GET", url);
+        xhr.send();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const deleteFile = () => {
+    deleteObject(imagesRef)
+      .then(() => {
+        props.showFileList();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const [deleteModal, setDeleteModal] = useState(false);
+
+  const showDeleteModal = () => {
+    setDeleteModal(true);
+  };
+
   return (
     <ResumeBoxDiv>
       <div className="resume-body">
-        <div className="resume-image-title">{props.name.substring(12)}</div>
+        <div className="resume-image-title">{props.list.name}</div>
         <div className="resume-date">{props.lastModifiedDate}</div>
       </div>
       <div className="resume-footer">
         <BsFileEarmarkText className="file-icon" />
-        <p className="file-upload-state">첨부 완료</p>
-        <BsThreeDotsVertical className="dropdown-container"/>
+        <p className="file-upload-state" onClick={downloadFile}>
+          첨부 완료
+        </p>
+        <div ref={btnRef} className="dropdown-container">
+          <BsThreeDotsVertical />
+        </div>
+        <DropdownModalDiv ref={modalRef} dropdownState={dropdownState}>
+          <button className="dropdown-modal-menu">이력서 이름 변경</button>
+          <button onClick={downloadFile} className="dropdown-modal-menu">
+            다운로드
+          </button>
+          <button onClick={showDeleteModal} className="dropdown-modal-menu" id="deleteResume">
+            이력서 삭제
+          </button>
+        </DropdownModalDiv>
       </div>
+      {deleteModal && <DeleteResume name={props.list.name} setDeleteModal={setDeleteModal} deleteFile={deleteFile} />}
     </ResumeBoxDiv>
   );
 };
@@ -76,6 +149,7 @@ const ResumeBoxDiv = styled.div`
       line-height: 20px;
       letter-spacing: normal;
       text-align: left;
+      cursor: pointer;
     }
 
     .dropdown-container {
@@ -83,7 +157,36 @@ const ResumeBoxDiv = styled.div`
       justify-content: end;
       align-items: center;
       margin-left: auto;
+      cursor: pointer;
     }
+  }
+`;
+
+const DropdownModalDiv = styled.div`
+  display: ${(props) => (props.dropdownState ? "flex" : "none")};
+  flex-direction: column;
+  z-index: 10;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  min-width: 160px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  border: 1px solid #e1e2e3;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 10px 5px;
+
+  .dropdown-modal-menu {
+    height: 26px;
+    border: none;
+    color: #333;
+    text-align: left;
+    padding: 3px 15px;
+    font-size: 14px;
+  }
+
+  #deleteResume {
+    color: #fe415c;
   }
 `;
 
