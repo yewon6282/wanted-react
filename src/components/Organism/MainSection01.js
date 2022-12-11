@@ -1,53 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import ImageSlide from "../../json/ImageSlide.json";
 
-// function useInterval(callback, delay) {
-//   const savedCallback = useRef();
-//   useEffect(() => {
-//     savedCallback.current = callback;
-//   }, [callback]);
-
-//   useEffect(() => {
-//     function tick() {
-//       savedCallback.current();
-//     }
-//     if (delay !== null) {
-//       let id = setInterval(tick, delay);
-//       return () => clearInterval(id);
-//     }
-//   }, [delay]);
-// }
-
 const MainSection01 = () => {
-  // const imageList = ImageSlide.Images;
-  // const imageLength = ImageSlide.Images.length;
-  // const [currentIndex, setCurrentIndex] = useState(0);
-  // let newImageList = setNewImageList();
-
-  // function setNewImageList() {
-  //   const firstImage = imageList[0];
-  //   const lastImage = imageList[imageLength - 1];
-  //   return [lastImage, ...imageList, firstImage];
-  // }
-
-  // function handleSlide(index) {
-  //   if (index < 0) {
-  //     index = imageLength - 1;
-  //   } else if (index > imageLength) {
-  //     index = 0;
-  //   }
-  //   setCurrentIndex(index);
-  // }
-
-  // function handleSwipe(direction) {
-  //   handleSlide(currentIndex + direction);
-  // }
-
-  // useInterval(() => {
-  //   setCurrentIndex((currentIndex) => currentIndex + 1);
-  // }, 3000);
-
   const imageLength = ImageSlide.Images.length;
   const newImageList = { ...ImageSlide };
   const width = 67.75;
@@ -58,6 +13,7 @@ const MainSection01 = () => {
 
   useEffect(() => {
     newImageList.Images.push({ id: imageLength, imgAddress: first.map((e) => e.imgAddress).join(), alt: first.map((e) => e.alt).join() });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const countCurrentIndex = () => {
@@ -78,6 +34,7 @@ const MainSection01 = () => {
     return () => {
       countCurrentIndex();
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
   return (

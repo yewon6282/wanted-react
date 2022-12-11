@@ -262,6 +262,7 @@ const phoneNumReducer = (state, action) => {
 };
 
 const passwordReducer = (state, action) => {
+  // eslint-disable-next-line no-useless-escape
   const passwordCheck = /(?=.*\d{1,13})(?=.*[~`!@#$%\^&*()-+=]{1,13})(?=.*[a-zA-Z]{2,14}).{8,16}$/;
 
   if (action.type === "PASSWORD_INPUT") {

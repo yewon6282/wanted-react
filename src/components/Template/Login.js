@@ -79,6 +79,7 @@ const ModalOverlay = (props) => {
 };
 
 const emailReducer = (state, action) => {
+  // eslint-disable-next-line no-useless-escape
   const emailCheck = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
   if (action.type === "EMAIL_INPUT") {

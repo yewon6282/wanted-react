@@ -10,7 +10,6 @@ import ScrollToTop from "./components/Atom/ScrollTop";
 import SearchResult from "./components/Template/SearchResult";
 import Bookmarks from "./components/Template/Bookmarks";
 import Resume from "./components/Template/Resume";
-import firebaseApp from "./modules/firebase";
 
 function App() {
   return (

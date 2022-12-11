@@ -74,6 +74,7 @@ const Search = (props) => {
         setNewList((prevNewList) => [...prevNewList, addColorList]);
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finalNumList, randomNumList]);
 
   function selectTag() {

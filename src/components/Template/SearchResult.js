@@ -17,6 +17,7 @@ const SearchResult = () => {
 
   useEffect(() => {
     filteringData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params]);
 
   const filteringData = () => {

@@ -20,6 +20,7 @@ const ResumeBox = (props) => {
     return () => {
       window.removeEventListener("click", changeDropdown);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const storage = getStorage();
